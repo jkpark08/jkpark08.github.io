@@ -1,0 +1,17 @@
+---
+layout: post
+title: Recurrence-in-Recurrence Networks for Video Deblurring, BMVC, 2022.
+date: 2024-97-12 13:32:20 +0300
+description: ECCV, 2024. # Add post description (optional)
+img: rirn.jpg # Add image post (optional)
+fig-caption: # Add figcaption (optional)
+tags: [Video Deblurring, RNNs]
+---
+##### Joonkyu Park, Seungjun Nah, and Kyoung Mu Lee.
+
+Although hands frequently exhibit motion blur due to their dynamic nature, existing approaches for 3D hand recovery often disregard the impact of motion blur in hand images. Blurry hand images contain hands from multiple time steps, lack precise hand location at a
+specific time step, and introduce temporal ambiguity, leading to multiple possible hand trajectories. To address this issue and in the absence of datasets with real blur, we introduce the EBH dataset, which provides 1) hand images with real motion blur and 2) event data for authentic repre-
+sentation of fast hand movements. In conjunction with our new dataset, we present EBHNet, a novel network capable of recovering 3D hands from diverse input combinations, including blurry hand images, events, or both. Here, the event stream enhances motion understanding in blurry
+hands, addressing temporal ambiguity. Recognizing that blurry hand images include not only single 3D hands at a time step but also multiple hands along their motion trajectories, we design EBHNet to generate 3D hand sequences in motion. Moreover, to enable our EBHNet to predict 3D hands at novel, unsupervised time steps using a single shared module, we employ a Transformer-based module, temporal splitter, into
+EBHNet. Our experiments show the superior performance of EBH and EBHNet, especially in handling blurry hand images, making them valuable in real-world applications. 
+
