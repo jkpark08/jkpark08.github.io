@@ -1,7 +1,4 @@
-{% if post.tags3 %}
-  <h2>Dataset</h2>
-{% else %}
-{% endif %}
+<h2>Dataset</h2>
 
 ---
 layout: post
