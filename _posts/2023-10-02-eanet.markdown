@@ -1,0 +1,20 @@
+---
+layout: post
+title: Extract-and-Adaptation Network for 3d Interacting Hand Mesh Recovery, ICCVW (Oral), 2023.
+date: 2023-10-02 13:32:20 +0300
+description:  ICCVW (Oral), 2023. # Add post description (optional)
+img: eanet.jpg # Add image post (optional)
+fig-caption: # Add figcaption (optional)
+tags: [3D reconstruction, 3D human, 3D Hand]
+---
+##### Joonkyu Park\*, Daniel Sungho Jung\*, Gyeongsik Moon\*, and Kyoung Mu Lee.
+
+Understanding how two hands interact with each other is a key component of accurate 3D interacting hand mesh recovery.
+However, recent Transformer-based methods struggle to learn the interaction between two hands as they directly utilize two hand features as input tokens, which results in distant token problem.
+The distant token problem represents that input tokens are in heterogeneous spaces, leading Transformer to fail in capturing correlation between input tokens.
+Previous Transformer-based methods suffer from the problem especially when poses of two hands are very different as they project features from a backbone to separate left and right hand-dedicated features.
+We present EANet, extract-and-adaptation network, with EABlock, the main component of our network.
+Rather than directly utilizing two hand features as input tokens, our EABlock utilizes two complementary types of novel tokens, SimToken and JoinToken, as input tokens.
+Our two novel tokens are from a combination of separated two hand features; hence, it is much more robust to the distant token problem.
+Using the two type of tokens, our EABlock effectively extracts interaction feature and adapts it to each hand.
+The proposed EANet achieves the state-of-the-art performance on 3D interacting hands benchmarks. [[paper](https://openaccess.thecvf.com/content/ICCV2023W/CV4Metaverse/papers/Park_Extract-and-Adaptation_Network_for_3D_Interacting_Hand_Mesh_Recovery_ICCVW_2023_paper.pdf)]
