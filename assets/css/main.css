@@ -1150,11 +1150,11 @@ footer .copyright {
   width: 70%;
 }
 
-.post .post-content .post-date,
+/* .post .post-content .post-date,
 .post .post-content .post-words {
   font-size: 12px;
 }
-
+ */
 .post .post-content .post-title {
   margin: 0 0 10px;
   font-size: 30px;
