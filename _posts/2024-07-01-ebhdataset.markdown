@@ -1,4 +1,3 @@
-## Dataset
 ---
 layout: post
 title: EBH dataset (3D Hand Sequence Recovery from Real Blurry Images and Event Stream, ECCV, 2024)
