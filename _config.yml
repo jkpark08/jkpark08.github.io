@@ -11,7 +11,7 @@ site-twitter: #if your site has a twitter account, enter it here
 # Author Settings
 author: Joonkyu Park # add your name
 author-img: portfolio.jpg # add your photo
-about-author: I am interested in deep learning and computer vision, exploring human 3D reconstruction and image restoration, combining high-level and low-level tasks in my recent research. # add description
+about-author:  # add description
 social-facebook: jkpark0825 # add your Facebook handle
 social-github: jkpark08 # add your Github handle
 social-email: jkpark0825@snu.ac.kr # add your Email address
