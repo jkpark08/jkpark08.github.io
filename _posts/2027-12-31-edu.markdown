@@ -53,8 +53,7 @@ A New Dataset and Temporal Unfolding", CVPR, 2023. [[paper](https://arxiv.org/pd
 
 ---
 ## Academic Services (Reviewer) 
-- Conference : CVPR 2022, CVPR 2023, ICCV 2023, ICCVW 2023
-- Journal : TVCJ 2023
-
+- Conference : CVPR, ICCV, ICCVW, ECCV, NeurIPS
+- Journal : TVCJ, JIVP
 
 
