@@ -9,8 +9,7 @@ tags: #
 tags2: Publications
 ---
 I am Ph.D candidate advised by <a href="https://cv.snu.ac.kr/index.php/faculty//">Prof. Kyoung Mu Lee.</a>
-I am interested in deep learning and computer vision, exploring human 3D reconstruction and image restoration, combining high-level and low-level tasks in my recent research.
-I am currently dedicated to crafting images that match common visuals and reconstructing 3D human forms from severely degraded images.
+I am interested in machine learning and computer vision, exploring 3D human and image restoration, combining high-level and low-level tasks in my recent research.
 
 ---
 ## Education
@@ -20,7 +19,7 @@ I am currently dedicated to crafting images that match common visuals and recons
 ---
 ## Research Experience
 ##### Reality Labs Research at Meta
-- 3D recovery from specific targets.
+- 3D hand recovery from real-motioned blurry hands.
 
 ##### Seoul National University
 - Research Project with Samsung Research: Tunable SW ISP Algorithm.
