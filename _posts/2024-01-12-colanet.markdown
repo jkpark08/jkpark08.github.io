@@ -1,0 +1,12 @@
+---
+layout: post
+title: Rethinking RGB Color Representation for Image Restoration Models, ArXiv, 2024.
+date: 2024-01-12 13:32:20 +0300
+description: ArXiv, 2024. # Add post description (optional)
+img: colanet.jpg # Add image post (optional)
+fig-caption: # Add figcaption (optional)
+tags: [Image restoration]
+---
+##### Jaerin Lee, JoonKyu Park, Sungyong Baik, Kyoung Mu Lee
+
+Image restoration models are typically trained with a pixel-wise distance loss defined over the RGB color representation space, which is well known to be a source of blurry and unrealistic textures in the restored images. The reason, we believe, is that the three-channel RGB space is insufficient for supervising the restoration models. To this end, we augment the representation to hold structural information of local neighborhoods at each pixel while keeping the color information and pixel-grainedness unharmed. The result is a new representation space, dubbed augmented RGB (aRGB) space. Substituting the underlying representation space for the per-pixel losses facilitates the training of image restoration models, thereby improving the performance without affecting the evaluation phase. Notably, when combined with auxiliary objectives such as adversarial or perceptual losses, our aRGB space consistently improves overall metrics by reconstructing both color and local structures, overcoming the conventional perception-distortion trade-off. [[paper]([https://ieeexplore.ieee.org/document/10349927](https://arxiv.org/abs/2402.03399))] 
