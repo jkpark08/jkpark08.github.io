@@ -25,6 +25,18 @@ tags3: #
 ## Download
 ### blur_images.zip
 - blurry images captured from 10 individuals.
+```bash
+├── data
+│   ├── train
+│   ├── test
+│   └── validation
+├── code
+│   ├── train.py
+│   ├── classify.py
+│   ├── model.py
+│   └── dataset.py
+└── run.sh
+``` 
 ### events.zip
 - event stream divided by 1ms. ~~We will release overall event stream later~~
 ### annotations.zip
