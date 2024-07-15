@@ -10,11 +10,17 @@ tags2: #
 tags3: #
 ---
 
-# EBH dataset
-This is an official dataset for "3D Hand Sequence Recovery from Real Blurry Images and Event Stream, ECCV, 2024".
+# Introduction
+## EBH dataset
+- This is an official dataset for "3D Hand Sequence Recovery from Real Blurry Images and Event Stream, ECCV, 2024".
+- Our EBH dataset is the first to capture 3D hand movements with real-world motion blur and their corresponding event information.
 
 
 ## Quick visualizations
+![alt text](../assets/img/ebh_sample.jpg)
 ![alt text](../assets/img/ebh_mesh.jpg)
+
+# Introduction
+
 ## Link
 
