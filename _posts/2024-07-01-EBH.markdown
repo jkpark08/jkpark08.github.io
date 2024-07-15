@@ -17,7 +17,8 @@ tags3: #
 
 
 ## Quick visualizations
-![alt text](../assets/img/ebh_sample.jpg)
+![alt text](../assets/img/ebh_sample.jpg) 
+
 ![alt text](../assets/img/ebh_mesh.jpg)
 
 # Introduction
