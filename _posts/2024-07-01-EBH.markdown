@@ -23,15 +23,15 @@ tags3: #
 
 
 ## Download
-# blur_images.zip
+### blur_images.zip
 - blurry images captured from 10 individuals.
-# events.zip
+### events.zip
 - event stream divided by 1ms. ~~We will release overall event stream later~~
-# annotations.zip
+### annotations.zip
 - 3D annotations, including mesh (MANO parameters) and 3D keypoints.
-# ~~depth~~
+### ~~depth~~
 ~~We will include it soon~~
-# ~~clean images~~
+### ~~clean images~~
 ~~We will include it soon~~
 
 https://drive.google.com/drive/folders/1U5p64YJ2wMQeJTiAQl5Zer5rqyK8rnJh?usp=sharing
