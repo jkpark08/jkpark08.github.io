@@ -26,16 +26,25 @@ tags3: #
 ### blur_images.zip
 - blurry images captured from 10 individuals.
 ```bash
-├── blur_images
-│   ├── left_xxxxxx
-│   │    ├──cam_00
-│   │    │    ├──xxxxxx.png
-│   ├── right_xxxxxx
-│   │    ├──cam_00  
-│   │    │    ├──xxxxxx.png
+blur_images
+├── left_xxxxxx
+│       └─ cam_00
+│           └─ xxxxxx.png
+└── right_xxxxxx
+        └── cam_00  
+            └─ xxxxxx.png
 ``` 
 ### events.zip
 - event stream divided by 1ms. ~~We will release overall event stream later~~
+```bash
+events
+   └─── left_xxxxxx
+         └─ xxx_01.png
+         └─ xxx_02.png
+         └─ ...
+         └─ xxx_11.png
+``` 
+
 ### annotations.zip
 - 3D annotations, including mesh (MANO parameters) and 3D keypoints.
 ### ~~depth~~
