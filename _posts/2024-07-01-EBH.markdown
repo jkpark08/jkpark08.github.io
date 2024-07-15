@@ -15,6 +15,6 @@ This is an official dataset for "3D Hand Sequence Recovery from Real Blurry Imag
 
 
 ## Quick visualizations
-![alt text](../assets/img/argb.JPG)
+![alt text](../assets/img/ebh_mesh.jpg)
 ## Link
 
