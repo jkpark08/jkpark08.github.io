@@ -52,6 +52,6 @@ events
 ### ~~clean images~~
 ~~We will include it soon~~
 
-[[Download]([https://arxiv.org/pdf/2303.15417.pdf](https://drive.google.com/drive/folders/1U5p64YJ2wMQeJTiAQl5Zer5rqyK8rnJh?usp=sharing))]
+[[Download]([https://drive.google.com/drive/folders/1U5p64YJ2wMQeJTiAQl5Zer5rqyK8rnJh?usp=sharing])]
 
 
