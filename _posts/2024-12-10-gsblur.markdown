@@ -1,12 +1,12 @@
 ---
 layout: post
 title: GS-Blur: A 3D Scene-Based Dataset for Realistic Image Deblurring. NeurIPS, 2024.
-date: 2024-12-10 13:32:20 +0300
+date: 2024-10-01 13:32:20 +0300
 description: NeurIPS, 2024. # Add post description (optional)
 img: rirn.jpg # Add image post (optional)
 fig-caption: # Add figcaption (optional)
-tags: [Video Deblurring, RNNs] #
-tags3: [Video Deblurring, RNNs] #
+tags: [3DGS, Dataset, Deblurring] #
+tags3: [3DGS, Dataset, Deblurring] #
 ---
 ##### Dongwoo Lee, Joonkyu Park, and Kyoung Mu Lee.
 
