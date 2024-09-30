@@ -6,7 +6,6 @@ description: NeurIPS, 2024. # Add post description (optional)
 img: gsblur.JPG # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [3DGS, Dataset, Deblurring] #
-tags3: [3DGS, Dataset, Deblurring] #
 ---
 ##### Dongwoo Lee, Joonkyu Park, and Kyoung Mu Lee.
 
