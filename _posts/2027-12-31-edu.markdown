@@ -40,6 +40,6 @@ I am interested in machine learning and computer vision, exploring 3D human and 
 ---
 ## Academic Services (Reviewer) 
 - Conference : CVPR, ICCV, ICCVW, ECCV, ECCVW, NeurIPS, WACV, ACCV
-- Journal : TCSVT, TVCJ, JIVP
+- Journal : TCSVT, TVCJ, JIVP, EURASIP
 
 
