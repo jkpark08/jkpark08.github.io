@@ -6,7 +6,7 @@ In the following section, we showcase the results of our **Super-Resolution (SR)
 
 | **Low-Resolution Image** | **Super-Resolution Image** |
 |--------------------------|----------------------------|
-| ![Low-Resolution Image](blurhand.jpg) | ![Super-Resolution Image](dmsr/sr1.png) |
+| ![Low-Resolution Image](dmsr/lr1.png) | ![Super-Resolution Image](dmsr/sr1.png) |
 
 ### Example Image Comparison
 
