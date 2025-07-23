@@ -15,10 +15,10 @@ tags3: #
 <div style="position: relative; width: 100%; max-width: 800px; margin: auto; overflow: hidden;">
 
   <!-- Background: LR -->
-  <img src="dmsr/sr1.png" alt="LR" style="width: 100%; display: block;">
+  <img src="dmsr/lr1.jpg" alt="LR" style="width: 100%; display: block;">
 
   <!-- Foreground: SR clipped to right half -->
-  <img src="dmsr/lr1.jpg" alt="SR"
+  <img src="dmsr/sr1.png" alt="SR"
        style="position: absolute; top: 0; left: 0;
               width: 100%; height: auto;
               clip-path: inset(0 0 0 50%);
