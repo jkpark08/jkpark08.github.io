@@ -12,21 +12,6 @@ tags3: #
 
 ### LR vs SR (with center line)
 
-<div style="position: relative; width: 100%; max-width: 800px; margin: auto; overflow: hidden;">
-
-  <!-- Background: LR -->
-  <img src="dmsr/lr1.jpg" alt="LR" style="width: 100%; display: block;">
-
-  <!-- Foreground: SR clipped to right half -->
-  <img src="dmsr/sr1.png" alt="SR"
-       style="position: absolute; top: 0; left: 0;
-              width: 100%; height: auto;
-              clip-path: inset(0 0 0 50%);
-              z-index: 2;">
-
-  <!-- Center vertical line -->
-  <div style="position: absolute; top: 0; bottom: 0; left: 50%;
-              width: 2px; background: red; z-index: 3;"></div>
-
-</div>
-
+| Low-Resolution |   | Super-Resolution |
+|----------------|---|------------------|
+| ![](dmsr/sr1.png) | <div style="width:1px; background:red; height:100px;"></div> | ![](dmsr/sr1.png) |
