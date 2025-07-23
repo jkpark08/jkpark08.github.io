@@ -791,6 +791,16 @@ img {
   display: inline-block;
 }
 
+.img-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
 img + em {
   text-align: center;
   display: block;
