@@ -10,10 +10,23 @@ tags2: #
 tags3: #
 ---
 
-# Super-Resolution vs Low-Resolution Comparison
+### LR vs SR (with center line)
 
+<div style="position: relative; width: 100%; max-width: 800px; margin: auto; overflow: hidden;">
 
-<div style="display: flex; width: 100%; max-width: 800px; margin: auto; border: 1px solid #ddd;">
-  <img src="dmsr/sr1.png" alt="LR" style="width: 50%; object-fit: cover;">
-  <img src="dmsr/sr1.png" alt="SR" style="width: 50%; object-fit: cover;">
+  <!-- Background: LR -->
+  <img src="low_res_image.png" alt="LR" style="width: 100%; display: block;">
+
+  <!-- Foreground: SR clipped to right half -->
+  <img src="sr_output.png" alt="SR"
+       style="position: absolute; top: 0; left: 0;
+              width: 100%; height: auto;
+              clip-path: inset(0 0 0 50%);
+              z-index: 2;">
+
+  <!-- Center vertical line -->
+  <div style="position: absolute; top: 0; bottom: 0; left: 50%;
+              width: 2px; background: red; z-index: 3;"></div>
+
 </div>
+
