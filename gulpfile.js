@@ -67,22 +67,3 @@ gulp.task('watch', function () {
 //  Default task
 gulp.task('default', ['browser-sync', 'watch']);
 
-
-
-// add
-document.querySelectorAll('.img-wrapper').forEach(wrapper => {
-  const sr = wrapper.querySelector('.sr');
-  const slider = wrapper.querySelector('.slider');
-  let isDragging = false;
-  slider.addEventListener('mousedown', () => { isDragging = true; });
-  document.addEventListener('mouseup', () => { isDragging = false; });
-  document.addEventListener('mousemove', (e) => {
-    if (!isDragging) return;
-    const rect = wrapper.getBoundingClientRect();
-    let x = e.clientX - rect.left;
-    x = Math.max(0, Math.min(x, rect.width));
-    const percent = (x / rect.width) * 100;
-    sr.style.clipPath = `inset(0 0 0 ${100 - percent}%)`;
-    slider.style.left = `${percent}%`;
-  });
-});
