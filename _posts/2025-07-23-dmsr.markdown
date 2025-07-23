@@ -1,28 +1,101 @@
-# Super-Resolution vs Low-Resolution Comparison
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Super-Resolution Comparison</title>
+  <style>
+    /* Container that holds both images and the slider */
+    .container {
+      position: relative;
+      width: 100%;
+      height: 400px; /* Set height based on your image's aspect ratio */
+      overflow: hidden;
+    }
 
-In the following section, we showcase the results of our **Super-Resolution (SR)** method. Below, you can compare the **Low-Resolution (LR)** images with the **Super-Resolution (SR)** outputs. 
+    /* Low-Resolution Image */
+    .low-res {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-### Visual Comparison
+    /* Super-Resolution Image */
+    .sr-image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      clip-path: inset(0 50% 0 0); /* Start with the right half clipped */
+    }
 
-| **Low-Resolution Image** | **Super-Resolution Image** |
-|--------------------------|----------------------------|
-| ![Low-Resolution Image](dmsr/lr1.jpg) | ![Super-Resolution Image](dmsr/sr1.png) |
+    /* Scrollable bar in the middle */
+    .slider {
+      position: absolute;
+      top: 0;
+      left: 50%; /* Position the slider in the middle initially */
+      width: 3px;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      cursor: ew-resize; /* Horizontal resize cursor */
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
 
-### Example Image Comparison
-
-The image below shows a comparison between a low-resolution input and the enhanced high-resolution output produced by our model.
-
-<div style="position: relative; width: 100%; height: 400px; overflow: hidden;">
-  <!-- Low-Resolution Image -->
-  <img src="low_res_image.png" alt="Low-Resolution" style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+  <h1>Interactive Image Comparison: Low-Resolution vs Super-Resolution</h1>
   
-  <!-- Super-Resolution Image -->
-  <img src="sr_output.png" alt="Super-Resolution" style="position: absolute; width: 100%; height: 100%; object-fit: cover; clip-path: inset(0 50% 0 0);">
-  
-  <!-- Scrollable Bar -->
-  <div style="position: absolute; top: 0; left: 50%; width: 3px; height: 100%; cursor: ew-resize; background: rgba(0, 0, 0, 0.3);">
-    <div style="position: absolute; top: 0; left: 50%; width: 3px; height: 100%; background-color: #fff;"></div>
+  <!-- Image Comparison Container -->
+  <div class="container">
+    <!-- Low-Resolution Image -->
+    <img src="https://via.placeholder.com/800x400?text=Low-Resolution" alt="Low-Resolution" class="low-res">
+
+    <!-- Super-Resolution Image -->
+    <img src="https://via.placeholder.com/800x400?text=Super-Resolution" alt="Super-Resolution" class="sr-image">
+
+    <!-- Slider to compare images -->
+    <div class="slider" id="slider"></div>
   </div>
-</div>
 
-> **Note**: Drag the slider to compare the low-resolution (left) and super-resolution (right) images interactively.
+  <script>
+    // Select the slider and images
+    const slider = document.getElementById("slider");
+    const srImage = document.querySelector(".sr-image");
+    const container = document.querySelector(".container");
+
+    // Track if the mouse is being pressed
+    let isMouseDown = false;
+
+    // Function to handle slider movement
+    slider.addEventListener('mousedown', (e) => {
+      isMouseDown = true;
+      document.addEventListener('mousemove', moveSlider);
+    });
+
+    // When mouse is released, stop moving the slider
+    document.addEventListener('mouseup', () => {
+      isMouseDown = false;
+      document.removeEventListener('mousemove', moveSlider);
+    });
+
+    // Move the slider and adjust the images based on the mouse position
+    function moveSlider(e) {
+      if (!isMouseDown) return;
+      
+      // Get the position of the mouse relative to the container width
+      const containerWidth = container.offsetWidth;
+      let newPosition = e.clientX / containerWidth * 100; // Percentage of container width
+      newPosition = Math.max(0, Math.min(100, newPosition)); // Clamp the value between 0 and 100
+
+      // Move the slider
+      slider.style.left = `${newPosition}%`;
+
+      // Adjust the clip-path of the super-resolution image to reveal more or less
+      srImage.style.clipPath = `inset(0 ${100 - newPosition}% 0 0)`; // Clip from the right based on slider position
+    }
+  </script>
+  
+</body>
+</html>
