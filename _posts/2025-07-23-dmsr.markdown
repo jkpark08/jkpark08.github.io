@@ -15,8 +15,8 @@ tags3: #
 <!-- Half-Half LR vs SR Image -->
 <div style="display: flex; width: 100%; max-width: 800px; margin: auto;">
   <!-- Left: LR -->
-  <img src="low_res_image.png" alt="Low Resolution" style="width: 50%; object-fit: cover;">
+  <img src="dmsr/sr1.png" alt="Low Resolution" style="width: 50%; object-fit: cover;">
   
   <!-- Right: SR -->
-  <img src="sr_output.png" alt="Super Resolution" style="width: 50%; object-fit: cover;">
+  <img src="dmsr/sr1.png" alt="Super Resolution" style="width: 50%; object-fit: cover;">
 </div>
