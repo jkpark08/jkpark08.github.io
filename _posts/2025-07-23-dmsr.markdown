@@ -12,11 +12,11 @@ tags3: #
 
 # Super-Resolution vs Low-Resolution Comparison
 
-In this section, you can visually compare the **Low-Resolution (LR)** image and the **Super-Resolution (SR)** image side by side. Use the scroll bar to interactively compare them.
-
-### Visual Comparison
-{% include slider.html lr="dmsr/sr1.png" sr="dmsr/sr1.png" %}
-
-
-> Drag the middle slider to compare the low-resolution (left) and super-resolution (right) images interactively.
-
+<!-- Half-Half LR vs SR Image -->
+<div style="display: flex; width: 100%; max-width: 800px; margin: auto;">
+  <!-- Left: LR -->
+  <img src="low_res_image.png" alt="Low Resolution" style="width: 50%; object-fit: cover;">
+  
+  <!-- Right: SR -->
+  <img src="sr_output.png" alt="Super Resolution" style="width: 50%; object-fit: cover;">
+</div>
