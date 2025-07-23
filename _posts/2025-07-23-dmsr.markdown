@@ -17,10 +17,3 @@ In this section, you can visually compare the **Low-Resolution (LR)** image and 
 
 > Drag the middle slider to compare the low-resolution (left) and super-resolution (right) images interactively.
 
-### Results:
-
-- **Peak Signal-to-Noise Ratio (PSNR)**: 35.6 dB
-- **Structural Similarity Index (SSIM)**: 0.91
-- **Learned Perceptual Image Patch Similarity (LPIPS)**: 0.25
-
-The metrics above showcase the improvement in image quality using our super-resolution method.
