@@ -12,11 +12,8 @@ tags3: #
 
 # Super-Resolution vs Low-Resolution Comparison
 
-<!-- Half-Half LR vs SR Image -->
-<div style="display: flex; width: 100%; max-width: 800px; margin: auto;">
-  <!-- Left: LR -->
-  <img src="dmsr/sr1.png" alt="Low Resolution" style="width: 50%; object-fit: cover;">
-  
-  <!-- Right: SR -->
-  <img src="dmsr/sr1.png" alt="Super Resolution" style="width: 50%; object-fit: cover;">
+
+<div style="display: flex; width: 100%; max-width: 800px; margin: auto; border: 1px solid #ddd;">
+  <img src="dmsr/sr1.png" alt="LR" style="width: 50%; object-fit: cover;">
+  <img src="dmsr/sr1.png" alt="SR" style="width: 50%; object-fit: cover;">
 </div>
