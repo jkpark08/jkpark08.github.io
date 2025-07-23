@@ -15,4 +15,5 @@ tags3: #
 | Low-Resolution |Super-Resolution |
 |----------------|------------------|
 | ![](dmsr/lr1.jpg) | ![](dmsr/sr1.png) |
+| ![](dmsr/lr1.jpg) | ![](dmsr/sr1.png) |
 
