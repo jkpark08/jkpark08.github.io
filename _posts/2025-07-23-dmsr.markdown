@@ -12,7 +12,7 @@ tags3: #
 
 ### LR vs SR (with center line)
 
-| Low-Resolution |   | Super-Resolution |
-|----------------|---|------------------|
+| Low-Resolution |Super-Resolution |
+|----------------|------------------|
 | ![](dmsr/lr1.jpg) | ![](dmsr/sr1.png) |
 
