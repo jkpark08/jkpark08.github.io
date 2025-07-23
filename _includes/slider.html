@@ -1,0 +1,7 @@
+<div class="container">
+  <div class="img-wrapper" style="position:relative;">
+    <img src="{{ include.lr }}" alt="LR Image">
+    <img class="sr" src="{{ include.sr }}" alt="SR Image" style="clip-path: inset(0 0 0 50%); z-index:2;">
+    <div class="slider" style="position:absolute; top:0; left:50%; width:4px; height:100%; background:red; z-index:3; cursor: ew-resize;"></div>
+  </div>
+</div>
