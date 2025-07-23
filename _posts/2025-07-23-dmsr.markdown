@@ -14,4 +14,5 @@ tags3: #
 
 | Low-Resolution |   | Super-Resolution |
 |----------------|---|------------------|
-| ![](dmsr/lr1.jpg) | <div style="width:1px; background:red; height:100px;"></div> | ![](dmsr/sr1.png) |
+| ![](dmsr/lr1.jpg) | ![](dmsr/sr1.png) |
+
