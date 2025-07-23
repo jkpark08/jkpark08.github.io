@@ -11,17 +11,8 @@ tags3: Project Page
 In this section, you can visually compare the **Low-Resolution (LR)** image and the **Super-Resolution (SR)** image side by side. Use the scroll bar to interactively compare them.
 
 ### Visual Comparison
+{% include slider.html lr="dmsr/sr1.png" sr="dmsr/sr1.png" %}
 
-<div style="position: relative; width: 100%; height: 400px; overflow: hidden;">
-  <!-- Low-Resolution Image -->
-  <img src="dmsr/lr1.jpg" alt="Low-Resolution" style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
-  
-  <!-- Super-Resolution Image -->
-  <img src="dmsr/lr1.jpg" alt="Super-Resolution" style="position: absolute; width: 100%; height: 100%; object-fit: cover; clip-path: inset(0 50% 0 0);">
-  
-  <!-- Scrollable Bar -->
-  <div style="position: absolute; top: 0; left: 50%; width: 3px; height: 100%; cursor: ew-resize; background: rgba(0, 0, 0, 0.3); z-index: 1;" id="slider"></div>
-</div>
 
 > Drag the middle slider to compare the low-resolution (left) and super-resolution (right) images interactively.
 
