@@ -18,7 +18,7 @@ tags3: #
   <img src="dmsr/sr1.png" alt="LR" style="width: 100%; display: block;">
 
   <!-- Foreground: SR clipped to right half -->
-  <img src="dmsr/sr1.png" alt="SR"
+  <img src="dmsr/lr1.jpg" alt="SR"
        style="position: absolute; top: 0; left: 0;
               width: 100%; height: auto;
               clip-path: inset(0 0 0 50%);
