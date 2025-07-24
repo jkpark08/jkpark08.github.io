@@ -1,6 +1,6 @@
 ---
 layout: post
-title: DMSR
+title: DM-SR
 date: 2000-01-01 13:32:20 +0300
 description: # Add post description (optional)
 img: # Add image post (optional)
@@ -10,7 +10,12 @@ tags2: #
 tags3: #
 ---
 
-### LR vs SR (with center line)
+# DM-SR
+
+DM-SR aims at developing a Practical Algorithm for Real-world Super-Resolution.
+
+
+### Visual Comparisons
 
 ![alt text](../assets/img/dmsr/dmsr_pro11-1.png) 
 ![alt text](../assets/img/dmsr/dmsr_pro10-1.png) 
