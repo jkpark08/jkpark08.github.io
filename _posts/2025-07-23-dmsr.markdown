@@ -26,7 +26,7 @@ DM-SR leverages the generative capabilities of a pretrained diffusion model, whi
 <div id="juxtapose" style="width: 30%; max-width: 800px; margin: auto;"></div>
 
 
-<table>
+<table style="width:100%; text-align:center;">
   <tr>
     <td>
       <div id="slider1" style="width: 200px;"></div>
@@ -36,6 +36,9 @@ DM-SR leverages the generative capabilities of a pretrained diffusion model, whi
     </td>
     <td>
       <div id="slider3" style="width: 200px;"></div>
+    </td>
+    <td>
+      <div id="slider4" style="width: 200px;"></div>
     </td>
   </tr>
 </table>
@@ -68,6 +71,17 @@ DM-SR leverages the generative capabilities of a pretrained diffusion model, whi
     [
       {src: '../assets/img/dmsr/lr6.jpg', label: 'Before'},
       {src: '../assets/img/dmsr/sr6.png',label: 'After'}
+    ],
+    {
+      animate: true,
+      showLabels: true,
+      showCredits: false,
+      makeResponsive: true
+    });
+   new juxtapose.JXSlider('#slider3',
+    [
+      {src: '../assets/img/dmsr/lr7.jpg', label: 'Before'},
+      {src: '../assets/img/dmsr/sr7.png',label: 'After'}
     ],
     {
       animate: true,
