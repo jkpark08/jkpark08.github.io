@@ -29,16 +29,16 @@ DM-SR leverages the generative capabilities of a pretrained diffusion model, whi
 <table style="width:100%; text-align:center;">
   <tr>
     <td>
-      <div id="slider1" style="width: 200px;"></div>
+      <div align="center" id="slider1" style="width: 200px;"></div>
     </td>
     <td>
-      <div id="slider2" style="width: 200px;"></div>
+      <div align="center" id="slider2" style="width: 200px;"></div>
     </td>
     <td>
-      <div id="slider3" style="width: 200px;"></div>
+      <div align="center" id="slider3" style="width: 200px;"></div>
     </td>
     <td>
-      <div id="slider4" style="width: 200px;"></div>
+      <div align="center" id="slider4" style="width: 200px;"></div>
     </td>
   </tr>
 </table>
