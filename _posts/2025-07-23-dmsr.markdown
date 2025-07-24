@@ -29,13 +29,13 @@ DM-SR leverages the generative capabilities of a pretrained diffusion model, whi
 <table style="width:100%; text-align:center;">
   <tr>
     <td>
-      <div align="center" id="slider5" style="width: 300px;"></div>
+      <div align="center" id="slider5" style="display:inline-block; width: 310px;"></div>
     </td>
     <td>
-      <div align="center" id="slider6" style="width: 300px;"></div>
+      <div align="center" id="slider6" style="display:inline-block; width: 310px;"></div>
     </td>
     <td>
-      <div align="center" id="slider7" style="width: 300px;"></div>
+      <div align="center" id="slider7" style="display:inline-block; width: 310px;"></div>
     </td>
     </tr>
 </table>
@@ -43,16 +43,16 @@ DM-SR leverages the generative capabilities of a pretrained diffusion model, whi
 <table style="width:100%; text-align:center;">
   <tr>
     <td>
-      <div align="center" id="slider1" style="display:inline-block; width: 200px;"></div>
+      <div align="center" id="slider1" style="display:inline-block; width: 220px;"></div>
     </td>
     <td>
-      <div align="center" id="slider2" style="display:inline-block; width: 200px;"></div>
+      <div align="center" id="slider2" style="display:inline-block; width: 220px;"></div>
     </td>
     <td>
-      <div align="center" id="slider3" style="display:inline-block; width: 200px;"></div>
+      <div align="center" id="slider3" style="display:inline-block; width: 220px;"></div>
     </td>
     <td>
-      <div align="center" id="slider4" style="display:inline-block; width: 200px;"></div>
+      <div align="center" id="slider4" style="display:inline-block; width: 220px;"></div>
     </td>
   </tr>
 </table>
@@ -60,8 +60,8 @@ DM-SR leverages the generative capabilities of a pretrained diffusion model, whi
 <script>
   new juxtapose.JXSlider('#slider5',
     [
-      {src: '../assets/img/dmsr/lr1.jpg', label: 'Before'},
-      {src: '../assets/img/dmsr/sr1.png',label: 'After'}
+      {src: '../assets/img/dmsr/lr1.jpg', label: 'Bicubic'},
+      {src: '../assets/img/dmsr/sr1.png',label: 'DM-SR'}
     ],
     {
       animate: true,
@@ -71,8 +71,8 @@ DM-SR leverages the generative capabilities of a pretrained diffusion model, whi
     });
   new juxtapose.JXSlider('#slider6',
     [
-      {src: '../assets/img/dmsr/lr2.jpg', label: 'Before'},
-      {src: '../assets/img/dmsr/sr2.png',label: 'After'}
+      {src: '../assets/img/dmsr/lr2.jpg', label: 'Bicubic'},
+      {src: '../assets/img/dmsr/sr2.png',label: 'DM-SR'}
     ],
     {
       animate: true,
@@ -82,8 +82,8 @@ DM-SR leverages the generative capabilities of a pretrained diffusion model, whi
     });
    new juxtapose.JXSlider('#slider7',
     [
-      {src: '../assets/img/dmsr/lr3.jpg', label: 'Before'},
-      {src: '../assets/img/dmsr/sr3.png',label: 'After'}
+      {src: '../assets/img/dmsr/lr3.jpg', label: 'Bicubic'},
+      {src: '../assets/img/dmsr/sr3.png',label: 'DM-SR'}
     ],
     {
       animate: true,
@@ -96,8 +96,8 @@ DM-SR leverages the generative capabilities of a pretrained diffusion model, whi
 <script>
   new juxtapose.JXSlider('#slider1',
     [
-      {src: '../assets/img/dmsr/lr6.jpg', label: 'Before'},
-      {src: '../assets/img/dmsr/sr6.png',label: 'After'}
+      {src: '../assets/img/dmsr/lr6.jpg', label: 'Bicubic'},
+      {src: '../assets/img/dmsr/sr6.png',label: 'DM-SR'}
     ],
     {
       animate: true,
@@ -107,8 +107,8 @@ DM-SR leverages the generative capabilities of a pretrained diffusion model, whi
     });
   new juxtapose.JXSlider('#slider2',
     [
-      {src: '../assets/img/dmsr/lr7.jpg', label: 'Before'},
-      {src: '../assets/img/dmsr/sr7.png',label: 'After'}
+      {src: '../assets/img/dmsr/lr7.jpg', label: 'Bicubic'},
+      {src: '../assets/img/dmsr/sr7.png',label: 'DM-SR'}
     ],
     {
       animate: true,
@@ -118,8 +118,8 @@ DM-SR leverages the generative capabilities of a pretrained diffusion model, whi
     });
    new juxtapose.JXSlider('#slider3',
     [
-      {src: '../assets/img/dmsr/lr5.jpg', label: 'Before'},
-      {src: '../assets/img/dmsr/sr5.png',label: 'After'}
+      {src: '../assets/img/dmsr/lr5.jpg', label: 'Bicubic'},
+      {src: '../assets/img/dmsr/sr5.png',label: 'DM-SR'}
     ],
     {
       animate: true,
@@ -129,8 +129,8 @@ DM-SR leverages the generative capabilities of a pretrained diffusion model, whi
     });
    new juxtapose.JXSlider('#slider4',
     [
-      {src: '../assets/img/dmsr/lr4.jpg', label: 'Before'},
-      {src: '../assets/img/dmsr/sr4.png',label: 'After'}
+      {src: '../assets/img/dmsr/lr4.jpg', label: 'Bicubic'},
+      {src: '../assets/img/dmsr/sr4.png',label: 'DM-SR'}
     ],
     {
       animate: true,
