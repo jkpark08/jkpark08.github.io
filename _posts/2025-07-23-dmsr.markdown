@@ -13,7 +13,7 @@ tags3: #
 # DM-SR
 
 DM-SR aims at developing a Practical Algorithm for Real-world Super-Resolution.
-DM-SR leverages the generative capabilities of a pretrained diffusion model, while requiring *only a single step* to perform super-resolution.
+DM-SR leverages the generative capabilities of a pretrained diffusion model, while requiring **only a single step** to perform super-resolution.
 
 
 
