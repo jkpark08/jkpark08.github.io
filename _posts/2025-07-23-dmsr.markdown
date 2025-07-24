@@ -1,6 +1,6 @@
 ---
 layout: post
-title: DM-SR: Distribution Matching Enables Better Use of Pretrained Diffusion Priors for Super-Resolution
+title: Distribution Matching Enables Better Use of Pretrained Diffusion Priors for Super-Resolution
 date: 2000-01-01 13:32:20 +0300
 description: # Add post description (optional)
 img: # Add image post (optional)
@@ -12,7 +12,7 @@ tags3: #
 
 <img align="left" width="120" src="../assets/img/dmsr/dmsr.png" />
 
-# DM-SR
+# Distribution Matching Super-Resolution (DM-SR)
 
 DM-SR aims at developing a Practical Algorithm for Real-world Super-Resolution.
 DM-SR leverages the generative capabilities of a pretrained diffusion model, while requiring **only a single step** to perform super-resolution.
