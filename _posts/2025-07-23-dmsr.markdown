@@ -44,6 +44,9 @@ DM-SR leverages the generative capabilities of a pretrained diffusion model, whi
       showCredits: false,
       makeResponsive: true
     });
+</script>
+
+<script>
   new juxtapose.JXSlider('#juxtapose',
     [
       {
@@ -62,7 +65,6 @@ DM-SR leverages the generative capabilities of a pretrained diffusion model, whi
       makeResponsive: true
     });
 </script>
-
 
 
 ## Visual Comparisons
