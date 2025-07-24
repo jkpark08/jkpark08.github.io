@@ -20,6 +20,9 @@ DM-SR leverages the generative capabilities of a pretrained diffusion model, whi
 
 
 - - -
+## Demo
+The following images show a comparison between our DM-SR results and bicubic upsampling.
+You can drag the slider to visually compare the two methods side by side.
 
 <link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
 <script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
