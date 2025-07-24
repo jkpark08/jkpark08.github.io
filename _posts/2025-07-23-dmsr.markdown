@@ -43,21 +43,6 @@ You can drag the slider to visually compare the two methods side by side.
     </tr>
 </table>
 
-
-<table style="width:100%; text-align:center;">
-  <tr>
-    <td>
-      <div align="center" id="slider8" style="display:inline-block; width: 310px;"></div>
-    </td>
-    <td>
-      <div align="center" id="slider9" style="display:inline-block; width: 310px;"></div>
-    </td>
-    <td>
-      <div align="center" id="slider10" style="display:inline-block; width: 310px;"></div>
-    </td>
-    </tr>
-</table>
-
 <table style="width:100%; text-align:center;">
   <tr>
     <td>
@@ -74,6 +59,22 @@ You can drag the slider to visually compare the two methods side by side.
     </td>
   </tr>
 </table>
+
+
+<table style="width:100%; text-align:center;">
+  <tr>
+    <td>
+      <div align="center" id="slider8" style="display:inline-block; width: 310px;"></div>
+    </td>
+    <td>
+      <div align="center" id="slider9" style="display:inline-block; width: 310px;"></div>
+    </td>
+    <td>
+      <div align="center" id="slider10" style="display:inline-block; width: 310px;"></div>
+    </td>
+    </tr>
+</table>
+
 
 <script>
   new juxtapose.JXSlider('#slider5',
