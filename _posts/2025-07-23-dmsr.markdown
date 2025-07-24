@@ -15,3 +15,5 @@ tags3: #
 ![alt text](../assets/img/dmsr/dmsr_pro1.pdf) 
 ![alt text](../assets/img/dmsr/dmsr_pro2.pdf)
 
+xfun::embed_file("../assets/img/dmsr/dmsr_pro2.pdf")
+
