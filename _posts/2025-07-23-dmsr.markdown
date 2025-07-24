@@ -151,7 +151,7 @@ The left half shows the bicubic upsampled image, while the right half displays t
 Please zoom in for better view.
 
 - - -
-<img src="../assets/img/dmsr/dmsr_pro11-1.png" alt="description" width="50%"> <img src="../assets/img/dmsr/dmsr_pro10-1.png" alt="description" width="50%">
+<img src="../assets/img/dmsr/dmsr_pro11-1.png" alt="description" width="49%"> <img src="../assets/img/dmsr/dmsr_pro10-1.png" alt="description" width="49%">
 - - -
 ![alt text](../assets/img/dmsr/dmsr_pro11-1.png)
 - - -
