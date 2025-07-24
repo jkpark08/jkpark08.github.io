@@ -19,7 +19,7 @@ DM-SR leverages the generative capabilities of a pretrained diffusion model, whi
 
 
 
-
+- - -
 
 <link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
 <script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
@@ -30,11 +30,11 @@ DM-SR leverages the generative capabilities of a pretrained diffusion model, whi
   new juxtapose.JXSlider('#juxtapose',
     [
       {
-        src: '../assets/img/dmsr/lr6.jpg',
+        src: '../assets/img/dmsr/lr6.jpg', '../assets/img/dmsr/lr6.jpg',
         label: 'Before'
       },
       {
-        src: '../assets/img/dmsr/sr6.png',
+        src: '../assets/img/dmsr/sr6.png', '../assets/img/dmsr/sr6.png',
         label: 'After'
       }
     ],
