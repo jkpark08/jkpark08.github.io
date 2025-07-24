@@ -150,9 +150,7 @@ You can drag the slider to visually compare the two methods side by side.
 The left half shows the bicubic upsampled image, while the right half displays the super-resolved result produced by our DM-SR method.
 Please zoom in for better view.
 
-- - -
-<img src="../assets/img/dmsr/dmsr_pro11-1.png" alt="description" width="49%"> <img src="../assets/img/dmsr/dmsr_pro10-1.png" alt="description" width="49%">
-- - -
+
 ![alt text](../assets/img/dmsr/dmsr_pro11-1.png)
 - - -
 ![alt text](../assets/img/dmsr/dmsr_pro10-1.png)
