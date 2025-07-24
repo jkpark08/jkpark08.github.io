@@ -30,11 +30,11 @@ DM-SR leverages the generative capabilities of a pretrained diffusion model, whi
   new juxtapose.JXSlider('#juxtapose',
     [
       {
-        src: '../assets/img/dmsr/dmsr_pro11-1.png',
+        src: '../assets/img/dmsr/lr6.png',
         label: 'Before'
       },
       {
-        src: '../assets/img/dmsr/dmsr_pro10-1.png',
+        src: '../assets/img/dmsr/sr6.png',
         label: 'After'
       }
     ],
