@@ -24,45 +24,28 @@ DM-SR leverages the generative capabilities of a pretrained diffusion model, whi
 <link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
 <script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
 
-<div id="juxtapose" style="width: 30%; max-width: 800px; margin: auto;"></div>
 
-<script>
-    new juxtapose.JXSlider('#slider1',
-      [
-        { src: '../assets/img/dmsr/lr6.jpg', label: 'Before' },
-        { src: '../assets/img/dmsr/sr6.png', label: 'After' }
-      ],
-      {
-        animate: true,
-        showLabels: true,
-        showCredits: false,
-        makeResponsive: true
-      });
+<div id="juxtapose" style="width: 30%; max-width: 200px; margin: auto;"></div>
 
-    new juxtapose.JXSlider('#slider2',
-      [
-        { src: '../assets/img/dmsr/lr6.jpg', label: 'Bicubic' },
-        { src: '../assets/img/dmsr/sr6.png', label: 'DM-SR' }
-      ],
-      {
-        animate: true,
-        showLabels: true,
-        showCredits: false,
-        makeResponsive: true
-      });
-  </script>
-  
 <script>
   new juxtapose.JXSlider('#juxtapose',
     [
-      {
-        src: '../assets/img/dmsr/lr6.jpg',
-        label: 'Before'
-      },
-      {
-        src: '../assets/img/dmsr/sr6.png',
-        label: 'After'
-      }
+      {src: '../assets/img/dmsr/lr6.jpg', label: 'Before'},
+      {src: '../assets/img/dmsr/sr6.png',label: 'After'}
+    ],
+    {
+      animate: true,
+      showLabels: true,
+      showCredits: false,
+      makeResponsive: true
+    });
+</script>
+
+<script>
+  new juxtapose.JXSlider('#juxtapose',
+    [
+      {src: '../assets/img/dmsr/lr6.jpg', label: 'Before'},
+      {src: '../assets/img/dmsr/sr6.png',label: 'After'}
     ],
     {
       animate: true,
