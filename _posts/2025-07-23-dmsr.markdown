@@ -10,7 +10,7 @@ tags2: #
 tags3: #
 ---
 
-<img align="left" width="200" src="../assets/img/dmsr/dmsr.png" />
+<img align="left" width="150" src="../assets/img/dmsr/dmsr.png" />
 
 # DM-SR
 
