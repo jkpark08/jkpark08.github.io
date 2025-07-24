@@ -26,8 +26,8 @@ DM-SR leverages the generative capabilities of a pretrained diffusion model, whi
 
 
 <div id="juxtapose" style="width: 30%; max-width: 800px; margin: auto;"></div>
-<div id="slider1"></div>
-<div id="slider2"></div>
+<div id="slider1" style="width: 30%; max-width: 400px; margin: auto;"></div>
+<div id="slider2" style="width: 30%; max-width: 400px; margin: auto;"></div>
 
 <script>
   new juxtapose.JXSlider('#juxtapose',
