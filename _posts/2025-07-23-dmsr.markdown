@@ -10,6 +10,8 @@ tags2: #
 tags3: #
 ---
 
+<img align="left" width="200" src="../assets/img/dmsr/dmsr_pro11-1.png" />
+
 # DM-SR
 
 DM-SR aims at developing a Practical Algorithm for Real-world Super-Resolution.
