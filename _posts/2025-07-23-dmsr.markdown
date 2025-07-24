@@ -78,7 +78,7 @@ DM-SR leverages the generative capabilities of a pretrained diffusion model, whi
       showCredits: false,
       makeResponsive: true
     });
-   new juxtapose.JXSlider('#slider3',
+   new juxtapose.JXSlider('#slider4',
     [
       {src: '../assets/img/dmsr/lr7.jpg', label: 'Before'},
       {src: '../assets/img/dmsr/sr7.png',label: 'After'}
