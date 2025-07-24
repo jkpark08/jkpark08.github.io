@@ -19,6 +19,35 @@ DM-SR leverages the generative capabilities of a pretrained diffusion model, whi
 
 
 
+
+
+<link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
+<script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
+
+<div id="juxtapose" style="width: 100%; max-width: 800px; margin: auto;"></div>
+
+<script>
+  new juxtapose.JXSlider('#juxtapose',
+    [
+      {
+        src: '../assets/img/dmsr/dmsr_pro11-1.png',
+        label: 'Before'
+      },
+      {
+        src: '../assets/img/dmsr/dmsr_pro10-1.png',
+        label: 'After'
+      }
+    ],
+    {
+      animate: true,
+      showLabels: true,
+      showCredits: false,
+      makeResponsive: true
+    });
+</script>
+
+
+
 ## Visual Comparisons
 
 The left half shows the bicubic upsampled image, while the right half displays the super-resolved result produced by our DM-SR method.
