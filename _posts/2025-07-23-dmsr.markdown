@@ -1,6 +1,6 @@
 ---
 layout: post
-title: DM-SR
+title: DM-SR: Distribution Matching Enables Better Use of Pretrained Diffusion Priors for Super-Resolution
 date: 2000-01-01 13:32:20 +0300
 description: # Add post description (optional)
 img: # Add image post (optional)
