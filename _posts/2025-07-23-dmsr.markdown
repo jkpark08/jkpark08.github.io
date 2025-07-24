@@ -22,6 +22,7 @@ DM-SR leverages the generative capabilities of a pretrained diffusion model, whi
 ## Visual Comparisons
 
 The left half shows the bicubic upsampled image, while the right half displays the super-resolved result produced by our DM-SR method.
+Please zoom in for better view.
 
 - - -
 ![alt text](../assets/img/dmsr/dmsr_pro11-1.png) 
