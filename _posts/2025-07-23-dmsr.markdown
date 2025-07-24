@@ -12,5 +12,6 @@ tags3: #
 
 ### LR vs SR (with center line)
 
-![alt text](../assets/img/ebh_sample.jpg) 
-![alt text](dmsr/sr1.png) 
+![alt text](../assets/img/dmsr/dmsr_pro1.pdf) 
+![alt text](../assets/img/dmsr/dmsr_pro2.pdf) 
+
