@@ -10,6 +10,13 @@ tags2: #
 tags3: #
 ---
 
+### 🔗 Links
+
+- 📄 [**Paper**](https://arxiv.org/abs/test) — (ToDo)
+- 💻 [**Code**](https://github.com/test) — (ToDo) 
+- 🧪 [**Colab Notebook**](https://colab.research.google.com/drive/test) — (ToDo)
+- 📦 [**Model Weights**](https://huggingface.co/test) — (ToDo)
+
 <img align="left" width="120" src="../assets/img/dmsr/dmsr.png" />
 
 # Distribution Matching Super-Resolution (DM-SR)
