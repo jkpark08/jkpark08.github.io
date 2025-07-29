@@ -42,13 +42,10 @@ You can drag the slider to visually compare the two methods side by side.
 <table style="width:100%; text-align:center;">
   <tr>
     <td>
-      <div align="center" id="slider5" style="display:inline-block; width: 310px;"></div>
+      <div align="center" id="slider5" style="display:inline-block; width: 620px;"></div>
     </td>
     <td>
-      <div align="center" id="slider6" style="display:inline-block; width: 310px;"></div>
-    </td>
-    <td>
-      <div align="center" id="slider7" style="display:inline-block; width: 310px;"></div>
+      <div align="center" id="slider6" style="display:inline-block; width: 620px;"></div>
     </td>
     </tr>
 </table>
@@ -89,17 +86,6 @@ You can drag the slider to visually compare the two methods side by side.
 <script>
   new juxtapose.JXSlider('#slider5',
     [
-      {src: '../assets/img/dmsr/lr1.jpg', label: 'Bicubic'},
-      {src: '../assets/img/dmsr/sr1.png',label: 'DM-SR'}
-    ],
-    {
-      animate: true,
-      showLabels: true,
-      showCredits: false,
-      makeResponsive: true
-    });
-  new juxtapose.JXSlider('#slider6',
-    [
       {src: '../assets/img/dmsr/lr2.jpg', label: 'Bicubic'},
       {src: '../assets/img/dmsr/sr2.png',label: 'DM-SR'}
     ],
@@ -109,7 +95,7 @@ You can drag the slider to visually compare the two methods side by side.
       showCredits: false,
       makeResponsive: true
     });
-   new juxtapose.JXSlider('#slider7',
+   new juxtapose.JXSlider('#slider6',
     [
       {src: '../assets/img/dmsr/lr3.jpg', label: 'Bicubic'},
       {src: '../assets/img/dmsr/sr3.png',label: 'DM-SR'}
