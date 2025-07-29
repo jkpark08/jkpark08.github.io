@@ -53,13 +53,13 @@ You can drag the slider to visually compare the two methods side by side.
 <table style="width:100%; text-align:center;">
   <tr>
     <td>
-      <div align="center" id="slider3" style="display:inline-block; width: 330px;"></div>
+      <div align="center" id="slider3" style="display:inline-block; width: 410px;"></div>
     </td>
     <td>
-      <div align="center" id="slider4" style="display:inline-block; width: 330px;"></div>
+      <div align="center" id="slider4" style="display:inline-block; width: 410px;"></div>
     </td>
     <td>
-      <div align="center" id="slider5" style="display:inline-block; width: 330px;"></div>
+      <div align="center" id="slider5" style="display:inline-block; width: 410px;"></div>
     </td>
   </tr>
 </table>
@@ -68,10 +68,10 @@ You can drag the slider to visually compare the two methods side by side.
 <table style="width:100%; text-align:center;">
   <tr>
     <td>
-      <div align="center" id="slider6" style="display:inline-block; width: 330px;"></div>
+      <div align="center" id="slider6" style="display:inline-block; width: 620px;"></div>
     </td>
     <td>
-      <div align="center" id="slider7" style="display:inline-block; width: 330px;"></div>
+      <div align="center" id="slider7" style="display:inline-block; width: 620px;"></div>
     </td>
     </tr>
 </table>
