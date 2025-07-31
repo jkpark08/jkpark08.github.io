@@ -77,6 +77,20 @@ You can drag the slider to visually compare the two methods side by side.
 </table>
 
 
+<table style="width:100%; text-align:center;">
+  <tr>
+    <td>
+      <div align="center" id="slider8" style="display:inline-block; width: 410px;"></div>
+    </td>
+    <td>
+      <div align="center" id="slider9" style="display:inline-block; width: 410px;"></div>
+    </td>
+    <td>
+      <div align="center" id="slider10" style="display:inline-block; width: 410px;"></div>
+    </td>
+  </tr>
+</table>
+
 <script>
   new juxtapose.JXSlider('#slider1',
     [
@@ -163,6 +177,41 @@ You can drag the slider to visually compare the two methods side by side.
     });
 </script>
 
+<script>
+  new juxtapose.JXSlider('#slider8',
+    [
+      {src: '../assets/img/dmsr/lr11.jpg', label: 'Bicubic'},
+      {src: '../assets/img/dmsr/sr11.png',label: 'DM-SR'}
+    ],
+    {
+      animate: true,
+      showLabels: true,
+      showCredits: false,
+      makeResponsive: true
+    });
+  new juxtapose.JXSlider('#slider9',
+    [
+      {src: '../assets/img/dmsr/lr12.jpg', label: 'Bicubic'},
+      {src: '../assets/img/dmsr/sr12.png',label: 'DM-SR'}
+    ],
+    {
+      animate: true,
+      showLabels: true,
+      showCredits: false,
+      makeResponsive: true
+    });
+   new juxtapose.JXSlider('#slider10',
+    [
+      {src: '../assets/img/dmsr/lr4.jpg', label: 'Bicubic'},
+      {src: '../assets/img/dmsr/sr4.png',label: 'DM-SR'}
+    ],
+    {
+      animate: true,
+      showLabels: true,
+      showCredits: false,
+      makeResponsive: true
+    });
+</script>
 
 - - -
 
