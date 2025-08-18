@@ -1,0 +1,235 @@
+---
+layout: post
+title: Distribution Matching Enables Better Use of Pretrained Diffusion Priors for Super-Resolution
+date: 2000-01-01 13:32:20 +0300
+description: # Add post description (optional)
+img: # Add image post (optional)
+fig-caption: # Add figcaption (optional)
+tags: DMSR
+tags2: #
+tags3: #
+---
+
+### 🔗 Links
+
+- 📄 [**Paper**](https://arxiv.org/abs/test) — (ToDo)
+- 💻 [**Code**](https://github.com/test) — (ToDo) 
+- 🧪 [**Colab Notebook**](https://colab.research.google.com/drive/test) — (ToDo)
+- 📦 [**Model Weights**](https://huggingface.co/test) — (ToDo)
+
+- - -
+
+
+<img align="left" width="120" src="../assets/img/dmsr/dmsr.png" />
+
+# Distribution Matching Super-Resolution (DM-SR)
+
+DM-SR aims at developing a Practical Algorithm for Real-world Super-Resolution.
+DM-SR leverages the generative capabilities of a pretrained diffusion model, while requiring **only a single step** to perform super-resolution.
+
+
+
+- - -
+## Demo
+The following images show a comparison between our DM-SR results and bicubic upsampling.
+You can drag the slider to visually compare the two methods side by side.
+
+<link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
+<script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
+<div id="juxtapose" style="width: 30%; max-width: 800px; margin: auto;"></div>
+
+
+<table style="width:100%; text-align:center;">
+  <tr>
+    <td>
+      <div align="center" id="slider1" style="display:inline-block; width: 620px;"></div>
+    </td>
+    <td>
+      <div align="center" id="slider2" style="display:inline-block; width: 620px;"></div>
+    </td>
+    </tr>
+</table>
+
+<table style="width:100%; text-align:center;">
+  <tr>
+    <td>
+      <div align="center" id="slider3" style="display:inline-block; width: 410px;"></div>
+    </td>
+    <td>
+      <div align="center" id="slider4" style="display:inline-block; width: 410px;"></div>
+    </td>
+    <td>
+      <div align="center" id="slider5" style="display:inline-block; width: 410px;"></div>
+    </td>
+  </tr>
+</table>
+
+
+<table style="width:100%; text-align:center;">
+  <tr>
+    <td>
+      <div align="center" id="slider6" style="display:inline-block; width: 620px;"></div>
+    </td>
+    <td>
+      <div align="center" id="slider7" style="display:inline-block; width: 620px;"></div>
+    </td>
+    </tr>
+</table>
+
+
+<table style="width:100%; text-align:center;">
+  <tr>
+    <td>
+      <div align="center" id="slider8" style="display:inline-block; width: 410px;"></div>
+    </td>
+    <td>
+      <div align="center" id="slider9" style="display:inline-block; width: 410px;"></div>
+    </td>
+    <td>
+      <div align="center" id="slider10" style="display:inline-block; width: 410px;"></div>
+    </td>
+  </tr>
+</table>
+
+<script>
+  new juxtapose.JXSlider('#slider1',
+    [
+      {src: '../assets/img/dmsr/lr2.jpg', label: 'Bicubic'},
+      {src: '../assets/img/dmsr/sr2.png',label: 'DM-SR'}
+    ],
+    {
+      animate: true,
+      showLabels: true,
+      showCredits: false,
+      makeResponsive: true
+    });
+   new juxtapose.JXSlider('#slider2',
+    [
+      {src: '../assets/img/dmsr/lr3.jpg', label: 'Bicubic'},
+      {src: '../assets/img/dmsr/sr3.png',label: 'DM-SR'}
+    ],
+    {
+      animate: true,
+      showLabels: true,
+      showCredits: false,
+      makeResponsive: true
+    });
+</script>
+
+<script>
+  new juxtapose.JXSlider('#slider3',
+    [
+      {src: '../assets/img/dmsr/lr6.jpg', label: 'Bicubic'},
+      {src: '../assets/img/dmsr/sr6.png',label: 'DM-SR'}
+    ],
+    {
+      animate: true,
+      showLabels: true,
+      showCredits: false,
+      makeResponsive: true
+    });
+  new juxtapose.JXSlider('#slider4',
+    [
+      {src: '../assets/img/dmsr/lr7.jpg', label: 'Bicubic'},
+      {src: '../assets/img/dmsr/sr7.png',label: 'DM-SR'}
+    ],
+    {
+      animate: true,
+      showLabels: true,
+      showCredits: false,
+      makeResponsive: true
+    });
+   new juxtapose.JXSlider('#slider5',
+    [
+      {src: '../assets/img/dmsr/lr5.jpg', label: 'Bicubic'},
+      {src: '../assets/img/dmsr/sr5.png',label: 'DM-SR'}
+    ],
+    {
+      animate: true,
+      showLabels: true,
+      showCredits: false,
+      makeResponsive: true
+    });
+</script>
+
+<script>
+  new juxtapose.JXSlider('#slider6',
+    [
+      {src: '../assets/img/dmsr/lr8.jpg', label: 'Bicubic'},
+      {src: '../assets/img/dmsr/sr8.png',label: 'DM-SR'}
+    ],
+    {
+      animate: true,
+      showLabels: true,
+      showCredits: false,
+      makeResponsive: true
+    });
+  new juxtapose.JXSlider('#slider7',
+    [
+      {src: '../assets/img/dmsr/lr9.jpg', label: 'Bicubic'},
+      {src: '../assets/img/dmsr/sr9.png',label: 'DM-SR'}
+    ],
+    {
+      animate: true,
+      showLabels: true,
+      showCredits: false,
+      makeResponsive: true
+    });
+</script>
+
+<script>
+  new juxtapose.JXSlider('#slider8',
+    [
+      {src: '../assets/img/dmsr/lr11.jpg', label: 'Bicubic'},
+      {src: '../assets/img/dmsr/sr11.png',label: 'DM-SR'}
+    ],
+    {
+      animate: true,
+      showLabels: true,
+      showCredits: false,
+      makeResponsive: true
+    });
+  new juxtapose.JXSlider('#slider9',
+    [
+      {src: '../assets/img/dmsr/lr12.jpg', label: 'Bicubic'},
+      {src: '../assets/img/dmsr/sr12.png',label: 'DM-SR'}
+    ],
+    {
+      animate: true,
+      showLabels: true,
+      showCredits: false,
+      makeResponsive: true
+    });
+   new juxtapose.JXSlider('#slider10',
+    [
+      {src: '../assets/img/dmsr/lr4.jpg', label: 'Bicubic'},
+      {src: '../assets/img/dmsr/sr4.png',label: 'DM-SR'}
+    ],
+    {
+      animate: true,
+      showLabels: true,
+      showCredits: false,
+      makeResponsive: true
+    });
+</script>
+
+- - -
+
+
+## Visual Comparisons
+
+The left half shows the bicubic upsampled image, while the right half displays the super-resolved result produced by our DM-SR method.
+Please zoom in for better view.
+
+
+![alt text](../assets/img/dmsr/dmsr_pro11-1.png)
+![alt text](../assets/img/dmsr/dmsr_pro10-1.png)
+![alt text](../assets/img/dmsr/dmsr_pro9-1.png) 
+![alt text](../assets/img/dmsr/dmsr_pro8-1.png) 
+![alt text](../assets/img/dmsr/dmsr_pro7-1.png) 
+![alt text](../assets/img/dmsr/dmsr_pro6-1.png) 
+![alt text](../assets/img/dmsr/dmsr_pro5-1.png) 
+![alt text](../assets/img/dmsr/dmsr_pro4-1.png) 
+![alt text](../assets/img/dmsr/dmsr_pro3-1.png) 
+![alt text](../assets/img/dmsr/dmsr_pro2-1.png) 
+![alt text](../assets/img/dmsr/dmsr_pro1-1.png) 
