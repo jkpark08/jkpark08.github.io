@@ -12,8 +12,6 @@ tags3: #
 
 
 
-<img align="left" width="120" src="../assets/img/dmsr/dmsr.png" />
-
 # SR
 
 
