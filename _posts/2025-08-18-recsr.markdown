@@ -17,6 +17,8 @@ tags3: #
 
 - - -
 ## Demo
+DM-SR vs. new method
+
 
 <link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
 <script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
