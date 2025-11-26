@@ -1,1 +1,17 @@
+---
+layout: post
+title: Mars2 2025 challenge on multimodal reasoning: Datasets, methods, results, discussion, and outlook, ICCVW, 2025.
+date: 2025-11-23 13:32:20 +0300
+description: ICCVW, 2025. # Add post description (optional)
+img: mars.jpg # Add image post (optional)
+fig-caption: # Add figcaption (optional)
+tags: [MARS, VLM] #
+tags3: [MARS, VLM] #
+---
+##### Joonkyu Park, Seungjun Nah, and Kyoung Mu Lee.
+This paper reviews the MARS2 2025 Challenge on Multi-modal Reasoning. We aim to bring together different approaches in multimodal machine learning and LLMs via alarge benchmark. We hope it better allows researchers to follow the state-of-the-art in this very dynamic area. Meanwhile, a growing number of testbeds have boosted the evolution of general-purpose large language models. Thus, this year’s MARS2 focuses on real-world and specialized scenarios to broaden the multimodal reasoning applications of MLLMs. Our organizing team released two tailored datasets Lens and AdsQA as test sets, which support general reasoning in 12 daily scenarios and domain-specific reasoning in advertisement videos, respectively. We evaluated 40+ baselines that include both generalist MLLMs and task-specific models, and opened up three competition tracks, i.e., Visual Grounding in Real-world Scenarios (VGRS), Visual Question Answering with Spatial Awareness (VQA-SA), and Visual Reasoning in Creative AdvertisementVideos (VR-Ads). Finally, 76 teams from the renownedacademic and industrial institutions have registered and40+ valid submissions (out of 1200+) have been included in our ranking lists. Our datasets, code sets (40+ base-lines and 15+ participants’ methods), and rankings are publicly available on the MARS2 workshop website andour GitHub organization page ttps://github.com/mars2workshop/, where our updates and announce-ments of upcoming events will be continuously provided. 
+
+
+[[paper]([https://www.bmvc2021-virtualconference.com/assets/papers/0149.pdf](https://openaccess.thecvf.com/content/ICCV2025W/MARS2/papers/Xu_MARS2_2025_Challenge_on_Multimodal_Reasoning_Datasets_Methods_Results_Discussion_ICCVW_2025_paper.pdf))] 
+
 
