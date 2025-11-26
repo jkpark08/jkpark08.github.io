@@ -3,7 +3,7 @@ layout: post
 title: Mars2 2025 challenge on multimodal reasoning: Datasets, methods, results, discussion, and outlook, ICCVW, 2025.
 date: 2025-11-23 13:32:20 +0300
 description: ICCVW, 2025. # Add post description (optional)
-img: mars.jpg # Add image post (optional)
+img: mars.png # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [MARS, VLM] #
 tags3: [MARS, VLM] #
