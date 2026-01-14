@@ -166,8 +166,8 @@ You can drag the slider to visually compare the two methods side by side.
     });
   new juxtapose.JXSlider('#slider7',
     [
-      {src: '../assets/img/dmsr/lr9.jpg', label: 'Bicubic'},
-      {src: '../assets/img/dmsr/sr9.png',label: 'DM-SR'}
+      {src: '../assets/img/dmsr/lr10.jpg', label: 'Bicubic'},
+      {src: '../assets/img/dmsr/sr10.png',label: 'DM-SR'}
     ],
     {
       animate: true,
