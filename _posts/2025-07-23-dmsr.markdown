@@ -3,7 +3,7 @@ layout: post
 title: Bridging the Distribution Gap to Harness Pretrained Diffusion Priors for Super-Resolution
 date: 2026-01-25 13:32:20 +0300
 description: ICLR, 2026. # Add post description (optional)
-img: # Add image post (optional)
+img: dmsr.png # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: DMSR
 ---
