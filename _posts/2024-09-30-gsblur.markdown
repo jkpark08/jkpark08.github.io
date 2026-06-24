@@ -1,13 +1,13 @@
 ---
 layout: post
 title: A 3D Scene-Based Dataset for Realistic Image Deblurring. NeurIPS, 2024.
+authors: Dongwoo Lee, Joonkyu Park, and Kyoung Mu Lee.
 date: 2024-09-29 13:32:20 +0300
 description: NeurIPS, 2024. # Add post description (optional)
 img: gsblur.JPG # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [3DGS, Dataset, Deblurring] #
 ---
-##### Dongwoo Lee, Joonkyu Park, and Kyoung Mu Lee.
 
 To train a deblurring network, an appropriate dataset with paired blurry and sharp images is essential.Existing datasets collect blurry images either synthetically by aggregating consecutive sharp frames or using sophisticated camera systems to capture real blur.
 However, these methods offer limited diversity in blur types (blur trajectories) or require extensive human effort to reconstruct large-scale datasets, failing to fully reflect real-world blur scenarios.
