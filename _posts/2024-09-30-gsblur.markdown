@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A 3D Scene-Based Dataset for Realistic Image Deblurring. NeurIPS, 2024.
-authors: Dongwoo Lee, Joonkyu Park, and Kyoung Mu Lee.
+authors: Dongwoo Lee, <strong>Joonkyu Park</strong>, and Kyoung Mu Lee.
 date: 2024-09-29 13:32:20 +0300
 description: NeurIPS, 2024. # Add post description (optional)
 img: gsblur.JPG # Add image post (optional)
