@@ -893,9 +893,14 @@ table tfoot td {
   font-size: 14px;
 }
 
-.wrapper {
+/* .wrapper {
   max-width: 1250px;
   position: relative;
+} */
+
+.wrapper {
+  width: 100%;
+  max-width: none;
 }
 
 .post, .article-page {
