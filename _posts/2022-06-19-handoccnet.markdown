@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Occlusion-Robust 3d Hand Mesh Estimation Network, CVPR, 2022.
-authors: Joonkyu Park, Yeonguk Oh, Gyeongsik Moon, Hongsuk Choi, and Kyoung Mu Lee
+authors: <strong>Joonkyu Park</strong>, Yeonguk Oh, Gyeongsik Moon, Hongsuk Choi, and Kyoung Mu Lee
 date: 2022-06-19 13:32:20 +0300
 description:  CVPR, 2022. # Add post description (optional)
 img: handoccnet2.gif # handoccnet.jpg # Add image post (optional)
