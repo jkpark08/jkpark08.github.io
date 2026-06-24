@@ -913,6 +913,15 @@ table tfoot td {
   line-height: 1.25;
 }
 
+/* Optional: make the thumbnail less dominant in the wider card */
+.post .post-thumbnail {
+  width: 22%;
+}
+
+.post .post-content {
+  width: 78%;
+}
+
 .post, .article-page {
   background-color: #fff;
 }
