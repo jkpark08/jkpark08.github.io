@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Learning to Corrupt for Better Restoration, ECCV, 2026.\\Joonkyu Park
+title: Learning to Corrupt for Better Restoration, ECCV, 2026.
+authors: Joonkyu Park
 date: 2026-02-22 13:32:20 +0300
 description: ECCV, 2026. # Add post description (optional)
 img: iacir.png # Add image post (optional)
