@@ -1,13 +1,14 @@
 ---
 layout: post
 title: Occlusion-Robust 3d Hand Mesh Estimation Network, CVPR, 2022.
+authors: Joonkyu Park, Yeonguk Oh, Gyeongsik Moon, Hongsuk Choi, and Kyoung Mu Lee
 date: 2022-06-19 13:32:20 +0300
 description:  CVPR, 2022. # Add post description (optional)
 img: handoccnet2.gif # handoccnet.jpg # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [3D hands, 3D humans, Occlusion-robust network]
 ---
-##### Joonkyu Park, Yeonguk Oh, Gyeongsik Moon, Hongsuk Choi, and Kyoung Mu Lee
+
 Hands are often severely occluded by objects, which makes 3D hand mesh estimation challenging.
 Previous works often have disregarded information at occluded regions.
 However, we argue that occluded regions have strong correlations with hands so that they can provide highly beneficial information for complete 3D hand mesh estimation.
