@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!explorer) return;
 
-  const imageBase = "/assets/projects/ebh/style_grid/";
+  const imageBase = explorer.dataset.imageBase;
 
   const resultImage = explorer.querySelector("#style-result-image");
   const selectionText = explorer.querySelector("#style-selection-text");
@@ -11,28 +11,40 @@ document.addEventListener("DOMContentLoaded", () => {
   const backgroundButtons = explorer.querySelectorAll("[data-background]");
   const foregroundButtons = explorer.querySelectorAll("[data-foreground]");
 
-  let selectedBackground = 1;
-  let selectedForeground = 1;
+  let selectedBackground = "03";
+  let selectedForeground = "03";
+
+  function getActiveIndex(buttons) {
+    return [...buttons].findIndex(
+      (button) => button.classList.contains("is-active")
+    ) + 1;
+  }
 
   function updateResult() {
     const filename =
-      `bg${selectedBackground}_fg${selectedForeground}.png`;
+      `output_${selectedBackground}_${selectedForeground}.png`;
 
     resultImage.src = imageBase + filename;
 
+    const backgroundIndex = getActiveIndex(backgroundButtons);
+    const foregroundIndex = getActiveIndex(foregroundButtons);
+
     resultImage.alt =
-      `Generated result with Background ${selectedBackground} and Foreground ${selectedForeground}`;
+      `Generated result with Background ${backgroundIndex} and Foreground ${foregroundIndex}`;
 
     selectionText.textContent =
-      `Background ${selectedBackground} × Foreground ${selectedForeground}`;
+      `Background ${backgroundIndex} × Foreground ${foregroundIndex}`;
   }
 
   backgroundButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      selectedBackground = Number(button.dataset.background);
+      selectedBackground = button.dataset.background;
 
       backgroundButtons.forEach((item) => {
-        item.classList.toggle("is-active", item === button);
+        const isActive = item === button;
+
+        item.classList.toggle("is-active", isActive);
+        item.setAttribute("aria-pressed", isActive ? "true" : "false");
       });
 
       updateResult();
@@ -41,10 +53,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   foregroundButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      selectedForeground = Number(button.dataset.foreground);
+      selectedForeground = button.dataset.foreground;
 
       foregroundButtons.forEach((item) => {
-        item.classList.toggle("is-active", item === button);
+        const isActive = item === button;
+
+        item.classList.toggle("is-active", isActive);
+        item.setAttribute("aria-pressed", isActive ? "true" : "false");
       });
 
       updateResult();
