@@ -3,13 +3,13 @@ layout: project-page
 title: Controllable ISP
 home_section: project
 project_subtitle: with Samsung AI Center
-img: scisp/scisp.png #
+img: scisp/scisp.png
 project_script: /assets/js/style-explorer.js
 ---
 
-# Controllable ISP (Image Enhancment)
+# Controllable ISP
 
-Here we provide interactive control over foreground and background style, consdiering Harmony between two conflicting styles.
+Here we provide interactive control over foreground and background styles while considering harmony between two conflicting styles.
 
 <section
   class="style-explorer"
@@ -30,7 +30,6 @@ Here we provide interactive control over foreground and background style, consdi
 
   <div class="style-explorer__layout">
 
-    <!-- Background selector -->
     <div class="style-control-panel">
       <p class="style-control-panel__title">Background Style</p>
 
@@ -52,7 +51,6 @@ Here we provide interactive control over foreground and background style, consdi
       </div>
     </div>
 
-    <!-- Selected result -->
     <div class="style-result-panel">
       <div class="style-result-panel__top">
         <div>
@@ -71,7 +69,6 @@ Here we provide interactive control over foreground and background style, consdi
       </div>
     </div>
 
-    <!-- Foreground selector -->
     <div class="style-control-panel">
       <p class="style-control-panel__title">Foreground Style</p>
 
