@@ -2,7 +2,7 @@
 layout: project-page
 title: Controllable ISP
 home_section: project
-project_subtitle: with Meta Reality Lab
+project_subtitle: with Samsung AI Center
 img: ebh_thumbnail.png
 project_script: /assets/js/style-explorer.js
 ---
