@@ -126,29 +126,56 @@ profile:
           <p>02</p>
           <h2 id="publications-heading">Selected Publications</h2>
         </div>
-
-        <div class="research-list" role="list">
+      
+        <div
+          class="research-list"
+          id="publication-list"
+          data-page-size="5"
+          role="list">
+      
           {% for post in site.posts %}
             {% unless post.home_section == 'project' or post.url == featured_post.url %}
-              <article class="research-card" role="listitem">
-                <a class="research-card__image" href="{{ post.url | relative_url }}" aria-label="Read {{ post.title }}">
-                  {% if post.img %}
-                  <img src="{{ '/assets/img/' | append: post.img | relative_url }}" alt="Preview image for {{ post.title | escape }}">
-                  {% else %}
-                  <span class="research-card__placeholder">RESEARCH</span>
-                  {% endif %}
-                </a>
-                <div class="research-card__body">
-                  <p class="research-card__venue">{{ post.description | default: post.date | strip_html }}</p>
-                  <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-                  {% if post.authors %}
-                  <p class="research-card__authors">{{ post.authors }}</p>
-                  {% endif %}
-                </div>
-              </article>
+            <article class="research-card publication-card" role="listitem">
+              <a class="research-card__image"
+                 href="{{ post.url | relative_url }}"
+                 aria-label="Read {{ post.title }}">
+      
+                {% if post.img %}
+                <img
+                  src="{{ '/assets/img/' | append: post.img | relative_url }}"
+                  alt="Preview image for {{ post.title | escape }}">
+                {% else %}
+                <span class="research-card__placeholder">RESEARCH</span>
+                {% endif %}
+              </a>
+      
+              <div class="research-card__body">
+                <p class="research-card__venue">
+                  {{ post.description | default: post.date | strip_html }}
+                </p>
+      
+                <h3>
+                  <a href="{{ post.url | relative_url }}">
+                    {{ post.title }}
+                  </a>
+                </h3>
+      
+                {% if post.authors %}
+                <p class="research-card__authors">
+                  {{ post.authors }}
+                </p>
+                {% endif %}
+              </div>
+            </article>
             {% endunless %}
           {% endfor %}
         </div>
+      
+        <nav
+          class="publication-pagination"
+          id="publication-pagination"
+          aria-label="Publication pages">
+        </nav>
       </section>
 
       <section class="content-column" id="projects" aria-labelledby="projects-heading">
