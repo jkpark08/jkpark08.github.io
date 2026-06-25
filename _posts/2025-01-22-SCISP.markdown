@@ -1,0 +1,83 @@
+---
+layout: project-page
+title: Controllable ISP
+home_section: project
+project_subtitle: with Meta Reality Lab
+img: ebh_thumbnail.png
+project_script: /assets/js/style-explorer.js
+---
+
+# EBH Dataset
+
+Here we provide interactive control over foreground and background styles.
+
+<section class="style-explorer" id="style-explorer">
+  <div class="style-explorer__header">
+    <p class="project-venue">INTERACTIVE STYLE EXPLORER</p>
+    <h2>Foreground and Background Style Control</h2>
+    <p>
+      Select a background style and a foreground style to visualize
+      the corresponding generated result.
+    </p>
+  </div>
+
+  <div class="style-explorer__layout">
+
+    <div class="style-control-panel">
+      <p class="style-control-panel__title">Background Style</p>
+
+      <div class="style-option-grid style-option-grid--background">
+        {% for i in (1..4) %}
+        <button
+          class="style-option style-option--background {% if i == 1 %}is-active{% endif %}"
+          type="button"
+          data-background="{{ i }}">
+
+          <img
+            src="{{ '/assets/projects/ebh/style_grid/bg' | append: i | append: '_fg1.png' | relative_url }}"
+            alt="Background style {{ i }} preview">
+
+          <span>Background {{ i }}</span>
+        </button>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="style-result-panel">
+      <div class="style-result-panel__top">
+        <div>
+          <p class="style-result-panel__label">Selected Result</p>
+          <h3 id="style-selection-text">Background 1 × Foreground 1</h3>
+        </div>
+      </div>
+
+      <div class="style-result-image-wrap">
+        <img
+          id="style-result-image"
+          src="{{ '/assets/projects/ebh/style_grid/bg1_fg1.png' | relative_url }}"
+          alt="Generated result with Background 1 and Foreground 1">
+      </div>
+    </div>
+
+    <div class="style-control-panel">
+      <p class="style-control-panel__title">Foreground Style</p>
+
+      <div class="style-option-grid style-option-grid--foreground">
+        {% for i in (1..5) %}
+        <button
+          class="style-option style-option--foreground {% if i == 1 %}is-active{% endif %}"
+          type="button"
+          data-foreground="{{ i }}">
+
+          <img
+            src="{{ '/assets/projects/ebh/style_grid/bg1_fg' | append: i | append: '.png' | relative_url }}"
+            alt="Foreground style {{ i }} preview">
+
+          <span>Foreground {{ i }}</span>
+        </button>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+</section>
