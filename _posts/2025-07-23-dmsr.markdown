@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bridging the Distribution Gap to Harness Pretrained Diffusion Priors for Super-Resolution, ICLR, 2026.
+title: DM-SR
 project_subtitle: #
 home_section: project
 authors: <strong>Joonkyu Park</strong> and Kyoung Mu Lee
@@ -15,7 +15,7 @@ tags: DMSR
 
 ### 🔗 Links
 
-- 📄 [**Paper**](https://arxiv.org/abs/test) 
+- 📄 [**Paper**](https://iclr.cc/virtual/2026/poster/10011399) 
 - - -
 
 
