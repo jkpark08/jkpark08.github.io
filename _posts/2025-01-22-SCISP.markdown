@@ -7,9 +7,9 @@ img: #
 project_script: /assets/js/style-explorer.js
 ---
 
-# EBH Dataset
+# Controllable ISP (Image Enhancment)
 
-Here we provide interactive control over foreground and background styles.
+Here we provide interactive control over foreground and background style, consdiering Harmony between two conflicting styles.
 
 <section
   class="style-explorer"
