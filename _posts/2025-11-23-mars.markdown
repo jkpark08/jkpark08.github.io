@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Mars2 2025 challenge on multimodal reasoning
+authors: Peng Xu, Shengwu Xiong, Jiajun Zhang, Yaxiong Chen, Bowen Zhou, Chen Change Loy, David A. Clifton, Kyoung Mu Lee, Luc Van Gool, Ruiming He, Ruilin Yao, Xinwei Long, Jirui Huang, Kai Tian, Sa Yang, Yihua Shao, Jin Feng, Yue Zhong, Jiakai Zhou, Cheng Tang, Tianyu Zou, Yifang Zhang, Junming Liang, Guoyou Li, Zhaoxiang Wang, Qiang Zhou, Yichen Zhao, Shili Xiong, Hyeongjin Nam, Jaerin Lee, Jaeyoung Chung, JoonKyu Park (96 additional authors not shown)
 date: 2024-09-29 13:32:20 +0300
 description: ICCVW, 2025. # Add post description (optional)
 img: mars.png # Add image post (optional)
