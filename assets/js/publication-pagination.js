@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const list = document.getElementById("publication-list");
   const pagination = document.getElementById("publication-pagination");
+  const pageStatus = document.getElementById("publication-page-status");
 
   if (!list || !pagination) return;
 
@@ -20,7 +21,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const currentPage = Math.max(1, Math.min(page, totalPages));
     const start = (currentPage - 1) * pageSize;
     const end = start + pageSize;
+    const visibleEnd = Math.min(end, cards.length);
 
+    if (pageStatus) {
+      pageStatus.textContent =
+        `Showing ${start + 1}–${visibleEnd} of ${cards.length} · Page ${currentPage} of ${totalPages}`;
+    }
+    
     cards.forEach((card, index) => {
       card.hidden = index < start || index >= end;
     });
