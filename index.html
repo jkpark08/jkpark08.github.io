@@ -1,38 +1,181 @@
 ---
-layout: main
+layout: showcase
+title: Joonkyu Park | Computer Vision Research
+description: Personal website of Joonkyu Park.
+profile:
+  role: Computer Vision Researcher
+  affiliation: Seoul National University · CV Lab
+  location: Seoul, Republic of Korea
+  bio: I study generative image restoration, 3D vision, and human-centered visual intelligence.
+  interests:
+    - Image Restoration & Diffusion Models
+    - 3D Vision & Gaussian Splatting
+    - Human-Object Interaction
+  cv_url: "" # Optional: e.g. /assets/files/Joonkyu_Park_CV.pdf
 ---
-{% for post in paginator.posts %}
-<article class="post">
-  {% if post.img %}
-    <a class="post-thumbnail" style="background-image: url({{"/assets/img/" | prepend: site.baseurl | append : post.img}})" href="{{post.url | prepend: site.baseurl}}"></a>
-  {% else %}
-  {% endif %}
-  <div class="post-content">
-    <h2 class="post-title">
-  <a href="{{post.url | prepend: site.baseurl}}">
-    {{ post.title }}
-  </a>
-</h2>
 
-{% if post.authors %}
-<p class="post-authors">{{ post.authors }}</p>
-{% endif %}
-<!--     <span class="post-date">{{post.date | date: '%Y, %b %d'}}&nbsp;&nbsp;&nbsp;—&nbsp;</span> -->
-<!--     <span class="post-words">{% capture words %}{{ post.content | number_of_words }}{% endcapture %}</span> -->
-<!--     <span class="post-words">{% capture words %}{{ post.content | number_of_words }}{% endcapture %}{% unless words contains "-" %}{{ words | plus: 250 | divided_by: 250 | append: " minute read" }}{% endunless %}</span> -->
-  </div>
-</article>
+{% assign featured_post = site.posts.first %}
+{% assign profile_image = '/assets/img/' | append: site.author-img | relative_url %}
 
-{% if post.tags2 %}
-  <h2>Publications</h2>
-{% else %}
-{% endif %}
+<div class="showcase-shell">
+  <div class="showcase-ambient showcase-ambient--red" aria-hidden="true"></div>
+  <div class="showcase-ambient showcase-ambient--blue" aria-hidden="true"></div>
 
-{% if post.tags3 %}
-  <h2>Projects</h2>
-{% else %}
-{% endif %}
+  <header class="site-topbar">
+    <a class="site-brand" href="{{ '/' | relative_url }}" aria-label="Homepage">
+      <span class="site-brand__mark">JK</span>
+      <span>{{ site.author }}</span>
+    </a>
 
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="#about">About</a>
+      <a href="#publications">Publications</a>
+      <a href="#projects">Projects</a>
+      <a class="site-nav__email" href="mailto:{{ site.social-email }}">Contact</a>
+    </nav>
+  </header>
 
-{% endfor %}
-{% include pagination.html %}
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div
+        class="hero__backdrop"
+        aria-hidden="true"
+        {% if featured_post.img %}
+        style="background-image: linear-gradient(90deg, rgba(7, 8, 12, 0.96) 3%, rgba(7, 8, 12, 0.78) 46%, rgba(7, 8, 12, 0.95) 100%), linear-gradient(0deg, #07080c 0%, transparent 55%), url('{{ '/assets/img/' | append: featured_post.img | relative_url }}');"
+        {% endif %}
+      ></div>
+
+      <div class="hero__content">
+        <img class="hero__portrait" src="{{ profile_image }}" alt="Portrait of {{ site.author }}">
+
+        <div class="hero__identity">
+          <p class="eyebrow">PERSONAL RESEARCH PROFILE</p>
+          <h1 id="hero-title">{{ site.author }}</h1>
+          <p class="hero__role">{{ page.profile.role }}</p>
+          <p class="hero__meta">{{ page.profile.affiliation }} <span aria-hidden="true">·</span> {{ page.profile.location }}</p>
+
+          <div class="hero__links">
+            <a href="mailto:{{ site.social-email }}">{{ site.social-email }}</a>
+            {% if site.social-github %}
+            <a href="https://github.com/{{ site.social-github }}" rel="noopener noreferrer" target="_blank">GitHub</a>
+            {% endif %}
+            {% if page.profile.cv_url != "" %}
+            <a href="{{ page.profile.cv_url | relative_url }}">CV</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+
+      <a class="hero__feature" href="{{ featured_post.url | relative_url }}">
+        <span class="hero__feature-label">FEATURED RESEARCH</span>
+        <strong>{{ featured_post.title }}</strong>
+        <span>{{ featured_post.date | date: '%Y' }}</span>
+      </a>
+    </section>
+
+    <section class="content-grid" aria-label="Research overview">
+      <section class="content-column content-column--about" id="about" aria-labelledby="about-heading">
+        <div class="column-heading">
+          <p>01</p>
+          <h2 id="about-heading">Personal Information</h2>
+        </div>
+
+        <article class="about-card panel-card">
+          <p class="about-card__lead">{{ page.profile.bio }}</p>
+          <div class="about-card__divider"></div>
+          <p class="about-card__label">Research Interests</p>
+          <ul class="interest-list">
+            {% for interest in page.profile.interests %}
+            <li>{{ interest }}</li>
+            {% endfor %}
+          </ul>
+        </article>
+
+        <article class="contact-card panel-card">
+          <p class="contact-card__label">Get in touch</p>
+          <a class="contact-card__email" href="mailto:{{ site.social-email }}">{{ site.social-email }}</a>
+          <p>Open to research collaboration and academic discussion.</p>
+        </article>
+      </section>
+
+      <section class="content-column" id="publications" aria-labelledby="publications-heading">
+        <div class="column-heading">
+          <p>02</p>
+          <h2 id="publications-heading">Selected Publications</h2>
+        </div>
+
+        <div class="research-list" role="list">
+          {% assign publication_count = 0 %}
+          {% for post in site.posts %}
+            {% unless post.home_section == 'project' %}
+              {% if publication_count < 6 %}
+              <article class="research-card" role="listitem">
+                <a class="research-card__image" href="{{ post.url | relative_url }}" aria-label="Read {{ post.title }}">
+                  {% if post.img %}
+                  <img src="{{ '/assets/img/' | append: post.img | relative_url }}" alt="Preview image for {{ post.title | escape }}">
+                  {% else %}
+                  <span class="research-card__placeholder">RESEARCH</span>
+                  {% endif %}
+                </a>
+                <div class="research-card__body">
+                  <p class="research-card__venue">{{ post.description | default: post.date | strip_html }}</p>
+                  <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                  {% if post.authors %}
+                  <p class="research-card__authors">{{ post.authors }}</p>
+                  {% endif %}
+                </div>
+              </article>
+              {% assign publication_count = publication_count | plus: 1 %}
+              {% endif %}
+            {% endunless %}
+          {% endfor %}
+        </div>
+      </section>
+
+      <section class="content-column" id="projects" aria-labelledby="projects-heading">
+        <div class="column-heading">
+          <p>03</p>
+          <h2 id="projects-heading">Projects</h2>
+        </div>
+
+        <div class="research-list" role="list">
+          {% assign project_count = 0 %}
+          {% for post in site.posts %}
+            {% if post.home_section == 'project' %}
+              {% if project_count < 6 %}
+              <article class="research-card" role="listitem">
+                <a class="research-card__image" href="{{ post.url | relative_url }}" aria-label="View {{ post.title }}">
+                  {% if post.img %}
+                  <img src="{{ '/assets/img/' | append: post.img | relative_url }}" alt="Preview image for {{ post.title | escape }}">
+                  {% else %}
+                  <span class="research-card__placeholder">PROJECT</span>
+                  {% endif %}
+                </a>
+                <div class="research-card__body">
+                  <p class="research-card__venue">PROJECT</p>
+                  <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                  {% if post.description %}
+                  <p class="research-card__authors">{{ post.description | strip_html | truncatewords: 16 }}</p>
+                  {% endif %}
+                </div>
+              </article>
+              {% assign project_count = project_count | plus: 1 %}
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+
+          {% if project_count == 0 %}
+          <article class="empty-state">
+            <p>Mark a project post with <code>home_section: project</code> in its YAML front matter to show it here.</p>
+          </article>
+          {% endif %}
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© {{ site.time | date: '%Y' }} {{ site.author }}</span>
+    <span>Computer Vision · Generative AI · 3D Vision</span>
+  </footer>
+</div>
