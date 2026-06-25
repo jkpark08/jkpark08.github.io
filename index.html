@@ -171,11 +171,22 @@ profile:
           {% endfor %}
         </div>
       
-        <nav
-          class="publication-pagination"
-          id="publication-pagination"
-          aria-label="Publication pages">
-        </nav>
+        <div class="publication-pager">
+          <div class="publication-pager__info">
+            <span class="publication-pager__label">Publication Pages</span>
+            <span
+              class="publication-pager__status"
+              id="publication-page-status"
+              aria-live="polite">
+            </span>
+          </div>
+        
+          <nav
+            class="publication-pagination"
+            id="publication-pagination"
+            aria-label="Publication pages">
+          </nav>
+        </div>
       </section>
 
       <section class="content-column" id="projects" aria-labelledby="projects-heading">
