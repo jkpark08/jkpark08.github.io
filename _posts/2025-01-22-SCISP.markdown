@@ -15,6 +15,7 @@ Here we provide interactive control over foreground and background style, consdi
   class="style-explorer"
   id="style-explorer"
   data-image-base="{{ '/assets/img/scisp/' | relative_url }}">
+
   <div class="style-explorer__header">
     <p class="project-venue">INTERACTIVE STYLE EXPLORER</p>
     <h2>Foreground and Background Style Control</h2>
@@ -24,59 +25,69 @@ Here we provide interactive control over foreground and background style, consdi
     </p>
   </div>
 
+  {% assign background_codes = "03,05,10,23" | split: "," %}
+  {% assign foreground_codes = "03,15,16,17,20" | split: "," %}
+
   <div class="style-explorer__layout">
 
+    <!-- Background selector -->
     <div class="style-control-panel">
       <p class="style-control-panel__title">Background Style</p>
 
       <div class="style-option-grid style-option-grid--background">
-        {% for i in (1..4) %}
+        {% for bg in background_codes %}
         <button
-          class="style-option style-option--background {% if i == 1 %}is-active{% endif %}"
+          class="style-option style-option--background {% if forloop.first %}is-active{% endif %}"
           type="button"
-          data-background="{{ i }}">
+          data-background="{{ bg }}"
+          aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}">
 
           <img
-            src="{{ '/assets/img/scisp/bg' | append: i | append: '_fg1.png' | relative_url }}"
-            alt="Background style {{ i }} preview">
+            src="{{ '/assets/img/scisp/output_' | append: bg | append: '_03.png' | relative_url }}"
+            alt="Background style {{ forloop.index }}">
 
-          <span>Background {{ i }}</span>
+          <span>Background {{ forloop.index }}</span>
         </button>
         {% endfor %}
       </div>
     </div>
 
+    <!-- Selected result -->
     <div class="style-result-panel">
       <div class="style-result-panel__top">
         <div>
           <p class="style-result-panel__label">Selected Result</p>
-          <h3 id="style-selection-text">Background 1 × Foreground 1</h3>
+          <h3 id="style-selection-text">
+            Background 1 × Foreground 1
+          </h3>
         </div>
       </div>
 
       <div class="style-result-image-wrap">
         <img
           id="style-result-image"
-          src="{{ '/assets/img/scisp/bg1_fg1.png' | relative_url }}"
+          src="{{ '/assets/img/scisp/output_03_03.png' | relative_url }}"
           alt="Generated result with Background 1 and Foreground 1">
       </div>
     </div>
 
+    <!-- Foreground selector -->
     <div class="style-control-panel">
       <p class="style-control-panel__title">Foreground Style</p>
 
       <div class="style-option-grid style-option-grid--foreground">
-        {% for i in (1..5) %}
+        {% for fg in foreground_codes %}
         <button
-          class="style-option style-option--foreground {% if i == 1 %}is-active{% endif %}"
+          class="style-option style-option--foreground {% if forloop.first %}is-active{% endif %}"
           type="button"
-          data-foreground="{{ i }}">
+          data-foreground="{{ fg }}"
+          aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}">
 
           <img
-            src="{{ '/assets/img/scisp/bg1_fg' | append: i | append: '.png' | relative_url }}"
-            alt="Foreground style {{ i }} preview">
+            src="{{ '/assets/img/scisp/output_03_' | append: fg | append: '.png' | relative_url }}"
+            alt="Foreground style {{ forloop.index }}">
 
-          <span>Foreground {{ i }}</span>
+          <span>Foreground {{ forloop.index }}</span>
         </button>
         {% endfor %}
       </div>
