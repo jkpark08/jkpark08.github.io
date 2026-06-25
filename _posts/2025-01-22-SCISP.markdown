@@ -11,7 +11,10 @@ project_script: /assets/js/style-explorer.js
 
 Here we provide interactive control over foreground and background styles.
 
-<section class="style-explorer" id="style-explorer">
+<section
+  class="style-explorer"
+  id="style-explorer"
+  data-image-base="{{ '/assets/img/scisp/' | relative_url }}">
   <div class="style-explorer__header">
     <p class="project-venue">INTERACTIVE STYLE EXPLORER</p>
     <h2>Foreground and Background Style Control</h2>
@@ -34,7 +37,7 @@ Here we provide interactive control over foreground and background styles.
           data-background="{{ i }}">
 
           <img
-            src="{{ '/assets/projects/ebh/style_grid/bg' | append: i | append: '_fg1.png' | relative_url }}"
+            src="{{ '/assets/img/scisp/bg' | append: i | append: '_fg1.png' | relative_url }}"
             alt="Background style {{ i }} preview">
 
           <span>Background {{ i }}</span>
@@ -54,7 +57,7 @@ Here we provide interactive control over foreground and background styles.
       <div class="style-result-image-wrap">
         <img
           id="style-result-image"
-          src="{{ '/assets/projects/ebh/style_grid/bg1_fg1.png' | relative_url }}"
+          src="{{ '/assets/img/scisp/bg1_fg1.png' | relative_url }}"
           alt="Generated result with Background 1 and Foreground 1">
       </div>
     </div>
@@ -70,7 +73,7 @@ Here we provide interactive control over foreground and background styles.
           data-foreground="{{ i }}">
 
           <img
-            src="{{ '/assets/projects/ebh/style_grid/bg1_fg' | append: i | append: '.png' | relative_url }}"
+            src="{{ '/assets/img/scisp/bg1_fg' | append: i | append: '.png' | relative_url }}"
             alt="Foreground style {{ i }} preview">
 
           <span>Foreground {{ i }}</span>
