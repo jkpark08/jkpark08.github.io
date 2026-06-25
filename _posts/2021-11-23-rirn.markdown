@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Recurrence-in-Recurrence Networks for Video Deblurring, BMVC, 2022.
+title: Recurrence-in-Recurrence Networks for Video Deblurring
 authors: <strong>Joonkyu Park</strong>, Seungjun Nah, and Kyoung Mu Lee.
 date: 2021-11-23 13:32:20 +0300
 description: BMVC, 2021. # Add post description (optional)
