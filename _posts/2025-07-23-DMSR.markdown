@@ -6,7 +6,7 @@ home_section: project
 authors: <strong>Joonkyu Park</strong> and Kyoung Mu Lee
 date: 2026-01-25 13:32:20 +0300
 description: ICLR, 2026. # Add post description (optional)
-img: dmsr.png # Add image post (optional)
+img: dmsr/dmsr.png # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: DMSR
 ---
