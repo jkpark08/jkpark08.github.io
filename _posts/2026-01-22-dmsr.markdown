@@ -17,5 +17,4 @@ adaptively predicts the appropriate noise level based on the degradation of each
 distribution. Extensive experiments show that DM-SR achieves superior perceptual quality with a single-stage diffusion process, setting a new direction for efficient
 and high-fidelity SR with diffusion models.
 
-[[paper](https://openreview.net/pdf?id=66Ad0i78lW)]
-
+[[paper](https://iclr.cc/virtual/2026/poster/10011399)]
