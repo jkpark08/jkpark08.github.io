@@ -169,10 +169,16 @@ profile:
                   {% endif %}
                 </a>
                 <div class="research-card__body">
-                  <p class="research-card__venue">PROJECT</p>
-                  <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-                  {% if post.description %}
-                  <p class="research-card__authors">{{ post.description | strip_html | truncatewords: 16 }}</p>
+                  <h3>
+                    <a href="{{ post.url | relative_url }}">
+                      {{ post.title }}
+                    </a>
+                  </h3>
+                
+                  {% if post.project_subtitle %}
+                  <p class="research-card__project-subtitle">
+                    {{ post.project_subtitle }}
+                  </p>
                   {% endif %}
                 </div>
               </article>
