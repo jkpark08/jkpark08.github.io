@@ -1,0 +1,21 @@
+---
+layout: post
+title: Bridging the Distribution Gap to Harness Pretrained Diffusion Priors for Super-Resolution
+date: 2026-01-22 13:32:20 +0300
+description: ICCVW, 2025. # Add post description (optional)
+img: dmsr.png # Add image post (optional)
+fig-caption: # Add figcaption (optional)
+tags: [DMSR] #
+---
+
+Diffusion models, well recognized for their strong generative priors, have recently been increasingly applied to super-resolution (SR) tasks. However, as diffusion
+models are trained on Gaussian-corrupted natural images, the distribution gap between low-resolution (LR) inputs and the model’s training distribution hinders
+direct inference. Prior works address this by conditioning on LR images, but their fine-tuning often weakens generative capability and requires multiple de-
+noising steps. In this work, we present DM-SR, a novel framework that bridges this gap without modifying the pretrained diffusion model. We train an image
+encoder that maps LR inputs into the latent distribution aligned with the diffusion model’s training space, preserving its full generative power. Furthermore, DM-SR
+adaptively predicts the appropriate noise level based on the degradation of each input, ensuring optimal alignment with the diffusion model’s timestep-dependent
+distribution. Extensive experiments show that DM-SR achieves superior perceptual quality with a single-stage diffusion process, setting a new direction for efficient
+and high-fidelity SR with diffusion models.
+
+[[paper](https://openreview.net/pdf?id=66Ad0i78lW)]
+
