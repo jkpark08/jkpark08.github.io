@@ -171,7 +171,7 @@ profile:
           {% endfor %}
         </div>
       
-        <div class="publication-pager">
+        <div class="publication-pager" id="publication-pager">
           <div class="publication-pager__info">
             <span class="publication-pager__label">Publication Pages</span>
             <span
@@ -243,8 +243,12 @@ profile:
 document.addEventListener("DOMContentLoaded", function () {
   const publicationList = document.getElementById("publication-list");
   const pagination = document.getElementById("publication-pagination");
+  const pager = document.getElementById("publication-pager");
+  const pageStatus = document.getElementById("publication-page-status");
 
-  if (!publicationList || !pagination) return;
+  if (!publicationList || !pagination || !pager || !pageStatus) {
+    return;
+  }
 
   const cards = Array.from(
     publicationList.querySelectorAll(".publication-card")
@@ -253,18 +257,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const pageSize = Number(publicationList.dataset.pageSize || 5);
   const totalPages = Math.ceil(cards.length / pageSize);
 
-  if (totalPages <= 1) {
-    pagination.style.display = "none";
+  if (cards.length === 0 || totalPages <= 1) {
+    pager.hidden = true;
     return;
   }
-
-  let currentPage = 1;
 
   function createButton(label, page, options = {}) {
     const button = document.createElement("button");
 
     button.type = "button";
     button.className = "publication-pagination__button";
+    button.textContent = label;
 
     if (options.active) {
       button.classList.add("is-active");
@@ -275,8 +278,6 @@ document.addEventListener("DOMContentLoaded", function () {
       button.disabled = true;
     }
 
-    button.textContent = label;
-
     button.addEventListener("click", function () {
       if (!options.disabled) {
         showPage(page, true);
@@ -286,20 +287,22 @@ document.addEventListener("DOMContentLoaded", function () {
     return button;
   }
 
-  function showPage(page, scrollToList) {
-    currentPage = Math.max(1, Math.min(page, totalPages));
+  function showPage(page, shouldScroll) {
+    const currentPage = Math.max(1, Math.min(page, totalPages));
+    const startIndex = (currentPage - 1) * pageSize;
+    const endIndex = Math.min(startIndex + pageSize, cards.length);
 
     cards.forEach(function (card, index) {
-      const start = (currentPage - 1) * pageSize;
-      const end = start + pageSize;
-
-      card.hidden = !(index >= start && index < end);
+      card.hidden = index < startIndex || index >= endIndex;
     });
+
+    pageStatus.textContent =
+      `Showing ${startIndex + 1}–${endIndex} of ${cards.length} publications · Page ${currentPage}/${totalPages}`;
 
     pagination.innerHTML = "";
 
     pagination.appendChild(
-      createButton("‹", currentPage - 1, {
+      createButton("Prev", currentPage - 1, {
         disabled: currentPage === 1
       })
     );
@@ -313,13 +316,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     pagination.appendChild(
-      createButton("›", currentPage + 1, {
+      createButton("Next", currentPage + 1, {
         disabled: currentPage === totalPages
       })
     );
 
-    if (scrollToList) {
-      publicationList.scrollIntoView({
+    if (shouldScroll) {
+      document.getElementById("publications").scrollIntoView({
         behavior: "smooth",
         block: "start"
       });
