@@ -4,6 +4,7 @@ title: Controllable ISP
 home_section: project
 project_subtitle: with Samsung AI Center
 img: scisp/scisp.png
+date: 2023-01-01 13:32:20 +0300
 project_script: /assets/js/style-explorer.js
 ---
 
