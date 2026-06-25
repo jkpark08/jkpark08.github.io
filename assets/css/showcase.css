@@ -1058,3 +1058,16 @@ body.showcase-body {
   }
 }
 
+.about-card__lead a {
+  color: #ff626b;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 98, 107, 0.6);
+  text-underline-offset: 3px;
+}
+
+.about-card__lead a:hover {
+  color: #ffffff;
+  text-decoration-color: #ffffff;
+}
+
