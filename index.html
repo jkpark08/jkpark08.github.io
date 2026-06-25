@@ -79,7 +79,31 @@ profile:
           <p>01</p>
           <h2 id="about-heading">Personal Information</h2>
         </div>
-
+        {% if featured_post %}
+          <article class="featured-publication-card panel-card">
+            <p class="featured-publication-card__label">Featured Publication</p>
+          
+            <a href="{{ featured_post.url | relative_url }}">
+              {% if featured_post.img %}
+              <img
+                src="{{ '/assets/img/' | append: featured_post.img | relative_url }}"
+                alt="Preview image for {{ featured_post.title | escape }}">
+              {% endif %}
+          
+              <h3>{{ featured_post.title }}</h3>
+            </a>
+          
+            {% if featured_post.authors %}
+            <p class="featured-publication-card__authors">
+              {{ featured_post.authors }}
+            </p>
+            {% endif %}
+          
+            <p class="featured-publication-card__venue">
+              {{ featured_post.description | default: featured_post.date | strip_html }}
+            </p>
+          </article>
+          {% endif %}
         <article class="about-card panel-card">
           <p class="about-card__lead">{{ page.profile.bio }}</p>
           <div class="about-card__divider"></div>
