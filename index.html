@@ -66,10 +66,14 @@ profile:
         </div>
       </div>
 
-      <a class="hero__feature" href="{{ featured_post.url | relative_url }}">
-        <span class="hero__feature-label">FEATURED RESEARCH</span>
-        <strong>{{ featured_post.title }}</strong>
-        <span>{{ featured_post.date | date: '%Y' }}</span>
+      <a class="hero__feature hero__feature--cv"
+         href="{{ '/assets/img/CV_JK.pdf' | relative_url }}"
+         download="CV_JK.pdf"
+         aria-label="Download Joonkyu Park CV">
+      
+        <span class="hero__feature-label">CURRICULUM VITAE</span>
+        <strong>Download CV</strong>
+        <span>PDF Document ↓</span>
       </a>
     </section>
 
