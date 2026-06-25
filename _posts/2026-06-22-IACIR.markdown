@@ -103,30 +103,6 @@ You can drag the slider to visually compare the two methods side by side.
 
 
 
-<table style="width:100%; text-align:center;">
-  <tr>
-    <td>
-      <div align="center" id="slider6" style="display:inline-block; width: 1240px;"></div>
-    </td>
-    </tr>
-</table>
-
-<script>
-  new juxtapose.JXSlider('#slider6',
-    [
-      {src: '../assets/img/iacir/36_master_of_color_street_photography_joel_meyerowitz.jpg', label: 'Bicubic'},
-      {src: '../assets/img/iacir/36_master_of_color_street_photography_joel_meyerowitz_1iter.png',label: 'IAC-IR'}
-    ],
-    {
-      animate: true,
-      showLabels: true,
-      showCredits: false,
-      makeResponsive: true
-    });
-</script>
-
-
-
 
 <table style="width:100%; text-align:center;">
   <tr>
