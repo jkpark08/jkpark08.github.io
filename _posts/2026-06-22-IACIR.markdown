@@ -81,56 +81,6 @@ You can drag the slider to visually compare the two methods side by side.
 <table style="width:100%; text-align:center;">
   <tr>
     <td>
-      <div align="center" id="slider3" style="display:inline-block; width: 1240px;"></div>
-    </td>
-    </tr>
-</table>
-
-<script>
-  new juxtapose.JXSlider('#slider3',
-    [
-      {src: '../assets/img/iacir/7.jpg', label: 'Bicubic'},
-      {src: '../assets/img/iacir/7_1iter.png',label: 'IAC-IR'}
-    ],
-    {
-      animate: true,
-      showLabels: true,
-      showCredits: false,
-      makeResponsive: true
-    });
-</script>
-
-
-
-
-<table style="width:100%; text-align:center;">
-  <tr>
-    <td>
-      <div align="center" id="slider4" style="display:inline-block; width: 1240px;"></div>
-    </td>
-    </tr>
-</table>
-
-<script>
-  new juxtapose.JXSlider('#slider4',
-    [
-      {src: '../assets/img/iacir/10.png', label: 'Bicubic'},
-      {src: '../assets/img/iacir/10_1iter.png',label: 'IAC-IR'}
-    ],
-    {
-      animate: true,
-      showLabels: true,
-      showCredits: false,
-      makeResponsive: true
-    });
-</script>
-
-
-
-
-<table style="width:100%; text-align:center;">
-  <tr>
-    <td>
       <div align="center" id="slider5" style="display:inline-block; width: 1240px;"></div>
     </td>
     </tr>
