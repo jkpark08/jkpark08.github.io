@@ -512,3 +512,46 @@ body.showcase-body {
   .hero__links a { padding: 7px 9px; font-size: 0.75rem; }
   .research-card { grid-template-columns: 96px minmax(0, 1fr); }
 }
+
+
+.featured-publication-card {
+  margin-bottom: 18px;
+  overflow: hidden;
+}
+
+.featured-publication-card__label {
+  margin: 0 0 10px;
+  color: #e50914;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.featured-publication-card img {
+  display: block;
+  width: 100%;
+  max-height: 150px;
+  margin-bottom: 14px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.featured-publication-card h3 {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: 17px;
+  line-height: 1.35;
+}
+
+.featured-publication-card h3:hover {
+  color: #e50914;
+}
+
+.featured-publication-card__authors,
+.featured-publication-card__venue {
+  margin: 5px 0 0;
+  color: #a9a9b5;
+  font-size: 13px;
+  line-height: 1.45;
+}
