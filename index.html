@@ -189,62 +189,60 @@ profile:
         </div>
       </section>
 
-      ```html
 <section class="content-column" id="projects" aria-labelledby="projects-heading">
-  <div class="column-heading">
-    <p>03</p>
-    <h2 id="projects-heading">Selected Projects</h2>
-  </div>
-
-  <div class="research-list project-poster-list" role="list">
-    {% for post in site.posts %}
-      {% if post.home_section == 'project' %}
-      <article class="project-poster" role="listitem">
-        <a
-          class="project-poster__link"
-          href="{{ post.url | relative_url }}"
-          aria-label="Explore {{ post.title }}">
-
-          <div class="project-poster__media">
-            {% if post.img %}
-            <img
-              src="{{ '/assets/img/' | append: post.img | relative_url }}"
-              alt="Preview image for {{ post.title | escape }}">
-            {% else %}
-            <div class="project-poster__placeholder">
-              PROJECT
-            </div>
-            {% endif %}
-
-            <div class="project-poster__image-overlay"></div>
-
-            <span class="project-poster__badge">
-              {{ post.project_label | default: "RESEARCH PROJECT" }}
-            </span>
-
-            <span class="project-poster__arrow" aria-hidden="true">
-              ↗
-            </span>
-          </div>
-
-          <div class="project-poster__content">
-            <h3>{{ post.title }}</h3>
-
-            {% if post.project_subtitle %}
-            <p>{{ post.project_subtitle }}</p>
-            {% endif %}
-
-            <span class="project-poster__explore">
-              Explore Project <span aria-hidden="true">→</span>
-            </span>
-          </div>
-        </a>
-      </article>
-      {% endif %}
-    {% endfor %}
-  </div>
-</section>
-```
+      <div class="column-heading">
+        <p>03</p>
+        <h2 id="projects-heading">Selected Projects</h2>
+      </div>
+    
+      <div class="research-list project-poster-list" role="list">
+        {% for post in site.posts %}
+          {% if post.home_section == 'project' %}
+          <article class="project-poster" role="listitem">
+            <a
+              class="project-poster__link"
+              href="{{ post.url | relative_url }}"
+              aria-label="Explore {{ post.title }}">
+    
+              <div class="project-poster__media">
+                {% if post.img %}
+                <img
+                  src="{{ '/assets/img/' | append: post.img | relative_url }}"
+                  alt="Preview image for {{ post.title | escape }}">
+                {% else %}
+                <div class="project-poster__placeholder">
+                  PROJECT
+                </div>
+                {% endif %}
+    
+                <div class="project-poster__image-overlay"></div>
+    
+                <span class="project-poster__badge">
+                  {{ post.project_label | default: "RESEARCH PROJECT" }}
+                </span>
+    
+                <span class="project-poster__arrow" aria-hidden="true">
+                  ↗
+                </span>
+              </div>
+    
+              <div class="project-poster__content">
+                <h3>{{ post.title }}</h3>
+    
+                {% if post.project_subtitle %}
+                <p>{{ post.project_subtitle }}</p>
+                {% endif %}
+    
+                <span class="project-poster__explore">
+                  Explore Project <span aria-hidden="true">→</span>
+                </span>
+              </div>
+            </a>
+          </article>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </section>
     </section>
   </main>
 
