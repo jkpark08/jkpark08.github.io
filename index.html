@@ -130,7 +130,7 @@ profile:
 
         <div class="research-list" role="list">
           {% for post in site.posts %}
-            {% unless post.home_section == 'project' %}
+            {% unless post.home_section == 'project' or post.url == featured_post.url %}
               <article class="research-card" role="listitem">
                 <a class="research-card__image" href="{{ post.url | relative_url }}" aria-label="Read {{ post.title }}">
                   {% if post.img %}
