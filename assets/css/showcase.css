@@ -555,3 +555,12 @@ body.showcase-body {
   font-size: 13px;
   line-height: 1.45;
 }
+
+.hero__feature--cv {
+  cursor: pointer;
+}
+
+.hero__feature--cv strong::after {
+  content: " ↓";
+  color: #e50914;
+}
