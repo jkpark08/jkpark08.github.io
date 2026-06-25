@@ -622,3 +622,39 @@ body.showcase-body {
     font-size: 12px;
   }
 }
+
+#publication-list .publication-card[hidden] {
+  display: none !important;
+}
+
+.publication-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 7px;
+  margin: 22px 0 8px;
+}
+
+.publication-pagination__button {
+  min-width: 34px;
+  height: 34px;
+  padding: 0 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #d8d8df;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.publication-pagination__button:hover {
+  border-color: #e50914;
+  color: #ffffff;
+}
+
+.publication-pagination__button.is-active {
+  border-color: #e50914;
+  background: #e50914;
+  color: #ffffff;
+}
