@@ -105,10 +105,8 @@ profile:
         </div>
 
         <div class="research-list" role="list">
-          {% assign publication_count = 0 %}
           {% for post in site.posts %}
             {% unless post.home_section == 'project' %}
-              {% if publication_count < 6 %}
               <article class="research-card" role="listitem">
                 <a class="research-card__image" href="{{ post.url | relative_url }}" aria-label="Read {{ post.title }}">
                   {% if post.img %}
@@ -125,8 +123,6 @@ profile:
                   {% endif %}
                 </div>
               </article>
-              {% assign publication_count = publication_count | plus: 1 %}
-              {% endif %}
             {% endunless %}
           {% endfor %}
         </div>
@@ -139,10 +135,8 @@ profile:
         </div>
 
         <div class="research-list" role="list">
-          {% assign project_count = 0 %}
           {% for post in site.posts %}
             {% if post.home_section == 'project' %}
-              {% if project_count < 6 %}
               <article class="research-card" role="listitem">
                 <a class="research-card__image" href="{{ post.url | relative_url }}" aria-label="View {{ post.title }}">
                   {% if post.img %}
@@ -159,8 +153,6 @@ profile:
                   {% endif %}
                 </div>
               </article>
-              {% assign project_count = project_count | plus: 1 %}
-              {% endif %}
             {% endif %}
           {% endfor %}
 
