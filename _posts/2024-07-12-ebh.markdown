@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 3D Hand Sequence Recovery from Real Blurry Images and Event Stream, ECCV, 2024.
+title: 3D Hand Sequence Recovery from Real Blurry Images and Event Stream
 authors: <strong>Joonkyu Park</strong>, Gyeongsik Moon, Weipeng Xu, Evan Kaseman, Takaaki Shiratori, and Kyoung Mu Lee
 date: 2024-07-01 13:32:20 +0300
 description: ECCV, 2024. # Add post description (optional)
