@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<link rel="stylesheet"
+      href="{{ '/assets/css/project-page.css' | relative_url }}">
+
+<main class="project-page-main">
+  <a class="project-page-back" href="{{ '/' | relative_url }}">
+    ← Back to Homepage
+  </a>
+
+  {{ content }}
+</main>
+
+{% if page.project_script %}
+<script src="{{ page.project_script | relative_url }}"></script>
+{% endif %}
