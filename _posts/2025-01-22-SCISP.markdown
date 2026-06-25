@@ -3,7 +3,7 @@ layout: project-page
 title: Controllable ISP
 home_section: project
 project_subtitle: with Samsung AI Center
-img: #
+img: scisp/scisp.png #
 project_script: /assets/js/style-explorer.js
 ---
 
