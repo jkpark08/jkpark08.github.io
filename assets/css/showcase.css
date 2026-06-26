@@ -1613,37 +1613,10 @@ body.showcase-body {
   color: var(--accent-bright);
 }
 
-.jx-slider {
-  margin: 0 !important;
-}
 
-.jx-label {
-  border-radius: 5px !important;
-  background: rgba(8, 10, 16, 0.72) !important;
-  color: #fff !important;
-  font-family: "DM Sans", Arial, sans-serif !important;
-  font-size: 0.7rem !important;
-  font-weight: 800 !important;
-  letter-spacing: 0.08em !important;
-}
 
-.project-article .jx-slider,
-.project-article .jx-image {
-  width: 100% !important;
-  max-width: none !important;
-}
 
-.project-article .jx-slider img,
-.project-article .jx-image img {
-  display: block !important;
-  width: auto !important;
-  max-width: none !important;
-  height: auto !important;
-  margin: 0 !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-  background: transparent !important;
-}
+
 
 /* =========================================================
    DM-SR qualitative comparison panels
@@ -1825,26 +1798,5 @@ body.showcase-body {
   background: rgba(255, 255, 255, 0.03);
 }
 
-.iacir-slider-card .jx-slider {
-  width: 100% !important;
-  overflow: hidden !important;
-}
 
-.iacir-slider-card .jx-image {
-  height: 100% !important;
-}
 
-.iacir-slider-card .jx-image img {
-  display: block !important;
-  width: auto !important;
-  max-width: none !important;
-  height: 100% !important;
-  max-height: none !important;
-  margin: 0 !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-}
-
-.iacir-slider-card .jx-handle {
-  z-index: 20 !important;
-}
