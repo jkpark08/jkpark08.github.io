@@ -10,12 +10,13 @@ description: "Interactive Research Demo"
 img: "scisp/scisp.png"
 summary: "Controllable ISP enables interactive foreground and background style control while maintaining visual harmony between regions with conflicting appearances."
 tags:
-* Image Signal Processing
-* Image Synthesis
-* Style Control
-* Interactive Demo
-* Generative Models
+- Image Signal Processing
+- Image Synthesis
+- Style Control
+- Interactive Demo
+- Generative Models
 ---
+
 
 ## Overview
 
