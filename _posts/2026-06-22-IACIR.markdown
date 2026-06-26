@@ -118,9 +118,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
-
-![IAC-IR qualitative results]({{ '/assets/img/iacir/iacir_character.png' | relative_url }})
-
 ## Key Idea
 
 IAC-IR focuses on restoration settings where different regions of an image can
