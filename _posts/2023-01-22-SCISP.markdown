@@ -1,33 +1,20 @@
 ---
-
 layout: project
-
 title: Controllable ISP
 project_title: Controllable Image Signal Processing
 project_subtitle: with Samsung AI Center
 project_label: Interactive Demo
 home_section: project
-
 date: 2023-01-22 13:32:20 +0300
 description: "Interactive Research Demo"
-
 img: "scisp/scisp.png"
-
-summary: >
-Controllable ISP enables interactive foreground and background style control
-while maintaining visual harmony between regions with conflicting appearances.
-
-paper_url: ""
-code_url: ""
-
+summary: "Controllable ISP enables interactive foreground and background style control while maintaining visual harmony between regions with conflicting appearances."
 tags:
-
 * Image Signal Processing
 * Image Synthesis
 * Style Control
 * Interactive Demo
 * Generative Models
-
 ---
 
 ## Overview
