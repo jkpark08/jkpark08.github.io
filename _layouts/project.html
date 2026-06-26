@@ -54,6 +54,15 @@ layout: default
           {% endif %}
         {% endif %}
 
+        {% if page.dataset_url and page.dataset_url != "" %}
+          <a class="project-button"
+             href="{{ page.dataset_url }}"
+             target="_blank"
+             rel="noopener noreferrer">
+            Download Dataset <span>↓</span>
+          </a>
+          {% endif %}
+
         {% if page.code_url and page.code_url != "" %}
         <a class="project-button"
            href="{{ page.code_url }}"
