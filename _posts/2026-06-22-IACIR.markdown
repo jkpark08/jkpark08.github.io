@@ -43,6 +43,80 @@ substantially across regions, degradation types, and severity levels.
 The examples below compare the restoration results with bicubic upsampling.
 Use the interactive visualization to inspect details in challenging regions.
 
+<link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
+<script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
+
+<div class="iacir-comparisons" id="iacir-comparisons"></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const container = document.getElementById("iacir-comparisons");
+
+  if (!container || typeof juxtapose === "undefined") {
+    return;
+  }
+
+  const imageRoot = "{{ '/assets/img/iacir/' | relative_url }}";
+
+  const comparisons = [
+    ["1.jpg", "1_1iter.png"],
+    ["5.jpg", "5_1iter.png"],
+    ["13.png", "13_1iter.png"],
+    ["107.jpg", "107_1iter.png"],
+    ["108.jpg", "108_1iter.png"],
+    ["109.jpg", "109_1iter.png"],
+    ["113.jpg", "113_1iter.png"],
+    ["114.jpg", "114_1iter.png"],
+    ["116.jpg", "116_1iter.png"],
+    ["1903.jpg", "1903_14k_test.png"],
+    ["1911.jpg", "1911_14k_test.png"],
+    ["CrimeanWarSoldiers-edited.png", "CrimeanWarSoldiers-edited_14k_test.png"],
+    ["iconic-photos-defined-history-05.jpg", "iconic-photos-defined-history-05_14k_test.png"],
+    ["TaftHooverInaugurationOath.png", "TaftHooverInaugurationOath_14k_test.png"],
+    ["the-decisive-moments-street-photography-06.jpg", "the-decisive-moments-street-photography-06_14k_test.png"],
+    ["the-decisive-moments-street-photography-12.jpg", "the-decisive-moments-street-photography-12_14k_test.png"],
+    ["tiger_cub_lion_cub_best_friends_01.jpg", "tiger_cub_lion_cub_best_friends_01_14k_test.png"]
+  ];
+
+  comparisons.forEach(function ([bicubicImage, iacirImage], index) {
+    const sliderId = "iacir-slider-" + (index + 1);
+
+    const card = document.createElement("figure");
+    card.className = "iacir-slider-card";
+
+    card.innerHTML = `
+      <div class="iacir-slider" id="${sliderId}"></div>
+      <figcaption>
+        <span>Bicubic Upsampling</span>
+        <span>IAC-IR</span>
+      </figcaption>
+    `;
+
+    container.appendChild(card);
+
+    new juxtapose.JXSlider(
+      "#" + sliderId,
+      [
+        {
+          src: imageRoot + bicubicImage,
+          label: "Bicubic"
+        },
+        {
+          src: imageRoot + iacirImage,
+          label: "IAC-IR"
+        }
+      ],
+      {
+        animate: true,
+        showLabels: true,
+        showCredits: false,
+        makeResponsive: true,
+        startingPosition: "50%"
+      }
+    );
+  });
+});
+</script>
 
 
 ![IAC-IR qualitative results]({{ '/assets/img/iacir/iacir_character.png' | relative_url }})
