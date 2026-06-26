@@ -1,0 +1,140 @@
+---
+layout: default
+---
+
+<link rel="stylesheet" href="{{ '/assets/css/showcase.css' | relative_url }}">
+
+<main class="project-page">
+  <div class="project-page__ambient project-page__ambient--red"></div>
+  <div class="project-page__ambient project-page__ambient--blue"></div>
+
+  <header class="project-topbar">
+    <a class="project-brand" href="{{ '/' | relative_url }}" aria-label="Back to homepage">
+      <span class="project-brand__mark">JK</span>
+      <span>Joonkyu Park</span>
+    </a>
+
+    <nav class="project-nav" aria-label="Project navigation">
+      <a href="{{ '/' | relative_url }}#projects">Projects</a>
+      <a href="{{ '/' | relative_url }}#publications">Publications</a>
+      <a class="project-nav__contact" href="mailto:{{ site.social-email }}">Contact</a>
+    </nav>
+  </header>
+
+  <section class="project-hero">
+    <div class="project-hero__copy">
+      <p class="project-kicker">
+        {{ page.description | default: "Research Project" }}
+      </p>
+
+      <h1>{{ page.project_title | default: page.title }}</h1>
+
+      {% if page.project_subtitle %}
+      <p class="project-hero__subtitle">{{ page.project_subtitle }}</p>
+      {% endif %}
+
+      {% if page.summary %}
+      <p class="project-hero__summary">{{ page.summary }}</p>
+      {% endif %}
+
+      <div class="project-actions">
+        {% if page.paper_url and page.paper_url != "" %}
+          {% if page.paper_url contains "://" %}
+          <a class="project-button project-button--primary"
+             href="{{ page.paper_url }}"
+             target="_blank"
+             rel="noopener noreferrer">
+            Read Paper <span>↗</span>
+          </a>
+          {% else %}
+          <a class="project-button project-button--primary"
+             href="{{ page.paper_url | relative_url }}">
+            Read Paper <span>↗</span>
+          </a>
+          {% endif %}
+        {% endif %}
+
+        {% if page.code_url and page.code_url != "" %}
+        <a class="project-button"
+           href="{{ page.code_url }}"
+           target="_blank"
+           rel="noopener noreferrer">
+          Code <span>↗</span>
+        </a>
+        {% endif %}
+
+        <a class="project-button"
+           href="{{ '/' | relative_url }}#projects">
+          All Projects <span>←</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="project-hero__visual">
+      {% if page.img %}
+      <img
+        src="{{ '/assets/img/' | append: page.img | relative_url }}"
+        alt="{{ page.project_title | default: page.title | escape }}">
+      {% else %}
+      <div class="project-hero__placeholder">IAC-IR</div>
+      {% endif %}
+
+      <div class="project-hero__overlay"></div>
+
+      <div class="project-hero__label">
+        <span>PROJECT</span>
+        <strong>{{ page.title }}</strong>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-content">
+    <aside class="project-sidebar">
+      <div class="project-info-card">
+        <p class="project-info-card__label">Project Information</p>
+
+        {% if page.authors %}
+        <div class="project-info-card__item">
+          <span>Authors</span>
+          <strong>{{ page.authors }}</strong>
+        </div>
+        {% endif %}
+
+        {% if page.project_subtitle %}
+        <div class="project-info-card__item">
+          <span>Collaboration</span>
+          <strong>{{ page.project_subtitle }}</strong>
+        </div>
+        {% endif %}
+
+        {% if page.description %}
+        <div class="project-info-card__item">
+          <span>Venue</span>
+          <strong>{{ page.description }}</strong>
+        </div>
+        {% endif %}
+      </div>
+
+      {% if page.tags %}
+      <div class="project-info-card project-info-card--tags">
+        <p class="project-info-card__label">Research Topics</p>
+
+        <div class="project-tags">
+          {% for tag in page.tags %}
+          <span>{{ tag }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+    </aside>
+
+    <article class="project-article">
+      {{ content }}
+    </article>
+  </section>
+
+  <footer class="project-footer">
+    <span>© {{ site.time | date: '%Y' }} {{ site.author }}</span>
+    <span>Computer Vision · Generative AI · Image Restoration</span>
+  </footer>
+</main>
