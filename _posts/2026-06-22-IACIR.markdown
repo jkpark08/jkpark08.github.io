@@ -16,6 +16,7 @@ tags:
 summary: "IAC-IR explores an input-aware approach to image restoration, modeling degradations in a way that better reflects the visual evidence preserved in each input image."
 ---
 
+
 ## Overview
 
 Real-world image restoration requires more than applying a fixed degradation
