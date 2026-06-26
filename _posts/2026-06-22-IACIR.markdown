@@ -45,11 +45,8 @@ substantially across regions, degradation types, and severity levels.
 
 ## Interactive Comparison
 
-The examples below compare the restoration results with bicubic upsampling.
-Use the interactive visualization to inspect details in challenging regions.
-
-<link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
-<script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
+The examples below compare Bicubic upsampling and IAC-IR. Drag the divider to
+inspect the restored details.
 
 <div class="iacir-comparisons" id="iacir-comparisons"></div>
 
@@ -57,9 +54,7 @@ Use the interactive visualization to inspect details in challenging regions.
 window.addEventListener("load", function () {
   const container = document.getElementById("iacir-comparisons");
 
-  if (!container || typeof juxtapose === "undefined") {
-    return;
-  }
+  if (!container) return;
 
   const imageRoot = "{{ '/assets/img/iacir/' | relative_url }}";
 
@@ -84,41 +79,52 @@ window.addEventListener("load", function () {
   ];
 
   comparisons.forEach(function ([bicubicImage, iacirImage], index) {
-    const sliderId = "iacir-slider-" + (index + 1);
+    const id = "iacir-comparison-" + (index + 1);
 
     const card = document.createElement("figure");
     card.className = "iacir-slider-card";
 
     card.innerHTML = `
-      <div class="iacir-slider" id="${sliderId}"></div>
+      <div class="iacir-compare" id="${id}" style="--split: 50%;">
+        <img
+          class="iacir-compare__image iacir-compare__image--before"
+          src="${imageRoot + bicubicImage}"
+          alt="Bicubic upsampling result">
+
+        <div class="iacir-compare__after-layer">
+          <img
+            class="iacir-compare__image iacir-compare__image--after"
+            src="${imageRoot + iacirImage}"
+            alt="IAC-IR restoration result">
+        </div>
+
+        <div class="iacir-compare__divider" aria-hidden="true">
+          <span>↔</span>
+        </div>
+
+        <input
+          class="iacir-compare__range"
+          type="range"
+          min="0"
+          max="100"
+          value="50"
+          aria-label="Compare Bicubic and IAC-IR">
+      </div>
+
       <figcaption>
-        <span>Bicubic Upsampling</span>
+        <span>Bicubic</span>
         <span>IAC-IR</span>
       </figcaption>
     `;
 
     container.appendChild(card);
 
-    new juxtapose.JXSlider(
-      "#" + sliderId,
-      [
-        {
-          src: imageRoot + bicubicImage,
-          label: "Bicubic"
-        },
-        {
-          src: imageRoot + iacirImage,
-          label: "IAC-IR"
-        }
-      ],
-      {
-        animate: true,
-        showLabels: true,
-        showCredits: false,
-        makeResponsive: true,
-        startingPosition: "50%"
-      }
-    );
+    const compare = card.querySelector(".iacir-compare");
+    const range = card.querySelector(".iacir-compare__range");
+
+    range.addEventListener("input", function () {
+      compare.style.setProperty("--split", this.value + "%");
+    });
   });
 });
 </script>
