@@ -2,6 +2,7 @@
 layout: post
 title: Bridging the Distribution Gap to Harness Pretrained Diffusion Priors for Super-Resolution
 authors: <strong>Joonkyu Park</strong>, and Kyoung Mu Lee
+paper_url: "https://iclr.cc/virtual/2026/poster/10011399"
 date: 2026-01-22 13:32:20 +0300
 description: ICLR, 2026. # Add post description (optional)
 img: dmsr.png # Add image post (optional)
