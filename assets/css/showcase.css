@@ -1577,3 +1577,50 @@ body.showcase-body {
   }
 }
 
+.iacir-comparisons {
+  display: grid;
+  gap: 24px;
+  margin-top: 26px;
+}
+
+.iacir-slider-card {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.iacir-slider {
+  width: 100%;
+}
+
+.iacir-slider-card figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 11px 15px;
+  color: var(--soft);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.iacir-slider-card figcaption span:last-child {
+  color: var(--accent-bright);
+}
+
+.jx-slider {
+  margin: 0 !important;
+}
+
+.jx-label {
+  border-radius: 5px !important;
+  background: rgba(8, 10, 16, 0.72) !important;
+  color: #fff !important;
+  font-family: "DM Sans", Arial, sans-serif !important;
+  font-size: 0.7rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.08em !important;
+}
