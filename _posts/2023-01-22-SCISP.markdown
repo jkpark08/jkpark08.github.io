@@ -1,95 +1,159 @@
 ---
-layout: project-page
+
+layout: project
+
 title: Controllable ISP
-home_section: project
+project_title: Controllable Image Signal Processing
 project_subtitle: with Samsung AI Center
-img: scisp/scisp.png
-date: 2023-01-01 13:32:20 +0300
-project_script: /assets/js/style-explorer.js
+project_label: Interactive Demo
+home_section: project
+
+date: 2023-01-22 13:32:20 +0300
+description: "Interactive Research Demo"
+
+img: "scisp/scisp.png"
+
+summary: >
+Controllable ISP enables interactive foreground and background style control
+while maintaining visual harmony between regions with conflicting appearances.
+
+paper_url: ""
+code_url: ""
+
+tags:
+
+* Image Signal Processing
+* Image Synthesis
+* Style Control
+* Interactive Demo
+* Generative Models
+
 ---
 
-# Controllable ISP
+## Overview
 
-Here we provide interactive control over foreground and background styles while considering harmony between two conflicting styles.
+Image signal processing typically applies a single global visual style to the
+entire image. However, practical image editing often requires different visual
+appearances for foreground and background regions while preserving a natural
+and coherent final result.
 
-<section
+> **Controllable ISP** enables independent foreground and background style
+> control while generating an output that maintains visual harmony across the
+> full image.
+
+<div class="project-highlight-grid">
+  <div class="project-highlight">
+    <span>01 — FOREGROUND</span>
+    <strong>Choose a visual appearance for the subject or foreground region.</strong>
+  </div>
+
+  <div class="project-highlight">
+    <span>02 — BACKGROUND</span>
+    <strong>Independently select a complementary style for the background.</strong>
+  </div>
+
+  <div class="project-highlight">
+    <span>03 — HARMONY</span>
+    <strong>Generate a visually coherent image despite potentially conflicting style choices.</strong>
+  </div>
+</div>
+
+## Interactive Style Explorer
+
+Select a background style and a foreground style. The generated result updates
+automatically to show the corresponding controllable ISP output.
+
+{% assign background_codes = "03,05,10,23" | split: "," %}
+{% assign foreground_codes = "03,15,16,17,20" | split: "," %}
+
+<div
   class="style-explorer"
   id="style-explorer"
   data-image-base="{{ '/assets/img/scisp/' | relative_url }}">
 
-  <div class="style-explorer__header">
-    <p class="project-venue">INTERACTIVE STYLE EXPLORER</p>
-    <h2>Foreground and Background Style Control</h2>
+  <div class="style-explorer__intro">
+    <p class="style-explorer__eyebrow">INTERACTIVE DEMO</p>
+    <h2>Foreground × Background Control</h2>
     <p>
-      Select a background style and a foreground style to visualize
-      the corresponding generated result.
+      Explore how separate foreground and background style selections affect
+      the final harmonized output.
     </p>
   </div>
 
-  {% assign background_codes = "03,05,10,23" | split: "," %}
-  {% assign foreground_codes = "03,15,16,17,20" | split: "," %}
+  <div class="style-explorer__workspace">
 
-  <div class="style-explorer__layout">
+```
+<section class="style-explorer__control" aria-labelledby="background-style-heading">
+  <div class="style-explorer__control-heading">
+    <span>STEP 01</span>
+    <h3 id="background-style-heading">Background Style</h3>
+  </div>
 
-    <div class="style-control-panel">
-      <p class="style-control-panel__title">Background Style</p>
-
-      <div class="style-option-grid style-option-grid--background">
-        {% for bg in background_codes %}
-        <button
-          class="style-option style-option--background {% if forloop.first %}is-active{% endif %}"
-          type="button"
-          data-background="{{ bg }}"
-          aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}">
-
-          <img
-            src="{{ '/assets/img/scisp/output_' | append: bg | append: '_03.png' | relative_url }}"
-            alt="Background style {{ forloop.index }}">
-
-          <span>Background {{ forloop.index }}</span>
-        </button>
-        {% endfor %}
-      </div>
-    </div>
-
-    <div class="style-result-panel">
-      <div class="style-result-panel__top">
-        <div>
-          <p class="style-result-panel__label">Selected Result</p>
-          <h3 id="style-selection-text">
-            Background 1 × Foreground 1
-          </h3>
-        </div>
-      </div>
-
-      <div class="style-result-image-wrap">
-        <img
-          id="style-result-image"
-          src="{{ '/assets/img/scisp/output_03_03.png' | relative_url }}"
-          alt="Generated result with Background 1 and Foreground 1">
-      </div>
-    </div>
-
-    <div class="style-control-panel">
-      <p class="style-control-panel__title">Foreground Style</p>
-
-      <div class="style-option-grid style-option-grid--foreground">
-        {% for fg in foreground_codes %}
-        <button
-          class="style-option style-option--foreground {% if forloop.first %}is-active{% endif %}"
-          type="button"
-          data-foreground="{{ fg }}"
-          aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}">
-
-          <img
-            src="{{ '/assets/img/scisp/output_03_' | append: fg | append: '.png' | relative_url }}"
-            alt="Foreground style {{ forloop.index }}">
-
-          <span>Foreground {{ forloop.index }}</span>
-        </button>
-        {% endfor %}
-      </div>
-    </div>
-
+  <div class="style-choice-grid style-choice-grid--background">
+    {% for bg in background_codes %}
+    <button
+      class="style-choice {% if forloop.first %}is-active{% endif %}"
+      type="button"
+      data-background="{{ bg }}"
+      aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}">
+      <span class="style-choice__swatch style-choice__swatch--bg-{{ forloop.index }}"></span>
+      <span>Background {{ forloop.index }}</span>
+    </button>
+    {% endfor %}
   </div>
 </section>
+
+<section class="style-explorer__result" aria-live="polite">
+  <div class="style-explorer__result-heading">
+    <span>LIVE RESULT</span>
+    <strong id="style-selection-text">Background 1 × Foreground 1</strong>
+  </div>
+
+  <figure class="style-explorer__figure">
+    <img
+      id="style-result-image"
+      src="{{ '/assets/img/scisp/output_03_03.png' | relative_url }}"
+      alt="Generated result with Background 1 and Foreground 1">
+    <figcaption>
+      <span>Selected Style Pair</span>
+      <span>Controllable ISP Output</span>
+    </figcaption>
+  </figure>
+</section>
+
+<section class="style-explorer__control" aria-labelledby="foreground-style-heading">
+  <div class="style-explorer__control-heading">
+    <span>STEP 02</span>
+    <h3 id="foreground-style-heading">Foreground Style</h3>
+  </div>
+
+  <div class="style-choice-grid style-choice-grid--foreground">
+    {% for fg in foreground_codes %}
+    <button
+      class="style-choice {% if forloop.first %}is-active{% endif %}"
+      type="button"
+      data-foreground="{{ fg }}"
+      aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}">
+      <span class="style-choice__swatch style-choice__swatch--fg-{{ forloop.index }}"></span>
+      <span>Foreground {{ forloop.index }}</span>
+    </button>
+    {% endfor %}
+  </div>
+</section>
+```
+
+  </div>
+</div>
+
+## Key Idea
+
+The interface separates style control into two intuitive components:
+
+* **Background selection:** determines the desired visual character of the surrounding scene.
+* **Foreground selection:** determines the target appearance of the central subject.
+* **Harmonized synthesis:** generates a unified result that respects both conditions rather than treating the two regions independently.
+
+This makes it possible to explore contrasting style combinations without
+manually editing individual regions.
+
+<script src="{{ '/assets/js/style-explorer.js' | relative_url }}"></script>
