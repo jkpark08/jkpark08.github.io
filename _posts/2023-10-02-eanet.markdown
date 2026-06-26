@@ -2,6 +2,7 @@
 layout: post
 title: Extract-and-Adaptation Network for 3d Interacting Hand Mesh Recovery
 authors: <strong>Joonkyu Park*</strong>, Daniel Sungho Jung*, Gyeongsik Moon*, and Kyoung Mu Lee.
+paper_url: "https://openaccess.thecvf.com/content/ICCV2023W/CV4Metaverse/papers/Park_Extract-and-Adaptation_Network_for_3D_Interacting_Hand_Mesh_Recovery_ICCVW_2023_paper.pdf"
 date: 2023-10-02 13:32:20 +0300
 description:  ICCVW (Oral), 2023. # Add post description (optional)
 img: eanet.jpg # Add image post (optional)
