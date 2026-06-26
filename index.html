@@ -135,11 +135,18 @@ profile:
       
           {% for post in site.posts %}
             {% unless post.home_section == 'project' or post.url == featured_post.url %}
-            <article class="research-card publication-card" role="listitem">
-              <a class="research-card__image"
-                 href="{{ post.url | relative_url }}"
-                 aria-label="Read {{ post.title }}">
-      
+            {% assign publication_href = post.paper_url | default: post.url %}
+            
+            <a
+              class="research-card publication-card publication-card--link"
+              href="{{ publication_href | relative_url }}"
+              role="listitem"
+              {% if post.paper_url contains 'http' %}
+              target="_blank"
+              rel="noopener noreferrer"
+              {% endif %}>
+            
+              <div class="research-card__image">
                 {% if post.img %}
                 <img
                   src="{{ '/assets/img/' | append: post.img | relative_url }}"
@@ -147,26 +154,22 @@ profile:
                 {% else %}
                 <span class="research-card__placeholder">RESEARCH</span>
                 {% endif %}
-              </a>
-      
+              </div>
+            
               <div class="research-card__body">
                 <p class="research-card__venue">
                   {{ post.description | default: post.date | strip_html }}
                 </p>
-      
-                <h3>
-                  <a href="{{ post.url | relative_url }}">
-                    {{ post.title }}
-                  </a>
-                </h3>
-      
+            
+                <h3>{{ post.title }}</h3>
+            
                 {% if post.authors %}
                 <p class="research-card__authors">
                   {{ post.authors }}
                 </p>
                 {% endif %}
               </div>
-            </article>
+            </a>
             {% endunless %}
           {% endfor %}
         </div>
