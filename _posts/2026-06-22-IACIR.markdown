@@ -8,7 +8,7 @@ authors: "<strong>Joonkyu Park</strong> and Kyoung Mu Lee"
 date: 2026-01-25 13:32:20 +0300
 description: ICLR, 2026.
 img: iacir/iacir2.png
-summary: >IAC-IR explores an input-aware approach to image restoration,modeling degradations in a way that better reflects the visual evidencepreserved in each input image.
+summary: "IAC-IR explores an input-aware approach to image restoration, modeling degradations in a way that better reflects the visual evidence preserved in each input image."
 ---
 
 ## Overview
