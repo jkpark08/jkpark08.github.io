@@ -1,21 +1,26 @@
 ---
 layout: project
+
 title: EBH Dataset
 project_title: EBH Dataset
 project_subtitle: with Meta Reality Lab
 project_label: Dataset & Research Paper
 home_section: project
+
 authors: "<strong>Joonkyu Park</strong>, Gyeongsik Moon, Weipeng Xu, Evan Kaseman, Takaaki Shiratori, and Kyoung Mu Lee"
 date: 2024-07-01 13:32:20 +0300
 description: "ECCV, 2024."
+
 img: "ebh_sample.jpg"
+
 summary: >
   EBH is a dataset for recovering 3D hand motion sequences from real blurry
-  hand images and event streams, designed to capture fast hand motion in
+  hand images and event streams, designed to capture fast hand motion under
   realistic visual conditions.
+
 paper_url: "https://doi.org/10.1007/978-3-031-73202-7_20"
-dataset_url: "https://drive.google.com/drive/folders/1U5p64YJ2wMQeJTiAQl5Zer5rqyK8rnJh?usp=sharing"
 code_url: ""
+
 tags:
   - 3D Hand Reconstruction
   - Event Camera
@@ -26,14 +31,14 @@ tags:
 
 ## Overview
 
-Hands frequently exhibit severe motion blur because of their fast and
-articulated movement. This makes 3D hand recovery difficult: a single blurry
-image can contain visual evidence from multiple time steps and may not reveal
-the precise hand configuration at a specific instant.
+Hands frequently exhibit severe motion blur because of their fast and highly
+articulated movement. This makes 3D hand recovery challenging: a blurry image
+can contain visual evidence from multiple time steps, while the exact hand
+configuration at a particular instant remains ambiguous.
 
 > **EBH** provides real blurry hand images together with corresponding event
-> streams and 3D hand annotations, enabling the study of temporally ambiguous
-> hand motion in realistic capture conditions.
+> streams and 3D hand annotations, enabling research on temporally ambiguous
+> hand motion under realistic capture conditions.
 
 <div class="project-highlight-grid">
   <div class="project-highlight">
@@ -43,20 +48,20 @@ the precise hand configuration at a specific instant.
 
   <div class="project-highlight">
     <span>02 — EVENT STREAM</span>
-    <strong>Provides temporally dense event information to support motion understanding under blur.</strong>
+    <strong>Provides temporally dense event information to support motion understanding under severe blur.</strong>
   </div>
 
   <div class="project-highlight">
     <span>03 — 3D ANNOTATION</span>
-    <strong>Includes 3D hand annotations, MANO parameters, and 3D keypoints for sequence recovery.</strong>
+    <strong>Includes MANO parameters, hand meshes, and 3D keypoints for sequence-level recovery.</strong>
   </div>
 </div>
 
 ## Visual Examples
 
-The EBH dataset captures fast hand motion with synchronized blurry RGB images,
-event streams, and 3D hand annotations. The two examples below show the
-appearance of the captured data and the corresponding reconstructed hand mesh.
+The EBH dataset captures synchronized blurry RGB images, event-stream
+observations, and 3D hand annotations. The examples below illustrate both the
+captured visual evidence and the corresponding 3D hand reconstruction target.
 
 <div class="ebh-visual-grid">
   <figure class="ebh-visual-card">
@@ -72,7 +77,7 @@ appearance of the captured data and the corresponding reconstructed hand mesh.
   <figure class="ebh-visual-card">
     <img
       src="{{ '/assets/img/ebh_mesh.jpg' | relative_url }}"
-      alt="Example 3D hand mesh reconstruction from the EBH dataset">
+      alt="Example 3D hand mesh annotations from the EBH dataset">
     <figcaption>
       <span>3D Annotation</span>
       <strong>Hand mesh and temporal motion sequence</strong>
@@ -87,7 +92,7 @@ appearance of the captured data and the corresponding reconstructed hand mesh.
     <span class="ebh-download-card__index">01</span>
     <h3>Blurry Images</h3>
     <p>
-      Real blurry hand images collected from ten individuals, organized by
+      Real blurry hand images captured from ten individuals, organized by
       capture direction and camera view.
     </p>
     <code>blur_images.zip</code>
@@ -97,7 +102,7 @@ appearance of the captured data and the corresponding reconstructed hand mesh.
     <span class="ebh-download-card__index">02</span>
     <h3>Event Streams</h3>
     <p>
-      Event data divided into 1 ms intervals, providing high-temporal-resolution
+      Event data divided into 1 ms intervals, providing temporally dense
       observations of rapid hand movement.
     </p>
     <code>events.zip</code>
@@ -107,8 +112,8 @@ appearance of the captured data and the corresponding reconstructed hand mesh.
     <span class="ebh-download-card__index">03</span>
     <h3>3D Annotations</h3>
     <p>
-      3D hand annotations including MANO parameters, hand meshes, and 3D
-      keypoints for sequence-level supervision.
+      3D annotations including MANO parameters, hand meshes, and 3D keypoints
+      for sequence-level supervision.
     </p>
     <code>annotations.zip</code>
   </article>
@@ -126,3 +131,49 @@ blur_images/
 └── right_xxxxxx/
     └── cam_00/
         └── xxxxxx.png
+````
+
+### Event Streams
+
+```text
+events/
+└── left_xxxxxx/
+    ├── xxx_01.png
+    ├── xxx_02.png
+    ├── ...
+    └── xxx_11.png
+```
+
+### 3D Annotations
+
+```text
+annotations/
+├── mano_params/
+├── meshes/
+└── keypoints_3d/
+```
+
+## Download
+
+The full EBH dataset is available through the official project Google Drive
+folder.
+
+<a class="project-button project-button--primary"
+href="https://drive.google.com/drive/folders/1U5p64YJ2wMQeJTiAQl5Zer5rqyK8rnJh?usp=sharing"
+target="_blank"
+rel="noopener noreferrer">
+Download EBH Dataset <span>↓</span> </a>
+
+## Paper
+
+The EBH dataset and EBHNet were introduced in:
+
+> Joonkyu Park, Gyeongsik Moon, Weipeng Xu, Evan Kaseman, Takaaki Shiratori,
+> and Kyoung Mu Lee. **3D Hand Sequence Recovery from Real Blurry Images and
+> Event Stream.** ECCV 2024.
+
+<a class="project-button"
+href="https://doi.org/10.1007/978-3-031-73202-7_20"
+target="_blank"
+rel="noopener noreferrer">
+Read Paper <span>↗</span> </a>
