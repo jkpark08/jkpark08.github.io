@@ -2,6 +2,7 @@
 layout: post
 title: Rethinking RGB Color Representation for Image Restoration Models
 authors: Jaerin Lee, <strong>Joonkyu Park</strong>, Sungyong Baik, Kyoung Mu Lee
+paper_url: "https://arxiv.org/abs/2402.03399"
 date: 2024-01-12 13:32:20 +0300
 description: ArXiv, 2024. # Add post description (optional)
 img: argb.JPG # Add image post (optional)
