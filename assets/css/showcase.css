@@ -1903,3 +1903,101 @@ body.showcase-body {
   color: var(--accent-bright);
 }
 
+/* =========================================================
+   Slow ambient background motion
+   ========================================================= */
+
+.showcase-page,
+.project-page {
+  isolation: isolate;
+}
+
+.showcase-page > :not(.ambient-flow),
+.project-page > :not(.ambient-flow):not(.project-page__ambient) {
+  position: relative;
+  z-index: 1;
+}
+
+.ambient-flow {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.ambient-flow__orb {
+  position: absolute;
+  width: clamp(260px, 30vw, 520px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  opacity: 0.16;
+  filter: blur(70px);
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+.ambient-flow__orb--red {
+  top: 4%;
+  left: -12%;
+  background: rgba(229, 9, 20, 0.8);
+  animation: ambient-drift-red 82s ease-in-out infinite alternate;
+}
+
+.ambient-flow__orb--blue {
+  top: 30%;
+  right: -14%;
+  background: rgba(52, 120, 255, 0.72);
+  animation: ambient-drift-blue 96s ease-in-out infinite alternate;
+}
+
+.ambient-flow__orb--violet {
+  bottom: -14%;
+  left: 28%;
+  width: clamp(220px, 24vw, 420px);
+  background: rgba(139, 92, 246, 0.48);
+  animation: ambient-drift-violet 112s ease-in-out infinite alternate;
+}
+
+@keyframes ambient-drift-red {
+  0% {
+    transform: translate3d(-3%, -2%, 0) scale(1);
+  }
+
+  100% {
+    transform: translate3d(22%, 15%, 0) scale(1.13);
+  }
+}
+
+@keyframes ambient-drift-blue {
+  0% {
+    transform: translate3d(4%, -3%, 0) scale(1.04);
+  }
+
+  100% {
+    transform: translate3d(-24%, 18%, 0) scale(1.16);
+  }
+}
+
+@keyframes ambient-drift-violet {
+  0% {
+    transform: translate3d(-6%, 8%, 0) scale(0.95);
+  }
+
+  100% {
+    transform: translate3d(16%, -18%, 0) scale(1.12);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ambient-flow__orb {
+    animation: none;
+  }
+}
+
+@media (max-width: 620px) {
+  .ambient-flow__orb {
+    opacity: 0.11;
+    filter: blur(58px);
+  }
+}
