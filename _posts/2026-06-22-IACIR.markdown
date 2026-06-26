@@ -54,7 +54,7 @@ Use the interactive visualization to inspect details in challenging regions.
 <div class="iacir-comparisons" id="iacir-comparisons"></div>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("load", function () {
   const container = document.getElementById("iacir-comparisons");
 
   if (!container || typeof juxtapose === "undefined") {
