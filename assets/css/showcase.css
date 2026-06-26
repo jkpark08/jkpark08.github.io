@@ -1071,3 +1071,14 @@ body.showcase-body {
   text-decoration-color: #ffffff;
 }
 
+.publication-card--link {
+  display: grid;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.publication-card--link:hover h3 {
+  color: #ff626b;
+}
+
