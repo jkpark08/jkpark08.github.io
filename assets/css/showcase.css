@@ -1684,3 +1684,133 @@ body.showcase-body {
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
+
+
+
+/* =========================================================
+   EBH dataset project page
+   ========================================================= */
+
+.ebh-visual-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 26px;
+}
+
+.ebh-visual-card {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.035);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+}
+
+.ebh-visual-card img {
+  display: block !important;
+  width: 100% !important;
+  max-width: none !important;
+  height: auto !important;
+  margin: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+.ebh-visual-card figcaption {
+  display: grid;
+  gap: 5px;
+  padding: 15px;
+  border-top: 1px solid var(--line);
+}
+
+.ebh-visual-card figcaption span {
+  color: var(--accent-bright);
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.ebh-visual-card figcaption strong {
+  color: #fff;
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.ebh-download-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 13px;
+  margin: 24px 0 34px;
+}
+
+.ebh-download-card {
+  position: relative;
+  min-height: 210px;
+  padding: 20px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.018));
+}
+
+.ebh-download-card::after {
+  position: absolute;
+  top: -48px;
+  right: -48px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(229, 9, 20, 0.11);
+  content: "";
+}
+
+.ebh-download-card__index {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin-bottom: 17px;
+  color: var(--accent-bright);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.ebh-download-card h3 {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 9px !important;
+  color: #fff;
+  font-size: 1rem !important;
+}
+
+.ebh-download-card p {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 15px;
+  color: var(--soft);
+  font-size: 0.84rem !important;
+  line-height: 1.6 !important;
+}
+
+.ebh-download-card code {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 5px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.22);
+  color: #fff;
+  font-size: 0.7rem;
+}
+
+@media (max-width: 760px) {
+  .ebh-visual-grid,
+  .ebh-download-grid {
+    grid-template-columns: 1fr;
+  }
+}
