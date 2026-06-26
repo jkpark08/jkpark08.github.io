@@ -1,233 +1,142 @@
 ---
-layout: post
+layout: project
 title: DM-SR
-project_subtitle: #
+project_title: Distribution Matching Super-Resolution
+project_subtitle: Single-Step Real-World Super-Resolution
+project_label: Research Paper
 home_section: project
-authors: <strong>Joonkyu Park</strong> and Kyoung Mu Lee
+authors: "<strong>Joonkyu Park</strong> and Kyoung Mu Lee"
 date: 2026-01-25 13:32:20 +0300
-description: ICLR, 2026. # Add post description (optional)
-img: dmsr/dmsr2.png # Add image post (optional)
-fig-caption: # Add figcaption (optional)
-tags: DMSR
+description: "ICLR, 2026."
+img: "dmsr/dmsr2.png"
+summary: >
+  DM-SR is a practical framework for real-world super-resolution that
+  leverages the generative prior of a pretrained diffusion model while
+  requiring only a single restoration step.
+paper_url: "https://iclr.cc/virtual/2026/poster/10011399"
+code_url: ""
+tags:
+  - Real-World Super-Resolution
+  - Diffusion Models
+  - Generative Restoration
+  - Distribution Matching
 ---
 
+## Overview
 
+Real-world super-resolution must recover visually plausible high-frequency
+details while remaining faithful to the image evidence available in the
+low-resolution input. However, diffusion-based restoration often requires
+multiple iterative denoising steps, which can make practical deployment costly.
 
-### 🔗 Links
+> **DM-SR** formulates real-world super-resolution through distribution
+> matching, enabling a pretrained diffusion model to produce high-quality
+> restoration results in a single inference step.
 
-- 📄 [**Paper**](https://iclr.cc/virtual/2026/poster/10011399) 
+<div class="project-highlight-grid">
+  <div class="project-highlight">
+    <span>01 — PRACTICAL</span>
+    <strong>Designed for real-world super-resolution under unknown and complex degradations.</strong>
+  </div>
 
+  <div class="project-highlight">
+    <span>02 — GENERATIVE</span>
+    <strong>Leverages the visual prior of a pretrained diffusion model for realistic detail recovery.</strong>
+  </div>
 
-<img align="left" width="120" src="../assets/img/dmsr/dmsr2.png" />
+  <div class="project-highlight">
+    <span>03 — EFFICIENT</span>
+    <strong>Performs restoration in a single step instead of relying on a long denoising trajectory.</strong>
+  </div>
+</div>
 
-# Distribution Matching Super-Resolution (DM-SR)
+## Distribution Matching for Super-Resolution
 
-DM-SR aims at developing a Practical Algorithm for Real-world Super-Resolution.
-DM-SR leverages the generative capabilities of a pretrained diffusion model, while requiring **only a single step** to perform super-resolution.
+DM-SR uses distribution matching to bridge degraded low-resolution inputs and
+the clean high-resolution image distribution represented by a pretrained
+diffusion model. This allows the model to preserve the generative quality of
+diffusion-based restoration while substantially reducing inference cost.
 
-
-
-- - -
-## Demo
-The following images show a comparison between our DM-SR results and bicubic upsampling.
-You can drag the slider to visually compare the two methods side by side.
-
-<link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
-<script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
-<div id="juxtapose" style="width: 30%; max-width: 800px; margin: auto;"></div>
-
-
-<table style="width:100%; text-align:center;">
-  <tr>
-    <td>
-      <div align="center" id="slider1" style="display:inline-block; width: 620px;"></div>
-    </td>
-    <td>
-      <div align="center" id="slider2" style="display:inline-block; width: 620px;"></div>
-    </td>
-    </tr>
-</table>
-
-<table style="width:100%; text-align:center;">
-  <tr>
-    <td>
-      <div align="center" id="slider3" style="display:inline-block; width: 410px;"></div>
-    </td>
-    <td>
-      <div align="center" id="slider4" style="display:inline-block; width: 410px;"></div>
-    </td>
-    <td>
-      <div align="center" id="slider5" style="display:inline-block; width: 410px;"></div>
-    </td>
-  </tr>
-</table>
-
-
-<table style="width:100%; text-align:center;">
-  <tr>
-    <td>
-      <div align="center" id="slider6" style="display:inline-block; width: 620px;"></div>
-    </td>
-    <td>
-      <div align="center" id="slider7" style="display:inline-block; width: 620px;"></div>
-    </td>
-    </tr>
-</table>
-
-
-<table style="width:100%; text-align:center;">
-  <tr>
-    <td>
-      <div align="center" id="slider8" style="display:inline-block; width: 410px;"></div>
-    </td>
-    <td>
-      <div align="center" id="slider9" style="display:inline-block; width: 410px;"></div>
-    </td>
-    <td>
-      <div align="center" id="slider10" style="display:inline-block; width: 410px;"></div>
-    </td>
-  </tr>
-</table>
-
-<script>
-  new juxtapose.JXSlider('#slider1',
-    [
-      {src: '../assets/img/dmsr/lr2.jpg', label: 'Bicubic'},
-      {src: '../assets/img/dmsr/sr2.png',label: 'DM-SR'}
-    ],
-    {
-      animate: true,
-      showLabels: true,
-      showCredits: false,
-      makeResponsive: true
-    });
-   new juxtapose.JXSlider('#slider2',
-    [
-      {src: '../assets/img/dmsr/lr3.jpg', label: 'Bicubic'},
-      {src: '../assets/img/dmsr/sr3.png',label: 'DM-SR'}
-    ],
-    {
-      animate: true,
-      showLabels: true,
-      showCredits: false,
-      makeResponsive: true
-    });
-</script>
-
-<script>
-  new juxtapose.JXSlider('#slider3',
-    [
-      {src: '../assets/img/dmsr/lr6.jpg', label: 'Bicubic'},
-      {src: '../assets/img/dmsr/sr6.png',label: 'DM-SR'}
-    ],
-    {
-      animate: true,
-      showLabels: true,
-      showCredits: false,
-      makeResponsive: true
-    });
-  new juxtapose.JXSlider('#slider4',
-    [
-      {src: '../assets/img/dmsr/lr7.jpg', label: 'Bicubic'},
-      {src: '../assets/img/dmsr/sr7.png',label: 'DM-SR'}
-    ],
-    {
-      animate: true,
-      showLabels: true,
-      showCredits: false,
-      makeResponsive: true
-    });
-   new juxtapose.JXSlider('#slider5',
-    [
-      {src: '../assets/img/dmsr/lr5.jpg', label: 'Bicubic'},
-      {src: '../assets/img/dmsr/sr5.png',label: 'DM-SR'}
-    ],
-    {
-      animate: true,
-      showLabels: true,
-      showCredits: false,
-      makeResponsive: true
-    });
-</script>
-
-<script>
-  new juxtapose.JXSlider('#slider6',
-    [
-      {src: '../assets/img/dmsr/lr8.jpg', label: 'Bicubic'},
-      {src: '../assets/img/dmsr/sr8.png',label: 'DM-SR'}
-    ],
-    {
-      animate: true,
-      showLabels: true,
-      showCredits: false,
-      makeResponsive: true
-    });
-  new juxtapose.JXSlider('#slider7',
-    [
-      {src: '../assets/img/dmsr/lr10.jpg', label: 'Bicubic'},
-      {src: '../assets/img/dmsr/sr10.png',label: 'DM-SR'}
-    ],
-    {
-      animate: true,
-      showLabels: true,
-      showCredits: false,
-      makeResponsive: true
-    });
-</script>
-
-<script>
-  new juxtapose.JXSlider('#slider8',
-    [
-      {src: '../assets/img/dmsr/lr11.jpg', label: 'Bicubic'},
-      {src: '../assets/img/dmsr/sr11.png',label: 'DM-SR'}
-    ],
-    {
-      animate: true,
-      showLabels: true,
-      showCredits: false,
-      makeResponsive: true
-    });
-  new juxtapose.JXSlider('#slider9',
-    [
-      {src: '../assets/img/dmsr/lr12.jpg', label: 'Bicubic'},
-      {src: '../assets/img/dmsr/sr12.png',label: 'DM-SR'}
-    ],
-    {
-      animate: true,
-      showLabels: true,
-      showCredits: false,
-      makeResponsive: true
-    });
-   new juxtapose.JXSlider('#slider10',
-    [
-      {src: '../assets/img/dmsr/lr4.jpg', label: 'Bicubic'},
-      {src: '../assets/img/dmsr/sr4.png',label: 'DM-SR'}
-    ],
-    {
-      animate: true,
-      showLabels: true,
-      showCredits: false,
-      makeResponsive: true
-    });
-</script>
-
-- - -
-
+The goal is not merely to sharpen an image, but to reconstruct visually
+plausible textures and structures that remain consistent with the degraded
+input content.
 
 ## Visual Comparisons
 
-The left half shows the bicubic upsampled image, while the right half displays the super-resolved result produced by our DM-SR method.
-Please zoom in for better view.
+Each panel compares bicubic upsampling, representative real-world
+super-resolution methods, and our DM-SR result. The highlighted crop helps
+inspect difficult details such as text, boundaries, texture, and fine structure.
 
+<div class="dmsr-comparisons">
 
-![alt text](../assets/img/dmsr/dmsr_pro11-1.png)
-![alt text](../assets/img/dmsr/dmsr_pro10-1.png)
-![alt text](../assets/img/dmsr/dmsr_pro9-1.png) 
-![alt text](../assets/img/dmsr/dmsr_pro8-1.png) 
-![alt text](../assets/img/dmsr/dmsr_pro7-1.png) 
-![alt text](../assets/img/dmsr/dmsr_pro6-1.png) 
-![alt text](../assets/img/dmsr/dmsr_pro5-1.png) 
-![alt text](../assets/img/dmsr/dmsr_pro4-1.png) 
-![alt text](../assets/img/dmsr/dmsr_pro3-1.png) 
-![alt text](../assets/img/dmsr/dmsr_pro2-1.png) 
-![alt text](../assets/img/dmsr/dmsr_pro1-1.png) 
+  <figure class="dmsr-comparison">
+    <img src="{{ '/assets/img/dmsr/dmsr_pro11-1.png' | relative_url }}"
+         alt="DM-SR qualitative comparison on a vehicle image">
+    <figcaption>Qualitative Comparison 01</figcaption>
+  </figure>
+
+  <figure class="dmsr-comparison">
+    <img src="{{ '/assets/img/dmsr/dmsr_pro10-1.png' | relative_url }}"
+         alt="DM-SR qualitative comparison example">
+    <figcaption>Qualitative Comparison 02</figcaption>
+  </figure>
+
+  <figure class="dmsr-comparison">
+    <img src="{{ '/assets/img/dmsr/dmsr_pro9-1.png' | relative_url }}"
+         alt="DM-SR qualitative comparison example">
+    <figcaption>Qualitative Comparison 03</figcaption>
+  </figure>
+
+  <figure class="dmsr-comparison">
+    <img src="{{ '/assets/img/dmsr/dmsr_pro8-1.png' | relative_url }}"
+         alt="DM-SR qualitative comparison example">
+    <figcaption>Qualitative Comparison 04</figcaption>
+  </figure>
+
+  <figure class="dmsr-comparison">
+    <img src="{{ '/assets/img/dmsr/dmsr_pro7-1.png' | relative_url }}"
+         alt="DM-SR qualitative comparison example">
+    <figcaption>Qualitative Comparison 05</figcaption>
+  </figure>
+
+  <figure class="dmsr-comparison">
+    <img src="{{ '/assets/img/dmsr/dmsr_pro6-1.png' | relative_url }}"
+         alt="DM-SR qualitative comparison example">
+    <figcaption>Qualitative Comparison 06</figcaption>
+  </figure>
+
+  <figure class="dmsr-comparison">
+    <img src="{{ '/assets/img/dmsr/dmsr_pro5-1.png' | relative_url }}"
+         alt="DM-SR qualitative comparison example">
+    <figcaption>Qualitative Comparison 07</figcaption>
+  </figure>
+
+  <figure class="dmsr-comparison">
+    <img src="{{ '/assets/img/dmsr/dmsr_pro4-1.png' | relative_url }}"
+         alt="DM-SR qualitative comparison example">
+    <figcaption>Qualitative Comparison 08</figcaption>
+  </figure>
+
+  <figure class="dmsr-comparison">
+    <img src="{{ '/assets/img/dmsr/dmsr_pro3-1.png' | relative_url }}"
+         alt="DM-SR qualitative comparison example">
+    <figcaption>Qualitative Comparison 09</figcaption>
+  </figure>
+
+  <figure class="dmsr-comparison">
+    <img src="{{ '/assets/img/dmsr/dmsr_pro2-1.png' | relative_url }}"
+         alt="DM-SR qualitative comparison example">
+    <figcaption>Qualitative Comparison 10</figcaption>
+  </figure>
+
+  <figure class="dmsr-comparison">
+    <img src="{{ '/assets/img/dmsr/dmsr_pro1-1.png' | relative_url }}"
+         alt="DM-SR qualitative comparison example">
+    <figcaption>Qualitative Comparison 11</figcaption>
+  </figure>
+
+</div>
+
+## Links
+
+- [Project paper](https://iclr.cc/virtual/2026/poster/10011399)
