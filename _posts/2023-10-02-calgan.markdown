@@ -2,6 +2,7 @@
 layout: post
 title: Content-Aware Local Gan for Photo-Realistic Super-Resolution
 authors: <strong>Joonkyu Park</strong>, Sanghyun Son, and Kyoung Mu Lee.
+paper_url: "https://openaccess.thecvf.com/content/ICCV2023/papers/Park_Content-Aware_Local_GAN_for_Photo-Realistic_Super-Resolution_ICCV_2023_paper.pdf"
 date: 2023-10-02 13:32:20 +0300
 description: ICCV, 2023. # Add post description (optional)
 img: cal_gan.jpg # Add image post (optional)
