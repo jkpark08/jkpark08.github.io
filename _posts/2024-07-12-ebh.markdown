@@ -2,6 +2,7 @@
 layout: post
 title: 3D Hand Sequence Recovery from Real Blurry Images and Event Stream
 authors: <strong>Joonkyu Park</strong>, Gyeongsik Moon, Weipeng Xu, Evan Kaseman, Takaaki Shiratori, and Kyoung Mu Lee
+paper_url: "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/07674.pdf"
 date: 2024-07-01 13:32:20 +0300
 description: ECCV, 2024. # Add post description (optional)
 img: ebh.JPG # Add image post (optional)
