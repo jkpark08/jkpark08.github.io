@@ -48,12 +48,418 @@ substantially across regions, degradation types, and severity levels.
 The examples below compare the restoration results with bicubic upsampling.
 Use the interactive visualization to inspect details in challenging regions.
 
-<!--
-Paste your existing image-comparison slider code here.
-For example, retain the current before/after slider HTML or iframe that you
-were previously using in this project page.
--->
+<link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
+<script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
+<div id="juxtapose" style="width: 30%; max-width: 800px; margin: auto;"></div>
+<table style="width:100%; text-align:center;">
+  <tr>
+    <td>
+      <div align="center" id="slider1" style="display:inline-block; width: 1240px;"></div>
+    </td>
+    </tr>
+</table>
 
+<script>
+  new juxtapose.JXSlider('#slider1',
+    [
+      {src: '../assets/img/iacir/1.jpg', label: 'Bicubic'},
+      {src: '../assets/img/iacir/1_1iter.png',label: 'IAC-IR'}
+    ],
+    {
+      animate: true,
+      showLabels: true,
+      showCredits: false,
+      makeResponsive: true
+    });
+</script>
+
+
+<table style="width:100%; text-align:center;">
+  <tr>
+    <td>
+      <div align="center" id="slider2" style="display:inline-block; width: 1240px;"></div>
+    </td>
+    </tr>
+</table>
+
+<script>
+  new juxtapose.JXSlider('#slider2',
+    [
+      {src: '../assets/img/iacir/5.jpg', label: 'Bicubic'},
+      {src: '../assets/img/iacir/5_1iter.png',label: 'IAC-IR'}
+    ],
+    {
+      animate: true,
+      showLabels: true,
+      showCredits: false,
+      makeResponsive: true
+    });
+</script>
+
+
+
+
+<table style="width:100%; text-align:center;">
+  <tr>
+    <td>
+      <div align="center" id="slider5" style="display:inline-block; width: 1240px;"></div>
+    </td>
+    </tr>
+</table>
+
+<script>
+  new juxtapose.JXSlider('#slider5',
+    [
+      {src: '../assets/img/iacir/13.png', label: 'Bicubic'},
+      {src: '../assets/img/iacir/13_1iter.png',label: 'IAC-IR'}
+    ],
+    {
+      animate: true,
+      showLabels: true,
+      showCredits: false,
+      makeResponsive: true
+    });
+</script>
+
+
+
+
+
+<table style="width:100%; text-align:center;">
+  <tr>
+    <td>
+      <div align="center" id="slider7" style="display:inline-block; width: 1240px;"></div>
+    </td>
+    </tr>
+</table>
+
+<script>
+  new juxtapose.JXSlider('#slider7',
+    [
+      {src: '../assets/img/iacir/107.jpg', label: 'Bicubic'},
+      {src: '../assets/img/iacir/107_1iter.png',label: 'IAC-IR'}
+    ],
+    {
+      animate: true,
+      showLabels: true,
+      showCredits: false,
+      makeResponsive: true
+    });
+</script>
+
+
+
+
+<table style="width:100%; text-align:center;">
+  <tr>
+    <td>
+      <div align="center" id="slider8" style="display:inline-block; width: 1240px;"></div>
+    </td>
+    </tr>
+</table>
+
+<script>
+  new juxtapose.JXSlider('#slider8',
+    [
+      {src: '../assets/img/iacir/108.jpg', label: 'Bicubic'},
+      {src: '../assets/img/iacir/108_1iter.png',label: 'IAC-IR'}
+    ],
+    {
+      animate: true,
+      showLabels: true,
+      showCredits: false,
+      makeResponsive: true
+    });
+</script>
+
+
+
+
+<table style="width:100%; text-align:center;">
+  <tr>
+    <td>
+      <div align="center" id="slider9" style="display:inline-block; width: 1240px;"></div>
+    </td>
+    </tr>
+</table>
+
+<script>
+  new juxtapose.JXSlider('#slider9',
+    [
+      {src: '../assets/img/iacir/109.jpg', label: 'Bicubic'},
+      {src: '../assets/img/iacir/109_1iter.png',label: 'IAC-IR'}
+    ],
+    {
+      animate: true,
+      showLabels: true,
+      showCredits: false,
+      makeResponsive: true
+    });
+</script>
+
+
+
+
+<table style="width:100%; text-align:center;">
+  <tr>
+    <td>
+      <div align="center" id="slider10" style="display:inline-block; width: 1240px;"></div>
+    </td>
+    </tr>
+</table>
+
+<script>
+  new juxtapose.JXSlider('#slider10',
+    [
+      {src: '../assets/img/iacir/113.jpg', label: 'Bicubic'},
+      {src: '../assets/img/iacir/113_1iter.png',label: 'IAC-IR'}
+    ],
+    {
+      animate: true,
+      showLabels: true,
+      showCredits: false,
+      makeResponsive: true
+    });
+</script>
+
+
+<table style="width:100%; text-align:center;">
+  <tr>
+    <td>
+      <div align="center" id="slider11" style="display:inline-block; width: 1240px;"></div>
+    </td>
+    </tr>
+</table>
+
+<script>
+  new juxtapose.JXSlider('#slider11',
+    [
+      {src: '../assets/img/iacir/114.jpg', label: 'Bicubic'},
+      {src: '../assets/img/iacir/114_1iter.png',label: 'IAC-IR'}
+    ],
+    {
+      animate: true,
+      showLabels: true,
+      showCredits: false,
+      makeResponsive: true
+    });
+</script>
+
+
+
+<table style="width:100%; text-align:center;">
+  <tr>
+    <td>
+      <div align="center" id="slider12" style="display:inline-block; width: 1240px;"></div>
+    </td>
+    </tr>
+</table>
+
+<script>
+  new juxtapose.JXSlider('#slider12',
+    [
+      {src: '../assets/img/iacir/116.jpg', label: 'Bicubic'},
+      {src: '../assets/img/iacir/116_1iter.png',label: 'IAC-IR'}
+    ],
+    {
+      animate: true,
+      showLabels: true,
+      showCredits: false,
+      makeResponsive: true
+    });
+</script>
+
+
+
+<table style="width:100%; text-align:center;">
+  <tr>
+    <td>
+      <div align="center" id="slider13" style="display:inline-block; width: 1240px;"></div>
+    </td>
+    </tr>
+</table>
+
+<script>
+  new juxtapose.JXSlider('#slider13',
+    [
+      {src: '../assets/img/iacir/1903.jpg', label: 'Bicubic'},
+      {src: '../assets/img/iacir/1903_14k_test.png',label: 'IAC-IR'}
+    ],
+    {
+      animate: true,
+      showLabels: true,
+      showCredits: false,
+      makeResponsive: true
+    });
+</script>
+
+
+
+<table style="width:100%; text-align:center;">
+  <tr>
+    <td>
+      <div align="center" id="slider14" style="display:inline-block; width: 1240px;"></div>
+    </td>
+    </tr>
+</table>
+
+<script>
+  new juxtapose.JXSlider('#slider14',
+    [
+      {src: '../assets/img/iacir/1911.jpg', label: 'Bicubic'},
+      {src: '../assets/img/iacir/1911_14k_test.png',label: 'IAC-IR'}
+    ],
+    {
+      animate: true,
+      showLabels: true,
+      showCredits: false,
+      makeResponsive: true
+    });
+</script>
+
+
+
+<table style="width:100%; text-align:center;">
+  <tr>
+    <td>
+      <div align="center" id="slider15" style="display:inline-block; width: 1240px;"></div>
+    </td>
+    </tr>
+</table>
+
+<script>
+  new juxtapose.JXSlider('#slider15',
+    [
+      {src: '../assets/img/iacir/CrimeanWarSoldiers-edited.png', label: 'Bicubic'},
+      {src: '../assets/img/iacir/CrimeanWarSoldiers-edited_14k_test.png',label: 'IAC-IR'}
+    ],
+    {
+      animate: true,
+      showLabels: true,
+      showCredits: false,
+      makeResponsive: true
+    });
+</script>
+
+
+
+<table style="width:100%; text-align:center;">
+  <tr>
+    <td>
+      <div align="center" id="slider16" style="display:inline-block; width: 1240px;"></div>
+    </td>
+    </tr>
+</table>
+
+<script>
+  new juxtapose.JXSlider('#slider16',
+    [
+      {src: '../assets/img/iacir/iconic-photos-defined-history-05.jpg', label: 'Bicubic'},
+      {src: '../assets/img/iacir/iconic-photos-defined-history-05_14k_test.png',label: 'IAC-IR'}
+    ],
+    {
+      animate: true,
+      showLabels: true,
+      showCredits: false,
+      makeResponsive: true
+    });
+</script>
+
+
+
+<table style="width:100%; text-align:center;">
+  <tr>
+    <td>
+      <div align="center" id="slider17" style="display:inline-block; width: 1240px;"></div>
+    </td>
+    </tr>
+</table>
+
+<script>
+  new juxtapose.JXSlider('#slider17',
+    [
+      {src: '../assets/img/iacir/TaftHooverInaugurationOath.png', label: 'Bicubic'},
+      {src: '../assets/img/iacir/TaftHooverInaugurationOath_14k_test.png',label: 'IAC-IR'}
+    ],
+    {
+      animate: true,
+      showLabels: true,
+      showCredits: false,
+      makeResponsive: true
+    });
+</script>
+
+
+
+<table style="width:100%; text-align:center;">
+  <tr>
+    <td>
+      <div align="center" id="slider18" style="display:inline-block; width: 1240px;"></div>
+    </td>
+    </tr>
+</table>
+
+<script>
+  new juxtapose.JXSlider('#slider18',
+    [
+      {src: '../assets/img/iacir/the-decisive-moments-street-photography-06.jpg', label: 'Bicubic'},
+      {src: '../assets/img/iacir/the-decisive-moments-street-photography-06_14k_test.png',label: 'IAC-IR'}
+    ],
+    {
+      animate: true,
+      showLabels: true,
+      showCredits: false,
+      makeResponsive: true
+    });
+</script>
+
+
+
+<table style="width:100%; text-align:center;">
+  <tr>
+    <td>
+      <div align="center" id="slider19" style="display:inline-block; width: 1240px;"></div>
+    </td>
+    </tr>
+</table>
+
+<script>
+  new juxtapose.JXSlider('#slider19',
+    [
+      {src: '../assets/img/iacir/the-decisive-moments-street-photography-12.jpg', label: 'Bicubic'},
+      {src: '../assets/img/iacir/the-decisive-moments-street-photography-12_14k_test.png',label: 'IAC-IR'}
+    ],
+    {
+      animate: true,
+      showLabels: true,
+      showCredits: false,
+      makeResponsive: true
+    });
+</script>
+
+
+
+<table style="width:100%; text-align:center;">
+  <tr>
+    <td>
+      <div align="center" id="slider20" style="display:inline-block; width: 1240px;"></div>
+    </td>
+    </tr>
+</table>
+
+<script>
+  new juxtapose.JXSlider('#slider20',
+    [
+      {src: '../assets/img/iacir/tiger_cub_lion_cub_best_friends_01.jpg', label: 'Bicubic'},
+      {src: '../assets/img/iacir/tiger_cub_lion_cub_best_friends_01_14k_test.png',label: 'IAC-IR'}
+    ],
+    {
+      animate: true,
+      showLabels: true,
+      showCredits: false,
+      makeResponsive: true
+    });
+</script>
 ![IAC-IR qualitative results]({{ '/assets/img/iacir/iacir_character.png' | relative_url }})
 
 ## Key Idea
