@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pay Attention to Hidden States for Video Deblurring, Ping-pong Recurrent Neural Networks and Selective Non-Local Attention
-authors: <strong>Joonkyu Park</strong>, Seungjun Nah, and Kyoung Mu Lee.
+authors: <strong>Joonkyu Park</strong>, Seungjun Nah, and Kyoung Mu Lee
 paper_url: "https://arxiv.org/abs/2203.16063"
 date: 2023-01-01 13:32:20 +0300
 description: arXiv 2022. # Add post description (optional)
