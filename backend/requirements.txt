@@ -1,0 +1,9 @@
+Flask==3.0.3
+flask-cors==4.0.1
+gunicorn==22.0.0
+numpy>=1.24,<2.0
+opencv-python-headless>=4.8,<5.0
+Pillow>=10.0
+# TensorFlow and dlib must remain compatible with the original TensorFlow-v1 checkpoint.
+tensorflow>=2.13,<2.17
+dlib>=19.24

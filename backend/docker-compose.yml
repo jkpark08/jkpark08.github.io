@@ -1,0 +1,13 @@
+services:
+  untact-makeup-api:
+    build: .
+    ports:
+      - "7860:7860"
+    environment:
+      # Replace with the exact origin(s) used by the Jekyll site.
+      ALLOWED_ORIGINS: "https://jkpark08.github.io"
+      UNTACT_MAKEUP_REPO: "/app/untact_makeup"
+      MAX_UPLOAD_MB: "12"
+    volumes:
+      # The original repository must include full_makeup.py, face landmarks, and models/ checkpoint files.
+      - ./untact_makeup:/app/untact_makeup:ro
