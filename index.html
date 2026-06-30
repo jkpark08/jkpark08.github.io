@@ -15,6 +15,14 @@ profile:
 ---
 
 {% assign featured_post = site.posts.first %}
+
+{% for post in site.posts %}
+  {% if post.homepage_feature == "personal" %}
+    {% assign featured_post = post %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
 {% assign profile_image = '/assets/img/' | append: site.author-img | relative_url %}
 
 <div class="showcase-shell">
