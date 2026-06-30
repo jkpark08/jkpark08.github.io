@@ -28,124 +28,24 @@ interests:
 # Do not add img: or home_section: project.
 ---
 
-## Education
-
-<div class="profile-timeline">
-  <article class="profile-timeline__item">
-    <span class="profile-timeline__date">2021 — Present</span>
+<section class="cv-document-card" aria-labelledby="cv-document-heading">
+  <div class="cv-document-card__header">
     <div>
-      <h3>Integrated Ph.D. Program</h3>
-      <p>Electrical and Computer Engineering, Seoul National University</p>
+      <p>Curriculum Vitae</p>
+      <h2 id="cv-document-heading">Joonkyu Park</h2>
     </div>
-  </article>
 
-  <article class="profile-timeline__item">
-    <span class="profile-timeline__date">2015 — 2021</span>
-    <div>
-      <h3>Bachelor of Engineering</h3>
-      <p>Electrical and Computer Engineering, Seoul National University</p>
-    </div>
-  </article>
-</div>
+    <a
+      href="{{ '/assets/img/CV_JK.pdf' | relative_url }}"
+      target="_blank"
+      rel="noopener noreferrer">
+      Open PDF ↗
+    </a>
+  </div>
 
-## Research Experience
-
-<div class="profile-experience-grid">
-  <article class="profile-experience-card">
-    <span>Reality Labs Research · Meta</span>
-    <h3>3D Hand Recovery from Real Blurry Hands</h3>
-    <p>
-      Conducted research on recovering 3D hand motion from real-world blurry
-      hand images and event-stream observations.
-    </p>
-  </article>
-
-  <article class="profile-experience-card">
-    <span>Seoul National University</span>
-    <h3>Tunable Software ISP Algorithm</h3>
-    <p>
-      Research project conducted in collaboration with Samsung Research on
-      controllable image signal processing.
-    </p>
-  </article>
-
-  <article class="profile-experience-card">
-    <span>Seoul National University</span>
-    <h3>Domain Adaptation for Oven Recipes</h3>
-    <p>
-      Research project conducted with Samsung Research on domain adaptation
-      for visual understanding in practical applications.
-    </p>
-  </article>
-
-  <article class="profile-experience-card">
-    <span>Teaching & Design</span>
-    <h3>Academic and Engineering Projects</h3>
-    <p>
-      College teaching assistant for Topics in Control and Automation;
-      recipient at the 9th Creative Design Festival for Untact AR Makeup;
-      and developer of an adversarial-example generation project based on GANs.
-    </p>
-  </article>
-</div>
-
-## Invited Talks
-
-<div class="profile-talk-list">
-  <article class="profile-talk">
-    <span>2024</span>
-    <div>
-      <h3>AI Retreat, Seoul National University</h3>
-      <p>
-        Recovering 3D Hand Mesh Sequences from a Single Blurry Image:
-        A New Dataset and Temporal Unfolding
-      </p>
-    </div>
-  </article>
-
-  <article class="profile-talk">
-    <span>2022</span>
-    <div>
-      <h3>Qualcomm Korea</h3>
-      <p>Occlusion-Robust 3D Hand Mesh Estimation Network</p>
-    </div>
-  </article>
-
-  <article class="profile-talk">
-    <span>2022</span>
-    <div>
-      <h3>Kakao Enterprise Corp.</h3>
-      <p>Occlusion-Robust 3D Hand Mesh Estimation Network</p>
-    </div>
-  </article>
-
-  <article class="profile-talk">
-    <span>2022</span>
-    <div>
-      <h3>LG AI Center</h3>
-      <p>Occlusion-Robust 3D Hand Mesh Estimation Network</p>
-    </div>
-  </article>
-
-  <article class="profile-talk">
-    <span>2022</span>
-    <div>
-      <h3>AI Retreat, Seoul National University</h3>
-      <p>Occlusion-Robust 3D Hand Mesh Estimation Network</p>
-    </div>
-  </article>
-</div>
-
-## Academic Service
-
-<div class="profile-service-grid">
-  <article class="profile-service-card">
-    <span>Conference Reviewer</span>
-    <p>CVPR, ICCV, ICCVW, ECCV, ECCVW, NeurIPS, WACV, and ACCV</p>
-  </article>
-
-  <article class="profile-service-card">
-    <span>Journal Reviewer</span>
-    <p>TCSVT, TVCJ, JIVP, and EURASIP Journal on Image and Video Processing</p>
-  </article>
-</div>
+  <iframe
+    class="cv-document-card__viewer"
+    src="{{ '/assets/img/CV_JK.pdf' | relative_url }}"
+    title="Joonkyu Park Curriculum Vitae">
+  </iframe>
+</section>
