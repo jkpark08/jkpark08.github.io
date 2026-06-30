@@ -4,11 +4,11 @@ title: Personal Information
 project_title: Joonkyu Park
 project_subtitle: Academic Profile and Research Experience
 project_label: Profile
-home_section: project
+home_section: # project
 authors: "Joonkyu Park"
 date: 2026-06-22 13:32:20 +0300
 description: "Academic Profile"
-img: "portfolio.jpg"
+img: #"portfolio.jpg"
 summary: >
   Ph.D. candidate at Seoul National University, advised by Prof. Kyoung Mu Lee.
   My research explores machine learning and computer vision, with a recent focus on
