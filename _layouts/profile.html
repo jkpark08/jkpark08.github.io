@@ -1,130 +1,146 @@
 ---
-layout: default
+layout: null
 ---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<main class="project-page profile-page">
-  <div class="project-page__ambient project-page__ambient--red"></div>
-  <div class="project-page__ambient project-page__ambient--blue"></div>
+  <meta name="description"
+        content="{{ page.description | default: site.description | strip_html | normalize_whitespace | escape }}">
 
-  <header class="project-topbar">
-    <a class="project-brand"
-       href="{{ '/' | relative_url }}"
-       aria-label="Back to homepage">
-      <span class="project-brand__mark">JK</span>
-      <span>Joonkyu Park</span>
-    </a>
+  <title>{{ page.title }} | {{ site.author }}</title>
 
-    <nav class="project-nav" aria-label="Website navigation">
-      <a href="{{ '/' | relative_url }}#about">About</a>
-      <a href="{{ '/' | relative_url }}#publications">Publications</a>
-      <a href="{{ '/' | relative_url }}#projects">Projects</a>
-      <a class="project-nav__contact"
-         href="mailto:{{ site.social-email }}">
-        Contact
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/showcase.css' | relative_url }}">
+</head>
+
+<body class="showcase-body">
+  <main class="project-page">
+    <div class="project-page__ambient project-page__ambient--red"></div>
+    <div class="project-page__ambient project-page__ambient--blue"></div>
+
+    <header class="project-topbar">
+      <a class="project-brand"
+         href="{{ '/' | relative_url }}"
+         aria-label="Back to homepage">
+        <span class="project-brand__mark">JK</span>
+        <span>Joonkyu Park</span>
       </a>
-    </nav>
-  </header>
 
-  <section class="profile-hero">
-    <div class="profile-hero__copy">
-      <p class="profile-hero__eyebrow">
-        {{ page.description | default: "Personal Profile" }}
-      </p>
+      <nav class="project-nav" aria-label="Website navigation">
+        <a href="{{ '/' | relative_url }}#about">About</a>
+        <a href="{{ '/' | relative_url }}#publications">Publications</a>
+        <a href="{{ '/' | relative_url }}#projects">Projects</a>
+        <a class="project-nav__contact"
+           href="mailto:{{ site.social-email }}">
+          Contact
+        </a>
+      </nav>
+    </header>
 
-      <h1>{{ page.title }}</h1>
+    <section class="project-hero">
+      <div class="project-hero__copy">
+        <p class="project-kicker">
+          {{ page.description | default: "Personal Profile" }}
+        </p>
 
-      {% if page.role %}
-      <p class="profile-hero__role">{{ page.role }}</p>
-      {% endif %}
-
-      {% if page.summary %}
-      <p class="profile-hero__summary">{{ page.summary }}</p>
-      {% endif %}
-
-      <div class="profile-hero__facts">
-        {% if page.affiliation %}
-        <div class="profile-hero__fact">
-          <span>Affiliation</span>
-          <strong>{{ page.affiliation }}</strong>
-        </div>
-        {% endif %}
-
-        {% if page.location %}
-        <div class="profile-hero__fact">
-          <span>Location</span>
-          <strong>{{ page.location }}</strong>
-        </div>
-        {% endif %}
-
-        {% if page.focus %}
-        <div class="profile-hero__fact">
-          <span>Focus</span>
-          <strong>{{ page.focus }}</strong>
-        </div>
-        {% endif %}
-      </div>
-    </div>
-
-    <div class="profile-hero__monogram" aria-hidden="true">
-      <span>JK</span>
-      <small>PROFILE</small>
-    </div>
-  </section>
-
-  <section class="project-content profile-content">
-    <aside class="project-sidebar">
-      <div class="project-info-card">
-        <p class="project-info-card__label">Profile</p>
-
-        {% if page.affiliation %}
-        <div class="project-info-card__item">
-          <span>Affiliation</span>
-          <strong>{{ page.affiliation }}</strong>
-        </div>
-        {% endif %}
+        <h1>{{ page.title }}</h1>
 
         {% if page.role %}
-        <div class="project-info-card__item">
-          <span>Role</span>
-          <strong>{{ page.role }}</strong>
-        </div>
+        <p class="project-hero__subtitle">{{ page.role }}</p>
         {% endif %}
 
-        {% if page.location %}
-        <div class="project-info-card__item">
-          <span>Based in</span>
-          <strong>{{ page.location }}</strong>
+        {% if page.summary %}
+        <p class="project-hero__summary">{{ page.summary }}</p>
+        {% endif %}
+
+        <div class="project-actions">
+          <a class="project-button project-button--primary"
+             href="mailto:{{ site.social-email }}">
+            Contact <span>↗</span>
+          </a>
+
+          <a class="project-button"
+             href="{{ '/assets/img/CV_JK.pdf' | relative_url }}"
+             download="CV_JK.pdf">
+            Download CV <span>↓</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-hero__visual" aria-hidden="true">
+        <div class="project-hero__placeholder">JK</div>
+
+        <div class="project-hero__label">
+          <span>PROFILE</span>
+          <strong>Computer Vision Research</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-content">
+      <aside class="project-sidebar">
+        <div class="project-info-card">
+          <p class="project-info-card__label">Profile</p>
+
+          {% if page.affiliation %}
+          <div class="project-info-card__item">
+            <span>Affiliation</span>
+            <strong>{{ page.affiliation }}</strong>
+          </div>
+          {% endif %}
+
+          {% if page.role %}
+          <div class="project-info-card__item">
+            <span>Role</span>
+            <strong>{{ page.role }}</strong>
+          </div>
+          {% endif %}
+
+          {% if page.location %}
+          <div class="project-info-card__item">
+            <span>Based in</span>
+            <strong>{{ page.location }}</strong>
+          </div>
+          {% endif %}
+
+          {% if page.focus %}
+          <div class="project-info-card__item">
+            <span>Research Focus</span>
+            <strong>{{ page.focus }}</strong>
+          </div>
+          {% endif %}
+        </div>
+
+        {% if page.interests %}
+        <div class="project-info-card project-info-card--tags">
+          <p class="project-info-card__label">Research Interests</p>
+
+          <div class="project-tags">
+            {% for interest in page.interests %}
+            <span>{{ interest }}</span>
+            {% endfor %}
+          </div>
         </div>
         {% endif %}
-      </div>
+      </aside>
 
-      {% if page.interests %}
-      <div class="project-info-card project-info-card--tags">
-        <p class="project-info-card__label">Research Interests</p>
+      <article class="project-article">
+        {{ content }}
+      </article>
+    </section>
 
-        <div class="project-tags">
-          {% for interest in page.interests %}
-          <span>{{ interest }}</span>
-          {% endfor %}
-        </div>
-      </div>
-      {% endif %}
-
-      <a class="profile-contact-card"
-         href="mailto:{{ site.social-email }}">
-        <span>Get in Touch</span>
-        <strong>{{ site.social-email }}</strong>
-        <em>Academic discussion & collaboration ↗</em>
-      </a>
-    </aside>
-
-    <article class="project-article profile-article">
-      {{ content }}
-    </article>
-  </section>
-
-  <footer class="project-footer">
-    <span>© {{ site.time | date: '%Y' }} {{ site.author }}</span>
-    <span>Computer Vision · Generative AI · 3D Vision</span>
-  </footer>
-</main>
+    <footer class="project-footer">
+      <span>© {{ site.time | date: '%Y' }} {{ site.author }}</span>
+      <span>Computer Vision · Generative AI · 3D Vision</span>
+    </footer>
+  </main>
+</body>
+</html>
