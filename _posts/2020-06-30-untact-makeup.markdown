@@ -6,7 +6,7 @@ project_subtitle: Reference-Guided Virtual Makeup Transfer
 project_label: Interactive Demo
 home_section: project
 authors: <strong>Joonkyu Park</strong>
-date: 2026-06-30 13:32:20 +0900
+date: 2020-06-30 13:32:20 +0900
 description: Personal Project
 img: untact-makeup/sample.png
 summary: A web interface for reference-guided virtual makeup transfer. Upload a portrait and optionally provide separate skin, lip, and eye references.
