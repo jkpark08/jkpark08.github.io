@@ -43,9 +43,9 @@ interests:
     </a>
   </div>
 
-  <iframe
-    class="cv-document-card__viewer"
-    src="{{ '/assets/img/CV_JK.pdf' | relative_url }}"
-    title="Joonkyu Park Curriculum Vitae">
-  </iframe>
+<iframe
+  class="cv-document-card__viewer"
+  src="{{ '/assets/img/CV_JK.pdf' | relative_url }}#zoom=page-width"
+  title="Joonkyu Park Curriculum Vitae">
+</iframe>
 </section>
