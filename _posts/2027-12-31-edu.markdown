@@ -1,45 +1,73 @@
 ---
-layout: post
+layout: project
 title: Personal Information
+project_title: Joonkyu Park
+project_subtitle: Academic Profile and Research Experience
+project_label: Profile
+home_section: project
+authors: "Joonkyu Park"
 date: 2026-06-22 13:32:20 +0300
-description: # Add post description (optional)
-img: # Add image post (optional)
-fig-caption: # Add figcaption (optional)
-tags: #
-tags2: Publications
+description: "Academic Profile"
+img: "portfolio.jpg"
+summary: >
+  Ph.D. candidate at Seoul National University, advised by Prof. Kyoung Mu Lee.
+  My research explores machine learning and computer vision, with a recent focus on
+  3D human understanding and image restoration that connects high-level and low-level vision.
+tags:
+  - Computer Vision
+  - Machine Learning
+  - 3D Human Understanding
+  - Image Restoration
 ---
-I am Ph.D candidate advised by <a href="https://cv.snu.ac.kr/index.php/faculty//">Prof. Kyoung Mu Lee.</a>
-I am interested in machine learning and computer vision, exploring 3D human and image restoration, combining high-level and low-level tasks in my recent research.
 
----
+## Overview
+
+I am a Ph.D. candidate at Seoul National University, advised by
+[Prof. Kyoung Mu Lee](https://cv.snu.ac.kr/).
+My research interests lie in machine learning and computer vision, particularly in
+3D human understanding and image restoration. I aim to connect high-level semantic
+reasoning with low-level visual reconstruction.
+
+> **Research focus.** Building robust visual systems that understand people and scenes
+> while recovering reliable visual details from imperfect observations.
+
+**01 — 3D HUMAN**  \
+Human pose, shape, and hand reconstruction under challenging visual conditions.
+
+**02 — RESTORATION**  \
+Generative image restoration, super-resolution, and degradation-aware modeling.
+
+**03 — VISION + LEARNING**  \
+Learning-based systems that combine semantic understanding with visual reconstruction.
+
 ## Education
-- 2021-present : Integrated Ph.D. program, Electrical & Computer Engineering, Seoul National University.
-- 2015–2021 : Bachelor of Engineering, Electrical and Computer Engineering, Seoul National University.
 
----
+- **2021--Present** · Integrated Ph.D. Program, Electrical and Computer Engineering, Seoul National University.
+- **2015--2021** · Bachelor of Engineering, Electrical and Computer Engineering, Seoul National University.
+
 ## Research Experience
-##### Reality Labs Research at Meta
-- 3D hand recovery from real-motioned blurry hands.
 
-##### Seoul National University
-- Research Project with Samsung Research: Tunable SW ISP Algorithm.
-- Research Project with Samsung Research: Domain Adaptation for Oven Recipes.
-- College TA: Topics in Control and Automation.
+### Reality Labs Research at Meta
+
+- 3D hand recovery from real-motion blurry hand images.
+
+### Seoul National University
+
+- Research project with Samsung Research: Tunable software ISP algorithm.
+- Research project with Samsung Research: Domain adaptation for oven recipes.
+- Teaching assistant: Topics in Control and Automation.
 - 9th Creative Design Festival: Untact AR Makeup.
-- Electrical Engineering Design Project: AE (Adversarial Examples) Generation with GAN. 
+- Electrical Engineering Design Project: Adversarial-example generation with GANs.
 
----
 ## Invited Talks
-- <strong> AI Retreat, SNU, </strong> Recovering
-3d hand mesh sequence from a single blurry image: A new dataset and temporal unfolding, 2024.
-- <strong> Qualcomm Korea, </strong> Occlusion-Robust 3D Hand Mesh Estimation Network. 2022.
-- <strong> Kakao Enterprise Corp, </strong> Occlusion-Robust 3D Hand Mesh Estimation Network, 2022.
-- <strong> LG AI Center, </strong> Occlusion-Robust 3D Hand Mesh Estimation Network, 2022.
-- <strong> AI Retreat, SNU, </strong> Occlusion-Robust 3D Hand Mesh Estimation Network, 2022.
 
----
-## Academic Services (Reviewer) 
-- Conference : CVPR, ICCV, ICCVW, ECCV, ECCVW, NeurIPS, WACV, ACCV
-- Journal : TCSVT, TVCJ, JIVP, EURASIP
+- **AI Retreat, SNU** · *Recovering 3D Hand Mesh Sequences from a Single Blurry Image: A New Dataset and Temporal Unfolding*, 2024.
+- **Qualcomm Korea** · *Occlusion-Robust 3D Hand Mesh Estimation Network*, 2022.
+- **Kakao Enterprise Corp.** · *Occlusion-Robust 3D Hand Mesh Estimation Network*, 2022.
+- **LG AI Center** · *Occlusion-Robust 3D Hand Mesh Estimation Network*, 2022.
+- **AI Retreat, SNU** · *Occlusion-Robust 3D Hand Mesh Estimation Network*, 2022.
 
+## Academic Service
 
+- **Conferences:** CVPR, ICCV, ICCVW, ECCV, ECCVW, NeurIPS, WACV, ACCV.
+- **Journals:** TCSVT, TVCJ, JIVP, EURASIP.
