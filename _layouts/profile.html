@@ -45,45 +45,36 @@ layout: null
       </nav>
     </header>
 
-    <section class="project-hero">
-      <div class="project-hero__copy">
-        <p class="project-kicker">
-          {{ page.description | default: "Personal Profile" }}
-        </p>
-
-        <h1>{{ page.title }}</h1>
-
-        {% if page.role %}
-        <p class="project-hero__subtitle">{{ page.role }}</p>
-        {% endif %}
-
-        {% if page.summary %}
-        <p class="project-hero__summary">{{ page.summary }}</p>
-        {% endif %}
-
-        <div class="project-actions">
-          <a class="project-button project-button--primary"
-             href="mailto:{{ site.social-email }}">
-            Contact <span>↗</span>
-          </a>
-
-          <a class="project-button"
-             href="{{ '/assets/img/CV_JK.pdf' | relative_url }}"
-             download="CV_JK.pdf">
-            Download CV <span>↓</span>
-          </a>
+    <section class="project-hero project-hero--profile">
+        <div class="project-hero__copy">
+          <p class="project-kicker">
+            {{ page.description | default: "Personal Profile" }}
+          </p>
+      
+          <h1>{{ page.title }}</h1>
+      
+          {% if page.role %}
+          <p class="project-hero__subtitle">{{ page.role }}</p>
+          {% endif %}
+      
+          {% if page.summary %}
+          <p class="project-hero__summary">{{ page.summary }}</p>
+          {% endif %}
+      
+          <div class="project-actions">
+            <a class="project-button project-button--primary"
+               href="mailto:{{ site.social-email }}">
+              Contact <span>↗</span>
+            </a>
+      
+            <a class="project-button"
+               href="{{ '/assets/img/CV_JK.pdf' | relative_url }}"
+               download="CV_JK.pdf">
+              Download CV <span>↓</span>
+            </a>
+          </div>
         </div>
-      </div>
-
-      <div class="project-hero__visual" aria-hidden="true">
-        <div class="project-hero__placeholder">JK</div>
-
-        <div class="project-hero__label">
-          <span>PROFILE</span>
-          <strong>Computer Vision Research</strong>
-        </div>
-      </div>
-    </section>
+      </section>
 
     <section class="project-content">
       <aside class="project-sidebar">
