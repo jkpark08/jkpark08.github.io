@@ -143,13 +143,49 @@ profile:
       
           {% for post in site.posts %}
             {% unless post.home_section == 'project' or post.url == featured_post.url %}
+            {% if post.publication_status == "not_published" %}
+            <article
+              class="research-card publication-card publication-card--unpublished"
+              role="listitem"
+              aria-label="{{ post.title }} — Not published yet">
+            
+              <div class="research-card__image">
+                {% if post.img %}
+                <img
+                  src="{{ '/assets/img/' | append: post.img | relative_url }}"
+                  alt="Preview image for {{ post.title | escape }}">
+                {% else %}
+                <span class="research-card__placeholder">RESEARCH</span>
+                {% endif %}
+              </div>
+            
+              <div class="research-card__body">
+                <p class="research-card__venue">
+                  {{ post.description | default: post.date | strip_html }}
+                </p>
+            
+                <h3>{{ post.title }}</h3>
+            
+                {% if post.authors %}
+                <p class="research-card__authors">
+                  {{ post.authors }}
+                </p>
+                {% endif %}
+              </div>
+            
+              <span class="publication-card__unpublished-message" aria-hidden="true">
+                Not published yet
+              </span>
+            </article>
+            
+            {% else %}
             {% assign publication_href = post.paper_url | default: post.url %}
             
             <a
               class="research-card publication-card publication-card--link"
               href="{{ publication_href | relative_url }}"
               role="listitem"
-              {% if post.paper_url contains 'http' %}
+              {% if post.paper_url contains "http" %}
               target="_blank"
               rel="noopener noreferrer"
               {% endif %}>
@@ -178,6 +214,7 @@ profile:
                 {% endif %}
               </div>
             </a>
+            {% endif %}
             {% endunless %}
           {% endfor %}
         </div>
