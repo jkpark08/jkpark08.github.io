@@ -1,0 +1,130 @@
+---
+layout: default
+---
+
+<main class="project-page profile-page">
+  <div class="project-page__ambient project-page__ambient--red"></div>
+  <div class="project-page__ambient project-page__ambient--blue"></div>
+
+  <header class="project-topbar">
+    <a class="project-brand"
+       href="{{ '/' | relative_url }}"
+       aria-label="Back to homepage">
+      <span class="project-brand__mark">JK</span>
+      <span>Joonkyu Park</span>
+    </a>
+
+    <nav class="project-nav" aria-label="Website navigation">
+      <a href="{{ '/' | relative_url }}#about">About</a>
+      <a href="{{ '/' | relative_url }}#publications">Publications</a>
+      <a href="{{ '/' | relative_url }}#projects">Projects</a>
+      <a class="project-nav__contact"
+         href="mailto:{{ site.social-email }}">
+        Contact
+      </a>
+    </nav>
+  </header>
+
+  <section class="profile-hero">
+    <div class="profile-hero__copy">
+      <p class="profile-hero__eyebrow">
+        {{ page.description | default: "Personal Profile" }}
+      </p>
+
+      <h1>{{ page.title }}</h1>
+
+      {% if page.role %}
+      <p class="profile-hero__role">{{ page.role }}</p>
+      {% endif %}
+
+      {% if page.summary %}
+      <p class="profile-hero__summary">{{ page.summary }}</p>
+      {% endif %}
+
+      <div class="profile-hero__facts">
+        {% if page.affiliation %}
+        <div class="profile-hero__fact">
+          <span>Affiliation</span>
+          <strong>{{ page.affiliation }}</strong>
+        </div>
+        {% endif %}
+
+        {% if page.location %}
+        <div class="profile-hero__fact">
+          <span>Location</span>
+          <strong>{{ page.location }}</strong>
+        </div>
+        {% endif %}
+
+        {% if page.focus %}
+        <div class="profile-hero__fact">
+          <span>Focus</span>
+          <strong>{{ page.focus }}</strong>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="profile-hero__monogram" aria-hidden="true">
+      <span>JK</span>
+      <small>PROFILE</small>
+    </div>
+  </section>
+
+  <section class="project-content profile-content">
+    <aside class="project-sidebar">
+      <div class="project-info-card">
+        <p class="project-info-card__label">Profile</p>
+
+        {% if page.affiliation %}
+        <div class="project-info-card__item">
+          <span>Affiliation</span>
+          <strong>{{ page.affiliation }}</strong>
+        </div>
+        {% endif %}
+
+        {% if page.role %}
+        <div class="project-info-card__item">
+          <span>Role</span>
+          <strong>{{ page.role }}</strong>
+        </div>
+        {% endif %}
+
+        {% if page.location %}
+        <div class="project-info-card__item">
+          <span>Based in</span>
+          <strong>{{ page.location }}</strong>
+        </div>
+        {% endif %}
+      </div>
+
+      {% if page.interests %}
+      <div class="project-info-card project-info-card--tags">
+        <p class="project-info-card__label">Research Interests</p>
+
+        <div class="project-tags">
+          {% for interest in page.interests %}
+          <span>{{ interest }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
+      <a class="profile-contact-card"
+         href="mailto:{{ site.social-email }}">
+        <span>Get in Touch</span>
+        <strong>{{ site.social-email }}</strong>
+        <em>Academic discussion & collaboration ↗</em>
+      </a>
+    </aside>
+
+    <article class="project-article profile-article">
+      {{ content }}
+    </article>
+  </section>
+
+  <footer class="project-footer">
+    <span>© {{ site.time | date: '%Y' }} {{ site.author }}</span>
+    <span>Computer Vision · Generative AI · 3D Vision</span>
+  </footer>
+</main>
