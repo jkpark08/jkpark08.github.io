@@ -1,73 +1,151 @@
 ---
-layout: project
+layout: profile
+
 title: Personal Information
-project_title: Joonkyu Park
-project_subtitle: Academic Profile and Research Experience
-project_label: Profile
-home_section: # project
-authors: "Joonkyu Park"
 date: 2026-06-22 13:32:20 +0300
-description: "Academic Profile"
-img: #"portfolio.jpg"
+
+# This forces the post to be used only for the first homepage column.
+homepage_feature: personal
+
+description: "Personal Profile"
+role: "Computer Vision Researcher"
+affiliation: "Seoul National University · CV Lab"
+location: "Seoul, Republic of Korea"
+focus: "Generative AI, 3D Vision, and Image Restoration"
+
 summary: >
-  Ph.D. candidate at Seoul National University, advised by Prof. Kyoung Mu Lee.
-  My research explores machine learning and computer vision, with a recent focus on
-  3D human understanding and image restoration that connects high-level and low-level vision.
-tags:
-  - Computer Vision
-  - Machine Learning
-  - 3D Human Understanding
-  - Image Restoration
+  I am a Ph.D. candidate at Seoul National University, advised by
+  Prof. Kyoung Mu Lee. My research explores machine learning and computer
+  vision, with recent interests in 3D human understanding and generative
+  image restoration.
+
+interests:
+  - Image Restoration & Diffusion Models
+  - 3D Vision & Gaussian Splatting
+  - Human-Centric Visual Intelligence
+  - Human-Object Interaction
+
+# Do not add img: or home_section: project.
 ---
-
-## Overview
-
-I am a Ph.D. candidate at Seoul National University, advised by
-[Prof. Kyoung Mu Lee](https://cv.snu.ac.kr/).
-My research interests lie in machine learning and computer vision, particularly in
-3D human understanding and image restoration. I aim to connect high-level semantic
-reasoning with low-level visual reconstruction.
-
-> **Research focus.** Building robust visual systems that understand people and scenes
-> while recovering reliable visual details from imperfect observations.
-
-**01 — 3D HUMAN**  \
-Human pose, shape, and hand reconstruction under challenging visual conditions.
-
-**02 — RESTORATION**  \
-Generative image restoration, super-resolution, and degradation-aware modeling.
-
-**03 — VISION + LEARNING**  \
-Learning-based systems that combine semantic understanding with visual reconstruction.
 
 ## Education
 
-- **2021--Present** · Integrated Ph.D. Program, Electrical and Computer Engineering, Seoul National University.
-- **2015--2021** · Bachelor of Engineering, Electrical and Computer Engineering, Seoul National University.
+<div class="profile-timeline">
+  <article class="profile-timeline__item">
+    <span class="profile-timeline__date">2021 — Present</span>
+    <div>
+      <h3>Integrated Ph.D. Program</h3>
+      <p>Electrical and Computer Engineering, Seoul National University</p>
+    </div>
+  </article>
+
+  <article class="profile-timeline__item">
+    <span class="profile-timeline__date">2015 — 2021</span>
+    <div>
+      <h3>Bachelor of Engineering</h3>
+      <p>Electrical and Computer Engineering, Seoul National University</p>
+    </div>
+  </article>
+</div>
 
 ## Research Experience
 
-### Reality Labs Research at Meta
+<div class="profile-experience-grid">
+  <article class="profile-experience-card">
+    <span>Reality Labs Research · Meta</span>
+    <h3>3D Hand Recovery from Real Blurry Hands</h3>
+    <p>
+      Conducted research on recovering 3D hand motion from real-world blurry
+      hand images and event-stream observations.
+    </p>
+  </article>
 
-- 3D hand recovery from real-motion blurry hand images.
+  <article class="profile-experience-card">
+    <span>Seoul National University</span>
+    <h3>Tunable Software ISP Algorithm</h3>
+    <p>
+      Research project conducted in collaboration with Samsung Research on
+      controllable image signal processing.
+    </p>
+  </article>
 
-### Seoul National University
+  <article class="profile-experience-card">
+    <span>Seoul National University</span>
+    <h3>Domain Adaptation for Oven Recipes</h3>
+    <p>
+      Research project conducted with Samsung Research on domain adaptation
+      for visual understanding in practical applications.
+    </p>
+  </article>
 
-- Research project with Samsung Research: Tunable software ISP algorithm.
-- Research project with Samsung Research: Domain adaptation for oven recipes.
-- Teaching assistant: Topics in Control and Automation.
-- 9th Creative Design Festival: Untact AR Makeup.
-- Electrical Engineering Design Project: Adversarial-example generation with GANs.
+  <article class="profile-experience-card">
+    <span>Teaching & Design</span>
+    <h3>Academic and Engineering Projects</h3>
+    <p>
+      College teaching assistant for Topics in Control and Automation;
+      recipient at the 9th Creative Design Festival for Untact AR Makeup;
+      and developer of an adversarial-example generation project based on GANs.
+    </p>
+  </article>
+</div>
 
 ## Invited Talks
 
-- **AI Retreat, SNU** · *Recovering 3D Hand Mesh Sequences from a Single Blurry Image: A New Dataset and Temporal Unfolding*, 2024.
-- **Qualcomm Korea** · *Occlusion-Robust 3D Hand Mesh Estimation Network*, 2022.
-- **Kakao Enterprise Corp.** · *Occlusion-Robust 3D Hand Mesh Estimation Network*, 2022.
-- **LG AI Center** · *Occlusion-Robust 3D Hand Mesh Estimation Network*, 2022.
-- **AI Retreat, SNU** · *Occlusion-Robust 3D Hand Mesh Estimation Network*, 2022.
+<div class="profile-talk-list">
+  <article class="profile-talk">
+    <span>2024</span>
+    <div>
+      <h3>AI Retreat, Seoul National University</h3>
+      <p>
+        Recovering 3D Hand Mesh Sequences from a Single Blurry Image:
+        A New Dataset and Temporal Unfolding
+      </p>
+    </div>
+  </article>
+
+  <article class="profile-talk">
+    <span>2022</span>
+    <div>
+      <h3>Qualcomm Korea</h3>
+      <p>Occlusion-Robust 3D Hand Mesh Estimation Network</p>
+    </div>
+  </article>
+
+  <article class="profile-talk">
+    <span>2022</span>
+    <div>
+      <h3>Kakao Enterprise Corp.</h3>
+      <p>Occlusion-Robust 3D Hand Mesh Estimation Network</p>
+    </div>
+  </article>
+
+  <article class="profile-talk">
+    <span>2022</span>
+    <div>
+      <h3>LG AI Center</h3>
+      <p>Occlusion-Robust 3D Hand Mesh Estimation Network</p>
+    </div>
+  </article>
+
+  <article class="profile-talk">
+    <span>2022</span>
+    <div>
+      <h3>AI Retreat, Seoul National University</h3>
+      <p>Occlusion-Robust 3D Hand Mesh Estimation Network</p>
+    </div>
+  </article>
+</div>
 
 ## Academic Service
 
-- **Conferences:** CVPR, ICCV, ICCVW, ECCV, ECCVW, NeurIPS, WACV, ACCV.
-- **Journals:** TCSVT, TVCJ, JIVP, EURASIP.
+<div class="profile-service-grid">
+  <article class="profile-service-card">
+    <span>Conference Reviewer</span>
+    <p>CVPR, ICCV, ICCVW, ECCV, ECCVW, NeurIPS, WACV, and ACCV</p>
+  </article>
+
+  <article class="profile-service-card">
+    <span>Journal Reviewer</span>
+    <p>TCSVT, TVCJ, JIVP, and EURASIP Journal on Image and Video Processing</p>
+  </article>
+</div>
