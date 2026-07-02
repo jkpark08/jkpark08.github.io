@@ -1,0 +1,11 @@
+---
+layout: post
+title: Language-Assisted Super-Resolution from Real-World Low-Resolution Patches
+authors: <strong>Joonkyu Park</strong>, Sanghyun Son, and Kyoung Mu Lee
+paper_url: "https://arxiv.org/abs/2606.31363"
+date: 2024-10-02 13:32:20 +0300
+description: arXiv 2024. # Add post description (optional)
+img: lasr.png # Add image post (optional)
+fig-caption: # Add figcaption (optional)
+tags: [Image Super-Resolution, Image restoration, Language, CLIP]
+---
