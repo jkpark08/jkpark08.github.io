@@ -1,8 +1,8 @@
 ---
 layout: project
-title: Controllable ISP
+title: Controllable ISP (with Samsung AI Center)
 project_title: Controllable Image Signal Processing
-project_subtitle: with Samsung AI Center
+project_subtitle: SW-based Harmonized ISP
 project_label: Interactive Demo
 home_section: project
 date: 2023-01-22 13:32:20 +0300
