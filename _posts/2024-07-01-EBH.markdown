@@ -1,9 +1,9 @@
 ---
 layout: project
 
-title: EBH Dataset
+title: EBH Dataset (with Meta Reality Lab)
 project_title: EBH Dataset
-project_subtitle: with Meta Reality Lab
+project_subtitle: Dataset for Blurry 3D Hands
 project_label: Dataset & Research Paper
 home_section: project
 
