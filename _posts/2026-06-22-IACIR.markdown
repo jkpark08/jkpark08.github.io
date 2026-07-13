@@ -1,9 +1,9 @@
 ---
 layout: project
 
-title: IAC-IR
+title: IAC-IR (with Samsung MX)
 project_title: Input-Aware Corruption for Image Restoration
-project_subtitle: with Samsung MX
+project_subtitle: Single-Step General Image Restoration
 project_label: Research Paper
 home_section: project
 
