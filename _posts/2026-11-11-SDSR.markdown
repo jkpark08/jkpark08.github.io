@@ -8,5 +8,4 @@ description: ACCV, 2026. # Add post description (optional)
 img: sdsr.jpg # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [Super-Resolution, Diffusion] #
-tags3: [Super-Resolution, Diffusion] #
 ---
